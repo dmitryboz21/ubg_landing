@@ -1,0 +1,81 @@
+.container--main-banner {
+	padding-top: 30px;
+    padding-bottom: 89px;
+}
+
+.main-banner-flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-banner-info {
+	padding-top: 69px;
+
+	&__h1 {
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		//color: transparent;
+		color: #dbb447;
+		background-image: radial-gradient(#E5C03A, #D1A954);
+		-webkit-background-clip: text;
+		background-clip: text;
+		font-size: 36px;
+		font-weight: 900;
+		font-style: normal;
+		line-height: 48px;
+		-webkit-text-fill-color: transparent;
+	}
+
+	&__desc {
+		margin-top: 20px;
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: flex-start;
+		margin-top: 55px;
+		margin-left: -56px;
+
+		.btn {
+			margin-left: 56px;
+		}
+	}
+}
+
+.main-banner-advantages {
+	max-width: 511px;
+	margin-top: 88px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-banner-advantage {
+	width: 125px;
+
+	&__val {
+		font-weight: 900;
+		font-size: 18px;
+		line-height: 22px;
+		letter-spacing: 0.05em;
+		color: #D1A954;
+	}
+
+	&__desc {
+		margin-top: 8px;
+		font-size: 12px;
+		line-height: 140%;
+	}
+}
+
+.main-banner-pic {
+	width: 551px;
+	min-width: 551px;
+	margin-right: 2px;
+	margin-left: 40px;
+    margin-bottom: -89px;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}

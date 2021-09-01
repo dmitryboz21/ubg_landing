@@ -1,5 +1,46 @@
-header.site-header
-	.sh-burger
-		span
+.outer-container
+	section.main-banner(style="background-image: url(img/sec-1-bg.jpg);")
 
-	
+		header.site-header
+			.container.container--site-header
+				.sh-controls
+					.sh-logo
+						img(src="img/header-logo.png", alt="Litvinoff logo")
+
+					.sh-burger-wrap
+						.sh-burger#sh-burger
+							span
+
+				ul#sh-menu.sh-menu
+					li.sh-menu-item
+						a.sh-menu-item__link(href="")  F.A.Q.
+					li.sh-menu-item
+						a.sh-menu-item__link(href="")  Программа
+					li.sh-menu-item
+						a.sh-menu-item__link(href="")  Автор
+					li.sh-menu-item
+						a.sh-menu-item__link(href="")  Cтоимость
+					li.sh-menu-item
+						a.sh-menu-item__link(href="")  Отзывы
+
+		.container.container--main-banner
+			.main-banner-flex
+				.main-banner-info
+					h1.main-banner-info__h1 курс по трейдингу<br> криптовалют
+					.main-banner-info__desc Это не волшебная кнопка с надписью “Бесконечные деньги”. Это полезная и структурированная информация, знания и опыт, которые помогут новичку не потерять деньги в трейдинге, а постепенно и упорно увеличивать депозит.
+					.main-banner-info__buttons
+						a.btn.btn--square(href="") Записаться
+						a.btn.btn--dashed Обратная связь
+
+					.main-banner-advantages
+						.main-banner-advantage
+							.main-banner-advantage__val 100+
+							.main-banner-advantage__desc Учеников прошли курс
+						.main-banner-advantage
+							.main-banner-advantage__val +10%
+							.main-banner-advantage__desc Средний доход ученика в месяц
+						.main-banner-advantage
+							.main-banner-advantage__val 24/7
+							.main-banner-advantage__desc Кураторы с вами на связи
+				.main-banner-pic
+					img(src="img/sec-1-pic.png", alt="Павел Литвинов")
