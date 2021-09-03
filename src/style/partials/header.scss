@@ -213,11 +213,13 @@
 .sh-menu-wrap {
 	//height: auto;
 	//max-height: 0;
+	@media screen and (max-width: 991px) {
 	pointer-events: none;
 	box-sizing: border-box;
 	overflow: hidden;
 	opacity: 0;
 	transition-duration: .6s;
+	}
 }
 
 .sh-menu {
