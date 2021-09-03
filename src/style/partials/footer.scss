@@ -1,6 +1,7 @@
 .site-footer {
 	background: #000000;
     padding: 57px 0 59px;
+	overflow: hidden;
 }
 
 
@@ -25,9 +26,11 @@
 .footer-logo {
 	width: 262px;
 
+
 	img {
 		width: 100%;
 		height: auto;
+		image-rendering: -webkit-optimize-contrast;
 	}
 }
 

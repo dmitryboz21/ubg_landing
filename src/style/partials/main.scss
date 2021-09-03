@@ -157,14 +157,14 @@ body {
 	background: #D1A954;
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
 	border-radius: 5px;
-    padding: 13px 18px 12px;
+	padding: 13px 18px 12px;
 }
 
 .btn--dashed {
 	-webkit-appearance: none;
 	appearance: none;
 	padding: 5px;
-    padding: 13px 0 12px;
+	padding: 13px 0 12px;
 
 	color: rgba(255, 255, 255, 0.7);
 
@@ -181,4 +181,44 @@ body {
 		background: rgba(209, 169, 84, 0.2);
 	}
 
+}
+
+
+.dd1,
+.dd2,
+.dt1,
+.dt2,
+.dm1 {
+	display: none;
+}
+
+
+@media screen and (min-width: 1200px) {
+	.dd1 {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+	.dd2 {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 991px) and (min-width: 767px)  {
+	.dt1 {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 766px) and (min-width: 576px)  {
+	.dt2 {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.dm1 {
+		display: block;
+	}
 }

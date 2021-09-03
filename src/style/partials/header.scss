@@ -1,11 +1,30 @@
 .sh-burger-wrap {
+	cursor: pointer;
+	transition-duration: .3s;
+
+	&:hover {
+		opacity: .6;
+	}
+
 	@media screen and (max-width: 1199px) {}
 
 	@media screen and (min-width: 992px) {
 		display: none;
 	}
 
-	@media screen and (max-width: 991px) {}
+	@media screen and (max-width: 991px) {
+		width: 42px;
+		position: relative;
+		border: 1px solid #D1A954;
+		border-radius: 50%;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 100%;
+			padding-top: 100%;
+		}
+	}
 
 	@media screen and (max-width: 766px) {}
 
@@ -14,15 +33,26 @@
 
 
 .sh-burger {
-	span {}
-}
-
-.sh-burger {
-	position: relative;
-	width: 34px;
-	height: 26px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -9px;
+	margin-left: -13px;
+	width: 26px;
+	height: 15px;
 	cursor: pointer;
 	transition-duration: .2s;
+
+
+	@media screen and (max-width: 1199px) {}
+
+
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 
 	span,
 	span::before,
@@ -30,11 +60,11 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: 34px;
-		height: 2px;
-		margin-top: -1px;
-		margin-left: -17px;
-		background-color: #fff;
+		width: 26px;
+		height: 1px;
+		margin-left: -13px;
+		background-color: #D1A954;
+		border-radius: 10px;
 	}
 
 	span::before,
@@ -44,51 +74,129 @@
 	}
 
 	span::before {
-		transform: translateY(-12px);
+		transform: translateY(-7px);
 	}
 
 	span::after {
-		transform: translateY(12px);
+		transform: translateY(7px);
 	}
 
 	&--active {
-		background: #F5F6FB;
 
 		span {
 			height: 0;
 
 			&::before {
 				transform: rotate(45deg);
-				background: #323340;
 			}
 
 			&::after {
 				transform: rotate(-45deg);
-				background: #323340;
 			}
 		}
 	}
 }
 
+.header-compensate {
+	display: block;
+	@media screen and (max-width: 991px) {
+		height: 143px;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+
+}
 
 .site-header {
 	padding: 45px 0;
+	background: rgba(36, 36, 36, 0);
+	transition: all .6s, padding .4s;
 
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {
+		padding: 50px 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+
+	&--menu-open {
+
+		@media screen and (max-width: 991px) {
+			background: rgba(36, 36, 36, 255);
+			box-shadow: 0px 14px 14px #000000;
+			padding-bottom: 39px;
+
+			.sh-menu-wrap {
+				max-height: 300px;
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
+	}
 }
 
 .container--site-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	@media screen and (max-width: 991px) {
+		display: block;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 }
 
-.sh-controls {}
+.sh-controls {
+
+	@media screen and (max-width: 1199px) {}
+
+
+
+	@media screen and (max-width: 991px) {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+}
 
 .sh-logo {
 	display: block;
 	width: 184px;
 	height: auto;
 
+
+	@media screen and (max-width: 1199px) {}
+
+
+
+	@media screen and (max-width: 991px) {
+		width: 169px;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 
 	&:active {}
 
@@ -98,7 +206,18 @@
 		width: 100%;
 		height: auto;
 		filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.15));
+		image-rendering: -webkit-optimize-contrast;
 	}
+}
+
+.sh-menu-wrap {
+	//height: auto;
+	//max-height: 0;
+	pointer-events: none;
+	box-sizing: border-box;
+	overflow: hidden;
+	opacity: 0;
+	transition-duration: .6s;
 }
 
 .sh-menu {
@@ -106,11 +225,42 @@
 	list-style: none;
 	margin-top: 22px;
 
+	@media screen and (max-width: 1199px) {}
+
+
+
+	@media screen and (max-width: 991px) {
+		justify-content: space-between;
+		margin-top: 50px;
+		padding-top: 41px;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		width: 684px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 }
 
 .sh-menu-item {
 	list-style: none;
 	margin-left: 74px;
+
+	@media screen and (max-width: 1199px) {
+		margin-left: 45px;
+	}
+
+
+
+	@media screen and (max-width: 991px) {
+		margin-left: 0;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 
 	&__link {
 		display: block;
@@ -135,7 +285,36 @@
 			width: 100%;
 			height: 2px;
 			background: rgba(209, 169, 84, 0.2);
+
+			@media screen and (max-width: 1199px) {}
+
+
+
+			@media screen and (max-width: 991px) {}
+
+			@media screen and (max-width: 766px) {}
+
+			@media screen and (max-width: 575px) {}
 		}
+
+		@media screen and (max-width: 1199px) {}
+
+
+
+		@media screen and (max-width: 991px) {
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.8);
+			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+
+			&::before {
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
+
 
 		&:hover {
 			opacity: .5;
