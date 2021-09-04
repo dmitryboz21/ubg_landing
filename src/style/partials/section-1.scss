@@ -15,7 +15,10 @@
 
 	@media screen and (max-width: 766px) {}
 
-	@media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {
+		padding-top: 6px;
+		padding-bottom: 25px;
+	}
 }
 
 .main-banner {
@@ -40,6 +43,7 @@
 
 .main-banner-info {
 	padding-top: 69px;
+	max-width: 100%;
 
 	@media screen and (max-width: 1199px) {
 		padding-top: 25px;
@@ -55,7 +59,9 @@
 
 	@media screen and (max-width: 766px) {}
 
-	@media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {
+		padding-top: 0;
+	}
 
 	&__h1 {
 		letter-spacing: 0.15em;
@@ -86,7 +92,10 @@
 
 		@media screen and (max-width: 766px) {}
 
-		@media screen and (max-width: 575px) {}
+		@media screen and (max-width: 575px) {
+			font-size: 18px;
+
+		}
 	}
 
 	&__desc {
@@ -109,7 +118,11 @@
 
 		@media screen and (max-width: 766px) {}
 
-		@media screen and (max-width: 575px) {}
+		@media screen and (max-width: 575px) {
+			font-size: 12px;
+			line-height: 142%;
+			margin-top: 20px;
+		}
 	}
 
 	&__buttons {
@@ -129,7 +142,13 @@
 
 		@media screen and (max-width: 766px) {}
 
-		@media screen and (max-width: 575px) {}
+		@media screen and (max-width: 575px) {
+			align-items: center;
+			margin-top: 37px;
+			margin-left: -10px;
+			width: calc(100% + 10px);
+			justify-content: space-between;
+		}
 
 		.btn {
 			margin-left: 56px;
@@ -142,7 +161,9 @@
 
 			@media screen and (max-width: 766px) {}
 
-			@media screen and (max-width: 575px) {}
+			@media screen and (max-width: 575px) {
+				margin-left: 10px;
+			}
 		}
 	}
 }
@@ -166,7 +187,12 @@
 
 	@media screen and (max-width: 766px) {}
 
-	@media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {
+		flex-wrap: wrap;
+		margin-top: 54px;
+		margin-bottom: -29px;
+		padding: 0 8px;
+	}
 }
 
 .main-banner-advantage {
@@ -181,7 +207,13 @@
 
 	@media screen and (max-width: 766px) {}
 
-	@media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {
+		&:first-child {
+			width: 100%;
+		}
+
+		margin-bottom: 29px;
+	}
 
 	&__val {
 		font-weight: 900;
@@ -198,7 +230,10 @@
 
 		@media screen and (max-width: 766px) {}
 
-		@media screen and (max-width: 575px) {}
+		@media screen and (max-width: 575px) {
+			font-size: 14px;
+			line-height: 17px;
+		}
 	}
 
 	&__desc {
@@ -216,7 +251,11 @@
 
 		@media screen and (max-width: 766px) {}
 
-		@media screen and (max-width: 575px) {}
+		@media screen and (max-width: 575px) {
+			font-size: 10px;
+			line-height: 140%;
+			margin-top: 7px;
+		}
 	}
 }
 

@@ -1,31 +1,94 @@
 .site-footer {
 	background: #000000;
-    padding: 57px 0 59px;
+    padding: 57px 0 54px;
 	overflow: hidden;
+
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 }
 
 
-.container--footer {}
+.container--footer {
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+}
 
 .footer-flex {
 	display: flex;
 	justify-content: space-between;
+
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 }
 
 .footer-col {
-	&--1 {}
+	&--1 {
+		@media screen and (max-width: 1199px) {}
 
-	&--2 {}
+		@media screen and (max-width: 991px) {}
 
-	&--3 {}
+		@media screen and (max-width: 766px) {}
 
-	&--4 {}
+		@media screen and (max-width: 575px) {}
+	}
+
+	&--2 {
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
+	}
+
+	&--3 {
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
+	}
+
+	&--4 {
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
+	}
 }
 
 
 .footer-logo {
 	width: 262px;
 
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 
 	img {
 		width: 100%;
@@ -39,15 +102,39 @@
 	line-height: 15px;
 	margin-top: 24px;
 	color: rgba(255, 255, 255, 0.3);
+
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 }
 
 .foo-contacts {
-	margin-top: 68px;
+    margin-top: 31px;
+
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 }
 
 .foo-contact {
 	display: block;
 	margin-top: 15px;
+
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 
 	&__type {
 		display: block;
@@ -56,6 +143,14 @@
 		font-size: 12px;
 		line-height: 15px;
 		color: rgba(255, 255, 255, 0.3);
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 
 	&__val {
@@ -66,6 +161,14 @@
 		letter-spacing: 0.05em;
 		color: #FFFFFF;
 		margin-top: 8px;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 
 		&:hover {}
 
@@ -83,19 +186,94 @@
 	}
 }
 
-.footer-menu-wrap {}
+.foo-conf {
+    margin-top: 25px;
+
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+
+	&__link {
+		display: inline;
+		font-weight: 500;
+		font-size: 10px;
+		line-height: 12px;
+
+		color: #FFFFFF;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
+
+		&--delimiter {
+			display: inline-block;
+			margin-right: 3px;
+			margin-left: -1px;
+
+			@media screen and (max-width: 1199px) {}
+
+			@media screen and (max-width: 991px) {}
+
+			@media screen and (max-width: 766px) {}
+
+			@media screen and (max-width: 575px) {}
+		}
+	}
+}
+
+.footer-menu-wrap {
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+}
 
 .footer-menu {
 	list-style: none;
 	display: flex;
 	flex-direction: column;
 
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+
 	&__item {
 		display: block;
 		list-style: none;
 
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
+
 		&:not(:first-child) {
 			margin-top: 31px;
+
+			@media screen and (max-width: 1199px) {}
+
+			@media screen and (max-width: 991px) {}
+
+			@media screen and (max-width: 766px) {}
+
+			@media screen and (max-width: 575px) {}
 		}
 	}
 
@@ -109,6 +287,14 @@
 		color: rgba(255, 255, 255, 0.7);
 
 		transition-duration: .3s;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 
 		&:hover {
 			opacity: .6;
@@ -125,6 +311,14 @@
 .footer-socials {
 	display: flex;
 	flex-direction: column;
+
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 }
 
 .footer-social {
@@ -133,17 +327,41 @@
 	cursor: pointer;
 	transition-duration: .3s;
 
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+
 	&:hover {
 		opacity: .6;
 	}
 
 	&:not(:first-child) {
 		margin-top: 50px;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 
 	&__pic {
 		width: 40px;
 		height: auto;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 
 		img {
 			width: 100%;
@@ -153,6 +371,14 @@
 
 	&__info {
 		margin-left: 14px;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 
 
@@ -165,6 +391,14 @@
 		letter-spacing: 0.05em;
 
 		color: #FFFFFF;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 
 	&__desc {
@@ -177,6 +411,14 @@
 		letter-spacing: 0.05em;
 
 		color: rgba(255, 255, 255, 0.3);
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 
 	&:hover {}
@@ -190,15 +432,47 @@
 	width: 262px;
 	margin-top: -7px;
 
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+
 	&__inp-row {
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
+
 		&+.footer-form__inp-row {
 			margin-top: 22px;
+
+			@media screen and (max-width: 1199px) {}
+
+			@media screen and (max-width: 991px) {}
+
+			@media screen and (max-width: 766px) {}
+
+			@media screen and (max-width: 575px) {}
 		}
 	}
 
 	&__inp-wrap {
 		display: block;
 		position: relative;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 
 		&::after {
 			content: '';
@@ -222,6 +496,13 @@
 		background: none;
 		color: #fff;
 
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 
 		&::placeholder {
 			font-size: inherit;
@@ -234,9 +515,25 @@
 
 	&__btn-wrap {
 		margin-top: 53px;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 
 	&__btn {
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 
 		&:hover {}
 
