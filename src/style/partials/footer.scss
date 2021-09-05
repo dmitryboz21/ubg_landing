@@ -1,11 +1,13 @@
 .site-footer {
 	background: #000000;
-    padding: 57px 0 54px;
+	padding: 57px 0 54px;
 	overflow: hidden;
 
 	@media screen and (max-width: 1199px) {}
 
-	@media screen and (max-width: 991px) {}
+	@media screen and (max-width: 991px) {
+		padding: 40px 0 39px;
+	}
 
 	@media screen and (max-width: 766px) {}
 
@@ -40,7 +42,9 @@
 	&--1 {
 		@media screen and (max-width: 1199px) {}
 
-		@media screen and (max-width: 991px) {}
+		@media screen and (max-width: 991px) {
+			width: 199px;
+		}
 
 		@media screen and (max-width: 766px) {}
 
@@ -84,7 +88,10 @@
 
 	@media screen and (max-width: 1199px) {}
 
-	@media screen and (max-width: 991px) {}
+	@media screen and (max-width: 991px) {
+		width: 199px;
+		margin-top: 7px;
+	}
 
 	@media screen and (max-width: 766px) {}
 
@@ -105,7 +112,9 @@
 
 	@media screen and (max-width: 1199px) {}
 
-	@media screen and (max-width: 991px) {}
+	@media screen and (max-width: 991px) {
+		margin-top: 14px;
+	}
 
 	@media screen and (max-width: 766px) {}
 
@@ -113,11 +122,13 @@
 }
 
 .foo-contacts {
-    margin-top: 31px;
+	margin-top: 31px;
 
 	@media screen and (max-width: 1199px) {}
 
-	@media screen and (max-width: 991px) {}
+	@media screen and (max-width: 991px) {
+		margin-top: 27px;
+	}
 
 	@media screen and (max-width: 766px) {}
 
@@ -160,11 +171,15 @@
 		line-height: 20px;
 		letter-spacing: 0.05em;
 		color: #FFFFFF;
-		margin-top: 8px;
+		margin-top: 3px;
 
 		@media screen and (max-width: 1199px) {}
 
-		@media screen and (max-width: 991px) {}
+		@media screen and (max-width: 991px) {
+			font-size: 12px;
+			line-height: 15px;
+			letter-spacing: 0.05em;
+		}
 
 		@media screen and (max-width: 766px) {}
 
@@ -187,11 +202,16 @@
 }
 
 .foo-conf {
-    margin-top: 25px;
+	margin-top: 25px;
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 12px;
 
 	@media screen and (max-width: 1199px) {}
 
-	@media screen and (max-width: 991px) {}
+	@media screen and (max-width: 991px) {
+		margin-top: 35px;
+	}
 
 	@media screen and (max-width: 766px) {}
 
@@ -199,9 +219,6 @@
 
 	&__link {
 		display: inline;
-		font-weight: 500;
-		font-size: 10px;
-		line-height: 12px;
 
 		color: #FFFFFF;
 
@@ -344,7 +361,9 @@
 
 		@media screen and (max-width: 1199px) {}
 
-		@media screen and (max-width: 991px) {}
+		@media screen and (max-width: 991px) {
+			margin-top: 64px;
+		}
 
 		@media screen and (max-width: 766px) {}
 
@@ -357,7 +376,9 @@
 
 		@media screen and (max-width: 1199px) {}
 
-		@media screen and (max-width: 991px) {}
+		@media screen and (max-width: 991px) {
+			width: 30px;
+		}
 
 		@media screen and (max-width: 766px) {}
 
@@ -372,7 +393,9 @@
 	&__info {
 		margin-left: 14px;
 
-		@media screen and (max-width: 1199px) {}
+		@media screen and (max-width: 1199px) {
+			display: none;
+		}
 
 		@media screen and (max-width: 991px) {}
 
@@ -434,7 +457,9 @@
 
 	@media screen and (max-width: 1199px) {}
 
-	@media screen and (max-width: 991px) {}
+	@media screen and (max-width: 991px) {
+		width: 200px;
+	}
 
 	@media screen and (max-width: 766px) {}
 

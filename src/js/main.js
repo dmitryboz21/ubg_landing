@@ -1,6 +1,7 @@
 /* libs */
 
 //= libs/jquery-3.3.1.min.js
+//= libs/magnific-popup.js
 
 //= libs/slick.min.js
 
