@@ -30,5 +30,9 @@ $(document).ready(function () {
    $('body').on('click', '.js-mfp-close-svg', function(){
       $(this).parent().click();
    });
+   $('.js-footer-menu-opener').click(function(){
+      $(this).toggleClass('footer-menu-opener--open')
+      $('.footer-menu-wrap').slideToggle(300);
+   });
 });
 

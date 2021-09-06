@@ -183,7 +183,10 @@ body {
 	border-radius: 5px;
 	padding: 13px 18px 12px;
 }
-
+.btn--square--transparent-dark{
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	background: transparent;
+}
 .btn--dashed {
 	-webkit-appearance: none;
 	appearance: none;
