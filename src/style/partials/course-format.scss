@@ -1,0 +1,269 @@
+.course-format {
+	background-position: center center;
+	background-size: cover;
+	padding: 152px 0 0;
+}
+
+.container {
+	&--course-format {}
+}
+
+.section-title {
+	letter-spacing: 0.15em;
+	color: rgba(255, 255, 255, 0.9);
+	text-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5);
+	font-size: 36px;
+	font-weight: 900;
+	line-height: 44px;
+
+	&--course-format {}
+}
+
+.course-format__subtitle {
+	letter-spacing: 0.055em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 150%;
+	margin-top: 20px;
+}
+
+.course-format__desc {
+	/* or 24px */
+	color: rgba(255, 255, 255, 0.3);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 150%;
+	margin-top: 31px;
+}
+
+.course-format-advantages {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	margin-top: 63px;
+
+	&__delimiter {
+		width: 2px;
+		display: block;
+		background: rgba(255, 255, 255, 0.05);
+	}
+}
+
+.course-format-advantage {
+	display: flex;
+	align-items: center;
+
+	&__pic {
+		width: auto;
+		height: 45px;
+
+		img {
+			width: auto;
+			height: 100%;
+		}
+	}
+
+	&__info {
+		margin-left: 20px;
+	}
+
+	&__name {
+		color: rgba(255, 255, 255, 0.9);
+		font-size: 18px;
+		font-weight: 900;
+		line-height: 22px;
+	}
+
+	&__desc {
+		color: rgba(255, 255, 255, 0.3);
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 17px;
+		margin-top: 5px;
+		margin-bottom: -2px;
+	}
+}
+
+.course-format-flex {
+	display: flex;
+	margin-top: 112px;
+
+	&__left {
+		flex-grow: 1;
+	}
+
+	&__right {
+		min-width: 322px;
+		width: 322px;
+		margin-left: 61px;
+	}
+}
+
+.course-format-h3 {
+	color: rgba(255, 255, 255, 0.9);
+	text-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5);
+	font-size: 36px;
+	font-weight: 900;
+	line-height: 44px;
+}
+
+.cf-accordeon {
+	margin-top: 79px;
+}
+
+.cf-accordeon-item {
+	position: relative;
+	z-index: 1;
+	padding: 21px 0 18px;
+
+	&__top {position: relative;
+
+		&::before,
+		&::after {
+			display: block;
+			width: 25px;
+			height: 2px;
+			content: '';
+			background-size: contain;
+			position: absolute;
+			/*right: 22px;
+			top: -1px;*/
+			right: 34px;
+			top: 8px;
+			background: #6C6C6C;
+			transition: .3s;
+			transform-origin: center center;
+			margin-right: -12px;
+		}
+		&::before{
+
+		}
+		&::after{
+			transform: rotate(90deg);
+		}
+	}
+
+	&__content {
+		display: none;
+	}
+
+	&::before,
+	&::after {
+		position: absolute;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 2px;
+		content: '';
+		background: rgba(255, 255, 255, 0.1);
+	}
+
+	&::before {
+		top: -2px;
+	}
+
+	&::after {
+		bottom: 0;
+	}
+
+	&--active {
+		z-index: 5;
+
+		.cf-accordeon-item__heading {
+			color: #FFFFFF;
+		}
+
+		&::before,
+		&::after {
+			background: rgba(255, 255, 255, 0.6);
+		}
+
+		.cf-accordeon-item__content {
+			display: block;
+		}
+	}
+}
+
+.cf-accordeon-item__heading {
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #AEAEAE;
+	font-size: 24px;
+	font-weight: 900;
+	font-style: normal;
+	line-height: 29px;
+}
+
+.cf-accordeon-cols {
+	display: flex;
+	align-items: flex-start;
+
+	&__col {
+		padding-left: 35px;
+	}
+}
+
+.cf-accordeon__list-title {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	/* identical to box height */
+
+
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.cf-accordeon-list {
+	list-style: none;
+	margin-top: 20px;
+
+	&__li {
+		list-style: none;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		color: rgba(255, 255, 255, 0.6);
+
+		&+.cf-accordeon-list__li {
+			margin-top: 10px;
+		}
+	}
+}
+
+.course-format-in-course {
+	display: block;
+	list-style: none;
+    margin-top: 71px;
+
+	&__item {
+		position: relative;
+		display: block;
+		list-style: none;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.79);
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 150%;
+		margin-left: 22px;
+
+		&::before {
+			position: absolute;
+			top: 6px;
+			left: -22px;
+			display: block;
+			width: 12px;
+			height: 12px;
+			content: "";
+			border-radius: 50%;
+			background: #C4C4C4;
+		}
+		&+.course-format-in-course__item{
+			margin-top: 53px;
+
+		}
+	}
+}
