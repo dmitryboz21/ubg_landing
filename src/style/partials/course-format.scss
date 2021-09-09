@@ -1,7 +1,7 @@
 .course-format {
 	background-position: center center;
 	background-size: cover;
-	padding: 152px 0 0;
+    padding: 152px 0 184px;
 }
 
 .container {
@@ -97,7 +97,7 @@
 	&__right {
 		min-width: 322px;
 		width: 322px;
-		margin-left: 61px;
+		margin-left: 69px;
 	}
 }
 
@@ -110,38 +110,42 @@
 }
 
 .cf-accordeon {
-	margin-top: 79px;
+	margin-top: 78px;
 }
 
 .cf-accordeon-item {
 	position: relative;
 	z-index: 1;
-	padding: 21px 0 18px;
+	padding: 21px 0 19px;
+	transition: .3s;
 
-	&__top {position: relative;
+	&__top {
+		position: relative;
+		cursor: pointer;
 
 		&::before,
 		&::after {
 			display: block;
-			width: 25px;
+			width: 26px;
 			height: 2px;
 			content: '';
 			background-size: contain;
 			position: absolute;
 			/*right: 22px;
 			top: -1px;*/
-			right: 34px;
-			top: 8px;
+			right: 26px;
+			top: 11px;
 			background: #6C6C6C;
 			transition: .3s;
 			transform-origin: center center;
-			margin-right: -12px;
+			//margin-right: -12px;
+			transform: translate(50%, 50%);
 		}
-		&::before{
 
-		}
-		&::after{
-			transform: rotate(90deg);
+		&::before {}
+
+		&::after {
+			transform: translate(50%, 50%) rotate(90deg);
 		}
 	}
 
@@ -173,6 +177,23 @@
 
 		.cf-accordeon-item__heading {
 			color: #FFFFFF;
+			transition: .3s;
+		}
+
+		.cf-accordeon-item__top {
+
+			&::before,
+			&::after {
+				width: 40px;
+			}
+
+			&::before {
+				transform: translate(50%, 50%) rotate(45deg);
+			}
+
+			&::after {
+				transform: translate(50%, 50%) rotate(135deg);
+			}
 		}
 
 		&::before,
@@ -181,7 +202,6 @@
 		}
 
 		.cf-accordeon-item__content {
-			display: block;
 		}
 	}
 }
@@ -194,14 +214,18 @@
 	font-weight: 900;
 	font-style: normal;
 	line-height: 29px;
+	padding: 0 10px;
 }
 
 .cf-accordeon-cols {
 	display: flex;
 	align-items: flex-start;
+	justify-content: space-between;
+	padding: 39px 0px 50px;
 
 	&__col {
 		padding-left: 35px;
+		width: calc(50% - 21px);
 	}
 }
 
@@ -218,7 +242,7 @@
 
 .cf-accordeon-list {
 	list-style: none;
-	margin-top: 20px;
+	margin-top: 27px;
 
 	&__li {
 		list-style: none;
@@ -228,7 +252,7 @@
 		color: rgba(255, 255, 255, 0.6);
 
 		&+.cf-accordeon-list__li {
-			margin-top: 10px;
+			margin-top: 15px;
 		}
 	}
 }
@@ -236,7 +260,7 @@
 .course-format-in-course {
 	display: block;
 	list-style: none;
-    margin-top: 71px;
+	margin-top: 74px;
 
 	&__item {
 		position: relative;
@@ -252,7 +276,7 @@
 
 		&::before {
 			position: absolute;
-			top: 6px;
+			top: 7px;
 			left: -22px;
 			display: block;
 			width: 12px;
@@ -261,8 +285,9 @@
 			border-radius: 50%;
 			background: #C4C4C4;
 		}
-		&+.course-format-in-course__item{
-			margin-top: 53px;
+
+		&+.course-format-in-course__item {
+			margin-top: 50px;
 
 		}
 	}

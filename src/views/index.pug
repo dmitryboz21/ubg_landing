@@ -57,7 +57,7 @@ block main
 						h3.course-format-h3 Блоки Курса:
 						.cf-accordeon
 							.cf-accordeon-item
-								.cf-accordeon-item__top
+								.cf-accordeon-item__top.js-cf-accordeon-item__top
 									.cf-accordeon-item__heading Блок 1
 								.cf-accordeon-item__content
 									.cf-accordeon-cols
@@ -71,8 +71,8 @@ block main
 											ul.cf-accordeon-list
 												li.cf-accordeon-list__li 1. Домашнее задание
 												li.cf-accordeon-list__li 2. Методические материалы
-							.cf-accordeon-item.cf-accordeon-item--active
-								.cf-accordeon-item__top
+							.cf-accordeon-item
+								.cf-accordeon-item__top.js-cf-accordeon-item__top
 									.cf-accordeon-item__heading Блок 2
 								.cf-accordeon-item__content
 									.cf-accordeon-cols
@@ -87,7 +87,7 @@ block main
 												li.cf-accordeon-list__li 1. Домашнее задание
 												li.cf-accordeon-list__li 2. Методические материалы
 							.cf-accordeon-item
-								.cf-accordeon-item__top
+								.cf-accordeon-item__top.js-cf-accordeon-item__top
 									.cf-accordeon-item__heading Блок 3
 								.cf-accordeon-item__content
 									.cf-accordeon-cols
@@ -102,7 +102,7 @@ block main
 												li.cf-accordeon-list__li 1. Домашнее задание
 												li.cf-accordeon-list__li 2. Методические материалы
 							.cf-accordeon-item
-								.cf-accordeon-item__top
+								.cf-accordeon-item__top.js-cf-accordeon-item__top
 									.cf-accordeon-item__heading Блок 4
 								.cf-accordeon-item__content
 									.cf-accordeon-cols
@@ -117,7 +117,7 @@ block main
 												li.cf-accordeon-list__li 1. Домашнее задание
 												li.cf-accordeon-list__li 2. Методические материалы
 							.cf-accordeon-item
-								.cf-accordeon-item__top
+								.cf-accordeon-item__top.js-cf-accordeon-item__top
 									.cf-accordeon-item__heading Блок 5
 								.cf-accordeon-item__content
 									.cf-accordeon-cols
@@ -138,3 +138,29 @@ block main
 							li.course-format-in-course__item  ПРОВЕРка домашних заданий;
 							li.course-format-in-course__item ЧАТ С ОДНОКУРСНИКАМИ;
 							li.course-format-in-course__item Литература для самостоятельного изучения.
+
+
+
+		section.course-author(style="background-image: url(img/bg-course-author.jpg)")
+			.container.container--course-author
+				.course-author-flex
+					.course-author-flex__info
+						h2.section-title.section-title--course-author автор курса
+						.course-author
+							.course-author__desc Павел Литвинов, профессиональный трейдер
+							.course-author-advantages
+								.course-author-advantage
+									.course-author-advantage__val +38%
+									.course-author-advantage__des Увеличение депозита в месяц
+								.course-author-advantage
+									.course-author-advantage__val 4+
+									.course-author-advantage__des Лет без пополнения депозита
+								.course-author-advantage
+									.course-author-advantage__val $28361
+									.course-author-advantage__des Максимальная прибыль за один день
+								.course-author-advantage
+									.course-author-advantage__val 100+
+									.course-author-advantage__des Учеников успешно прошли курс
+							.course-author__message Привет, рад видеть тебя здесь. Меня зовут Павел Литвинов. Если вкратце, я зарабатываю в среднем +25-50% к депозиту в месяц. В трейдинге я уже более 6-ти лет, и я бы хотел поподробнее рассказать о своем пути в данной сфере. На протяжении курса я расскажу тебе свою историю и дам практические советы, которые позволят ускорить твой путь в этой сфере. Опыт и знания, которые я оформил в этот обучающий курс значительно сократят твой путь и позволят избежать неприятных ошибок, из-за которых большинство начинающий трейдеров теряют свои деньги. Главное - чтобы ты был готов учиться.
+					.course-author-flex__pic
+						img(src="", alt="")
