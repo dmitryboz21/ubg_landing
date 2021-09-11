@@ -1,0 +1,141 @@
+.section-prices {
+    padding: 150px 0 150px;
+
+}
+
+.container--section-prices {}
+
+.section-title--section-prices {
+    letter-spacing: 0.1em;
+}
+
+
+.section-prices-desc {
+    margin-top: 19px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.section-prices-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 66px;
+}
+
+.section-prices-card {
+    display: flex;
+    flex-direction: column;
+    width: 488px;
+    background: #323232;
+    box-shadow: 0px 7px 114px rgba(0, 0, 0, 0.29);
+    border-radius: 0px 0px 10px 10px;
+
+    &__pic {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px 12px 0 0;
+        }
+    }
+
+    &__content {
+        padding: 30px 30px 43px;
+    }
+
+
+}
+
+
+.section-prices-card__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.section-prices-ul {
+    display: block;
+    flex-grow: 1;
+    list-style: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+
+    &--gold {}
+
+    /* identical to box height, or 21px */
+
+
+    color: rgba(255, 255, 255, 0.8);
+
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+
+    &--silver {}
+}
+
+.section-prices-li {
+    list-style: none;
+    position: relative;
+    display: block;
+    padding-left: 17px;
+
+    &--white {
+        color: #ffffff;
+    }
+
+
+    &::before {
+        background: #D1A954;
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        position: absolute;
+        left: 1px;
+        top: 10px;
+    }
+
+
+    &--star {
+        &::before {
+            background: url(../img/star.svg) no-repeat center center;
+            background-size: contain;
+            width: 12px;
+            height: 12px;
+            border-radius: 0;
+        }
+    }
+
+    b {
+        letter-spacing: 0.07em;
+    }
+
+    &+.section-prices-li {
+        margin-top: 20px;
+    }
+
+
+}
+
+.color-gold {
+    color: #d1a954;
+}
+
+.section-prices-card__btn-wrap {
+    margin-top: 39px;
+
+    .btn {
+        width: 100%;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+}
