@@ -33,7 +33,7 @@
     width: 488px;
     background: #323232;
     box-shadow: 0px 7px 114px rgba(0, 0, 0, 0.29);
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 15px 15px 10px 10px;
 
     &__pic {
         width: 100%;
@@ -67,7 +67,6 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
-
     &--gold {}
 
     /* identical to box height, or 21px */
@@ -77,7 +76,12 @@
 
     text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
 
-    &--silver {}
+    &--silver {
+         .section-prices-li::before {
+            background: #6F6F6F;
+        }
+
+    }
 }
 
 .section-prices-li {
