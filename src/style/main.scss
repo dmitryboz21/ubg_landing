@@ -7,7 +7,6 @@
 /* my style */
 
 @import "partials/_var";
-
 @import "partials/mixin";
 @import "partials/components";
 @import "partials/header";
@@ -20,5 +19,6 @@
 @import "partials/section-prices.scss";
 @import "partials/results.scss";
 @import "partials/cert.scss";
-
+@import "partials/reviews.scss";
+@import "partials/faq.scss";
 @import "partials/modals.scss";

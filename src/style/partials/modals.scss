@@ -1,130 +1,114 @@
 .mfp-bg {
-    background: rgba(0, 0, 0, 0.8);
+	background: rgba(0, 0, 0, 0.8);
 }
 
-.myPopupMainClass .mfp-container{
-
-    @media screen and (max-width: 766px) {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
+.myPopupMainClass .mfp-container {
+	@media screen and (max-width: 766px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 .my-modal {
-    margin: 80px auto 80px;
-    width: 936px;
-    max-width: calc(100% - 30px * 2);
-    background: #242424;
-    border-radius: 2px;
-    padding: 112px 73px 84px;
-    position: relative;
-    box-shadow: 0px 14px 14px #000000;
+	margin: 80px auto 80px;
+	width: 936px;
+	max-width: calc(100% - 30px * 2);
+	background: #242424;
+	border-radius: 2px;
+	padding: 112px 73px 84px;
+	position: relative;
+	box-shadow: 0px 14px 14px #000000;
+	@media screen and (max-width: 766px) {
+		max-width: 100%;
+		padding: 55px 15px 31px;
+		margin: 0 auto;
+	}
+	&--oferta {}
+	.mfp-close {
+		right: 8px;
+		top: 6px;
+		padding: 0;
+		margin: 0;
+		width: 57px;
+		height: auto;
+		display: block;
+		line-height: 0;
+		cursor: pointer;
+		transition-duration: .3s;
+		@media screen and (max-width: 766px) {
+			right: 0px;
+			top: 0px;
+		}
+		&:hover {
+			opacity: .3;
+		}
+		svg {
+			display: block;
+			height: auto;
+			width: 100%;
+		}
+	}
+	&__inner {}
+	&__text {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 135%;
+		color: rgba(255, 255, 255, 0.6);
+		@media screen and (max-width: 766px) {
+			font-size: 8px;
+			line-height: 10px;
+			text-align: center;
+			color: #FFFFFF;
+		}
+		h3 {
+			font-weight: 900;
+			font-size: 16px;
+			line-height: 20px;
+			/* identical to box height */
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: #FFFFFF;
+			@media screen and (max-width: 766px) {
+				font-weight: 500;
+				font-size: 8px;
+				line-height: 10px;
+				letter-spacing: 0;
+				text-align: center;
+				color: #FFFFFF;
+				text-transform: none;
+			}
+			&+p {
+				margin-top: 18px;
+				@media screen and (max-width: 766px) {
+					margin-top: 9px;
+				}
+			}
+		}
+		p {
+			@media screen and (max-width: 766px) {}
+			&+p {
+				@media screen and (max-width: 766px) {}
+			}
+			&+h3 {
+				margin-top: 47px;
+				@media screen and (max-width: 766px) {}
+			}
+		}
+	}
+	.mfp-close {
+		&:hover {}
+		&:active {}
+		&:focus {}
+	}
+}
 
-    @media screen and (max-width: 766px) {
-        max-width: 100%;
-        padding: 55px 15px 31px;
-        margin: 0 auto;
+.myPopupMainClass--video {}
 
-    }
+.mfp-content {
+	width: 608px !important;
+	max-width: calc(284 / 506 * (100vh - 80px))!important;
+}
 
-    &--oferta {}
-
-    .mfp-close {
-        right: 8px;
-        top: 6px;
-        padding: 0;
-        margin: 0;
-        width: 57px;
-        height: auto;
-        display: block;
-        line-height: 0;
-        cursor: pointer;
-        transition-duration: .3s;
-
-        @media screen and (max-width: 766px) {
-            right: 0px;
-            top: 0px;
-        }
-
-        &:hover {
-            opacity: .3;
-        }
-
-        svg {
-            display: block;
-            height: auto;
-            width: 100%;
-        }
-    }
-
-    &__inner {}
-
-    &__text {
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 135%;
-        color: rgba(255, 255, 255, 0.6);
-
-        @media screen and (max-width: 766px) {
-            font-size: 8px;
-            line-height: 10px;
-            text-align: center;
-            color: #FFFFFF;
-        }
-
-        h3 {
-            font-weight: 900;
-            font-size: 16px;
-            line-height: 20px;
-            /* identical to box height */
-
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-
-            color: #FFFFFF;
-
-            @media screen and (max-width: 766px) {
-                font-weight: 500;
-                font-size: 8px;
-                line-height: 10px;
-                letter-spacing: 0;
-                text-align: center;
-                color: #FFFFFF;
-                text-transform: none;
-            }
-
-
-            &+p {
-                margin-top: 18px;
-
-                @media screen and (max-width: 766px) {
-                    margin-top: 9px;
-                }
-            }
-        }
-
-        p {
-            @media screen and (max-width: 766px) {}
-
-            &+p {
-                @media screen and (max-width: 766px) {}
-            }
-
-            &+h3 {
-
-                margin-top: 47px;
-
-                @media screen and (max-width: 766px) {}
-            }
-        }
-    }
-
-    .mfp-close {
-        &:hover {}
-
-        &:active {}
-
-        &:focus {}
-    }
+.mfp-iframe-scaler {
+	padding-top: 178.169%;
 }

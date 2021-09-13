@@ -1,0 +1,38 @@
+.section-faq {
+	padding: 119px 0;
+}
+
+.container--section-faq {}
+
+.section-title--section-faq {}
+
+.section-faq-main {
+	width: 1005px;
+	max-width: 100%;
+	margin: 70px auto 0;
+	.cf-accordeon {
+		margin-top: 0 !important;
+	}
+}
+
+.cf-accordeon-item--faq {
+	&--active {}
+	&__top {}
+	&__content {}
+	.cf-accordeon-item__heading {
+		font-weight: 900;
+		font-size: 18px;
+		line-height: 22px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+}
+
+.cf-accordeon-answer {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	/* or 24px */
+	color: rgba(255, 255, 255, 0.6);
+	padding: 24px 65px 0 32px;
+}
