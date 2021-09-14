@@ -102,7 +102,12 @@
 	}
 }
 
-.myPopupMainClass--video {}
+.myPopupMainClass--video {
+	.mfp-iframe-holder .mfp-close {
+		top: 0;
+		right: -62px;
+	}
+}
 
 .mfp-content {
 	width: 608px !important;
