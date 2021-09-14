@@ -1,0 +1,102 @@
+.section-form {
+	.container--secform {}
+}
+
+.secform-form {
+	width: 458px;
+	margin: 0 auto;
+	max-width: 100%;
+	background: #141414;
+	display: block;
+	padding: 53px 30px 50px;
+	&__title {
+		font-weight: 900;
+		font-size: 24px;
+		line-height: 150%;
+		text-align: center;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #D1A954;
+	}
+	&__subtitle {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		text-align: center;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #FFFFFF;
+		margin-top: 19px;
+	}
+	&__inputs {
+		margin-top: 30px;
+		width: 100%;
+	}
+}
+
+.secform-inp-row {
+	width: 100%;
+	&+.secform-inp-row {
+		margin-top: 27px;
+	}
+	&+.secform-inp-row--textarea,
+	&+.secform-inp-row--btn {
+		margin-top: 30px;
+	}
+}
+
+.secform-inp-wrap {
+	position: relative;
+	display: block;
+	width: 100%;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: rgba(255, 255, 255, .5);
+	}
+}
+
+.secform-inp,
+.secform-textarea {
+	position: relative;
+	display: block;
+	width: 100%;
+	font-size: 12px;
+	line-height: 1;
+	color: #fff;
+	&::placeholder {
+		color: rgba(255, 255, 255, 0.2);
+	}
+}
+
+.secform-inp {
+	padding-left: 10px;
+	padding-bottom: 8px;
+}
+
+.secform-textarea {
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding: 14px 10px;
+	resize: none;
+	width: 100%;
+	height: 110px;
+	display: block;
+	overflow: auto;
+}
+
+.secform-btn-submit {
+	width: 100%;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	&:hover {}
+	&:active {}
+	&:focus {}
+}
