@@ -1,5 +1,9 @@
 .section-results {
-	padding: 136px 0 161px;
+	background: radial-gradient(64.74% 128.01% at 16.46% 0%, #1E1E1E 0%, #282828 100%);
+	&__inner{
+		background: url(../img/patterns/pattern-results.svg) repeat top left;
+		padding: 136px 0 161px;
+	}
 	@media screen and (max-width: 1199px) {}
 	@media screen and (max-width: 991px) {}
 	@media screen and (max-width: 766px) {}

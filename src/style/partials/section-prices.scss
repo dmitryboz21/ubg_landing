@@ -1,6 +1,15 @@
 .section-prices {
-    padding: 150px 0 150px;
+    overflow: hidden;
+    position: relative;
+    background: #000;
 
+    background: radial-gradient(73.32% 120.82% at 15.21% 0%, #141414 0%, #1E1E1E 100%);
+    background-size: 100% 2000px;
+    &__inner {
+        display: block;
+        padding: 150px 0 150px;
+        background: url(../img/patterns/pattern-price.svg) repeat top left;
+    }
 }
 
 .container--section-prices {}
@@ -67,6 +76,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
+
     &--gold {}
 
     /* identical to box height, or 21px */
@@ -77,7 +87,7 @@
     text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
 
     &--silver {
-         .section-prices-li::before {
+        .section-prices-li::before {
             background: #6F6F6F;
         }
 

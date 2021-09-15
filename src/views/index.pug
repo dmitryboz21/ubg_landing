@@ -11,7 +11,10 @@ block vars
 
 block main
 	.outer-container
-		section.course-format(style="background-image: url(img/bg-course-format.jpg)")
+		section.course-format#prog
+			img.sformat-art.sformat-art--1(src="img/sformat-art-1.png", alt="")
+			img.sformat-art.sformat-art--2(src="img/sformat-art-2.png", alt="")
+			img.sformat-art.sformat-art--3(src="img/sformat-art-3.png", alt="")
 			.container.container--course-format
 				h2.section-title.section-title--course-format ФОРМАТ КУРСА
 				.course-format__subtitle Курс состоит из 5 блоков, включающих видеозаписи, домашние задания и дополнительные материалы
@@ -65,7 +68,7 @@ block main
 											.cf-accordeon__list-title  Теория:
 											ul.cf-accordeon-list
 												li.cf-accordeon-list__li 1. Основы технического анализа
-												li.cf-accordeon-list__li 2. Индикаторы и их применение 
+												li.cf-accordeon-list__li 2. Индикаторы и их применение
 												li.cf-accordeon-list__li 3. Инструменты трейдера в TradingView
 										.cf-accordeon-cols__col
 											.cf-accordeon__list-title Практика:
@@ -143,7 +146,10 @@ block main
 
 
 
-		section.course-author(style="background-image: url(img/bg-course-author.jpg)")
+		section.scourse-author#author
+			img.sauthor-art.sauthor-art--1(src="img/sauthor-art-1.png", alt="")
+			img.sauthor-art.sauthor-art--2(src="img/sauthor-art-2.png", alt="")
+			img.sauthor-art.sauthor-art--3(src="img/sauthor-art-3.png", alt="")
 			.container.container--course-author
 				.course-author-flex
 					.course-author-flex__info
@@ -171,82 +177,84 @@ block main
 
 
 
-		section.section-prices(style="background-image: url(img/bg-price.jpg)")
-			.container.container--section-prices
-				h2.section-title.section-title--section-prices СТОИМОСТЬ
-				.section-prices-desc Курс преподается по двум тарифам. Также, есть возможность оформить рассрочку без переплат на 4/6/12 месяцев, без первоначального взноса. Таким образом, у Вас есть целый месяц чтобы пройти обучение и даже получить прибыль, которая с лихвой перекроет первый платеж.
-				.section-prices-flex
-					.section-prices-card
-						.section-prices-card__pic
-							img(src="img/price-silver.jpg", alt="")
-						.section-prices-card__content
-							.section-prices-ul.section-prices-ul--silver
-								.section-prices-li Курс в формате видеозаписей;
-								.section-prices-li 5 блоков по 1.5 часа в среднем;
-								.section-prices-li 4 рабочие стратегии торговли;
-								.section-prices-li Домашние задания с проверкой;
-								.section-prices-li Личный наставник на месяц после старта курса;
-								.section-prices-li Павел лично проверяет домашние задания и контролирует работу, вашу и наставника;
-								.section-prices-li Гарантия результата с возвратом средств;
-								.section-prices-li Сертификат в формате .pdf;
-								.section-prices-li Вечный доступ к урокам;
-								.section-prices-li $5 бонусами за каждый пройденный урок;
-								.section-prices-li Право на участие в конкурсе;
+		section.section-prices#price
+			.section-prices__inner
+				.container.container--section-prices
+					h2.section-title.section-title--section-prices СТОИМОСТЬ
+					.section-prices-desc Курс преподается по двум тарифам. Также, есть возможность оформить рассрочку без переплат на 4/6/12 месяцев, без первоначального взноса. Таким образом, у Вас есть целый месяц чтобы пройти обучение и даже получить прибыль, которая с лихвой перекроет первый платеж.
+					.section-prices-flex
+						.section-prices-card
+							.section-prices-card__pic
+								img(src="img/price-silver.jpg", alt="")
+							.section-prices-card__content
+								.section-prices-ul.section-prices-ul--silver
+									.section-prices-li Курс в формате видеозаписей;
+									.section-prices-li 5 блоков по 1.5 часа в среднем;
+									.section-prices-li 4 рабочие стратегии торговли;
+									.section-prices-li Домашние задания с проверкой;
+									.section-prices-li Личный наставник на месяц после старта курса;
+									.section-prices-li Павел лично проверяет домашние задания и контролирует работу, вашу и наставника;
+									.section-prices-li Гарантия результата с возвратом средств;
+									.section-prices-li Сертификат в формате .pdf;
+									.section-prices-li Вечный доступ к урокам;
+									.section-prices-li $5 бонусами за каждый пройденный урок;
+									.section-prices-li Право на участие в конкурсе;
 
-							.section-prices-card__btn-wrap
-								a.btn.btn--square(href="")  Записаться
+								.section-prices-card__btn-wrap
+									a.btn.btn--square(href="")  Записаться
 
-					.section-prices-card
-						.section-prices-card__pic
-							img(src="img/price-gold.jpg", alt="")
-						.section-prices-card__content
-							.section-prices-ul.section-prices-ul--gold
-								.section-prices-li.section-prices-li--white ВСЁ ИЗ ТАРИФА <b>“STANDARD”</b> <span class="color-gold">ПЛЮС</span>:
-								.section-prices-li $20 бонусами за каждый пройденный урок;
-								.section-prices-li Вас будет обучать лично Павел, без наставника. Поддержка Павла  в течении 6 месяцев
-								.section-prices-li Персональное онлайн-занятие по составлению инвестиционного портфеля;
-								.section-prices-li Дополнительный блок по психологии в трейдинге;
-								.section-prices-li Доступ в закрытый чат по практике трейдинга. В нем Павел объясняет свои сделки в реальном времени, и делится личными инвестиционными идеями;
-								.section-prices-li.section-prices-li--star Обучение по этому билету подразумевает личные занятия, соответственно, <span class="color-gold">количество мест ограничено</span>. Так я смогу уделить достаточно внимания каждому студенту, не жертвуя качеством обучения.
+						.section-prices-card
+							.section-prices-card__pic
+								img(src="img/price-gold.jpg", alt="")
+							.section-prices-card__content
+								.section-prices-ul.section-prices-ul--gold
+									.section-prices-li.section-prices-li--white ВСЁ ИЗ ТАРИФА <b>“STANDARD”</b> <span class="color-gold">ПЛЮС</span>:
+									.section-prices-li $20 бонусами за каждый пройденный урок;
+									.section-prices-li Вас будет обучать лично Павел, без наставника. Поддержка Павла  в течении 6 месяцев
+									.section-prices-li Персональное онлайн-занятие по составлению инвестиционного портфеля;
+									.section-prices-li Дополнительный блок по психологии в трейдинге;
+									.section-prices-li Доступ в закрытый чат по практике трейдинга. В нем Павел объясняет свои сделки в реальном времени, и делится личными инвестиционными идеями;
+									.section-prices-li.section-prices-li--star Обучение по этому билету подразумевает личные занятия, соответственно, <span class="color-gold">количество мест ограничено</span>. Так я смогу уделить достаточно внимания каждому студенту, не жертвуя качеством обучения.
 
-							.section-prices-card__btn-wrap
-								a.btn.btn--square(href="")  Записаться
-
-
-
+								.section-prices-card__btn-wrap
+									a.btn.btn--square(href="")  Записаться
 
 
-		section.section-results(style="background-image: url(img/results-bg.jpg)")
-			.container.container--section-results
-				h2.section-title.section-title--section-results РЕЗУЛЬТАТЫ
-				.results-flex
-					.results-item
-						.results-item__circle
-							.results-item__val
-								img(src="img/results-per-95.png", alt="95%")
-								//95%
-						.results-item__info
-							.results-item__name УЧЕНИКОВ
-							.results-item__desc Удвоили депозит в<br> течение месяца после<br> прохождения курса
-					.results-item
-						.results-item__circle
-							.results-item__val
-								img(src="img/results-per-80.png", alt="80%")
-								//80%
-						.results-item__info
-							.results-item__name УЧЕНИКОВ
-							.results-item__desc Создали<br>  диверсифицированные<br>  портфели инвестиций
-					.results-item
-						.results-item__circle
-							.results-item__val
-								img(src="img/results-per-1.png", alt="1%")
-								//1%
-						.results-item__info
-							.results-item__name УЧЕНИКОВ
-							.results-item__desc Попал в личную<br>  торговую команду Павла
 
 
-		section.section-cert(style="background-image: url(img/cert-bg.jpg)")
+
+		section.section-results
+			.section-results__inner
+				.container.container--section-results
+					h2.section-title.section-title--section-results РЕЗУЛЬТАТЫ
+					.results-flex
+						.results-item
+							.results-item__circle
+								.results-item__val
+									img(src="img/results-per-95.png", alt="95%")
+									//95%
+							.results-item__info
+								.results-item__name УЧЕНИКОВ
+								.results-item__desc Удвоили депозит в<br> течение месяца после<br> прохождения курса
+						.results-item
+							.results-item__circle
+								.results-item__val
+									img(src="img/results-per-80.png", alt="80%")
+									//80%
+							.results-item__info
+								.results-item__name УЧЕНИКОВ
+								.results-item__desc Создали<br>  диверсифицированные<br>  портфели инвестиций
+						.results-item
+							.results-item__circle
+								.results-item__val
+									img(src="img/results-per-1.png", alt="1%")
+									//1%
+							.results-item__info
+								.results-item__name УЧЕНИКОВ
+								.results-item__desc Попал в личную<br>  торговую команду Павла
+
+
+		section.section-cert
 			.container.container--section-cert
 				h2.section-title.section-title--section-cert СЕРТИФИКАТ
 				.seccert-flex
@@ -258,7 +266,10 @@ block main
 							.scert-ul__li  Сертификат предоставляет доступ к дополнительным бонусам, розыгышам и реферальным программам.
 							.scert-ul__li  Каждому сертификату присваивается уникальный номер, таким образом, всегда есть возможность удостовериться в его подлинности.
 
-		section.section-reviews(style="background-image: url(img/reviews-bg.jpg)")
+
+
+
+		section.section-reviews#reviews(style="background-image: url(img/reviews-bg.jpg)")
 			.container.container--section-reviews
 				h2.section-title.section-title--section-reviews ОТЗЫВЫ
 				.secreviews-flex
@@ -313,7 +324,8 @@ block main
 
 
 
-		section.section-faq(style="background-image: url(img/faq-bg.jpg)")
+
+		section.section-faq#faq(style="background-image: url(img/faq-bg.jpg)")
 			.container.container--section-faq
 				h2.section-title.section-title--section-faq F.A.Q.
 				.section-faq-main

@@ -55,4 +55,15 @@ $(document).ready(function() {
 			item.siblings('.cf-accordeon-item--active').removeClass('cf-accordeon-item--active').find('.cf-accordeon-item__content').slideUp(400);
 		}
 	});
+	$('.sh-menu-item__link, .footer-menu__item a').on( 'click', function(){
+		var el = $(this);
+		var dest = el.attr('href'); // получаем направление
+		if(dest !== undefined && dest !== '') { // проверяем существование
+			$('html').animate({
+				scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
+			}, 500 // скорость прокрутки
+			);
+		}
+		return false;
+	});
 });

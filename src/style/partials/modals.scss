@@ -107,12 +107,12 @@
 		top: 0;
 		right: -62px;
 	}
+	.mfp-content {
+		width: 608px !important;
+		max-width: calc(284 / 506 * (100vh - 80px))!important;
+	}
 }
 
-.mfp-content {
-	width: 608px !important;
-	max-width: calc(284 / 506 * (100vh - 80px))!important;
-}
 
 .mfp-iframe-scaler {
 	padding-top: 178.169%;

@@ -1,5 +1,11 @@
 .section-cert {
+	overflow: hidden;
+	position: relative;
 	padding: 131px 0 130px;
+	background: url(../img/bg-scert.png), radial-gradient(43.68% 98.04% at 30.49% 50%, #1E1E1E 0%, #191919 100%) no-repeat center center;
+	background-size: 1920px auto;
+
+
 	@media screen and (max-width: 1199px) {}
 	@media screen and (max-width: 991px) {}
 	@media screen and (max-width: 766px) {}
