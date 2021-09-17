@@ -4,11 +4,12 @@
     background: #000;
 
     background: radial-gradient(73.32% 120.82% at 15.21% 0%, #141414 0%, #1E1E1E 100%);
+	//background: radial-gradient(59.83% 114.74% at 81.15% 100%, #0B0B0C 0%, #313131 100%);
     background-size: 100% 2000px;
     &__inner {
         display: block;
         padding: 150px 0 150px;
-        background: url(../img/patterns/pattern-price.svg) repeat top left;
+		background: url(../img/patterns/pattern-s1.svg) repeat center top;
     }
 }
 

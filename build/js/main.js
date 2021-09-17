@@ -44,6 +44,7 @@ $(document).ready(function () {
 		}
 	});
 });
+topBtnShow=false;
 $(document).ready(function() {
 	// $("input[name='phone']").mask(" +7 (999) 999-99-99");
 
@@ -111,5 +112,26 @@ $(document).ready(function() {
 			);
 		}
 		return false;
+	});
+
+	$(window).scroll(function () {
+		/* Кнопка вверх */
+		if (window.scrollY > window.innerHeight) {
+			if (!topBtnShow) {
+				$('#top-btn').addClass('top-btn--show');
+				topBtnShow = true;
+			}
+		} else {
+			if (topBtnShow) {
+				$('#top-btn').removeClass('top-btn--show');
+				topBtnShow = false;
+			}
+		}
+
+	});
+	$(".js-top-btn").click(function () {
+		$("html, body").animate({
+			scrollTop: 0
+		}, 1000);
 	});
 });

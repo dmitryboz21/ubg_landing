@@ -1,6 +1,11 @@
 .section-reviews {
-	padding-top: 99px;
-	padding-bottom: 97px;
+	background: radial-gradient(58.24% 102.21% at 22.47% 16.05%, #161616 0%, #242424 100%);
+	background-size: 100% 5000px;
+	&__inner{
+		background: url(../img/patterns/pattern-s1.svg) repeat center top;
+		padding-top: 99px;
+		padding-bottom: 97px;
+	}
 }
 
 .container--section-reviews {}

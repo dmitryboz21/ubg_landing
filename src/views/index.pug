@@ -269,97 +269,107 @@ block main
 
 
 
-		section.section-reviews#reviews(style="background-image: url(img/reviews-bg.jpg)")
-			.container.container--section-reviews
-				h2.section-title.section-title--section-reviews ОТЗЫВЫ
-				.secreviews-flex
-					.secreviews-card
-						.secreviews-card__pic.js-open-video(href="img/vid1.MOV")
-							img(src="img/reviews-user-1.jpg", alt="")
-							| <svg class="play" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="27" cy="27" r="27" fill="black" fill-opacity="0.7"/><path d="M39.5 26.134C40.1667 26.5189 40.1667 27.4811 39.5 27.866L21.5 38.2583C20.8333 38.6432 20 38.1621 20 37.3923L20 16.6077C20 15.8379 20.8333 15.3568 21.5 15.7417L39.5 26.134Z" fill="#C4C4C4"/></svg>
+		section.section-reviews#reviews
+			.section-reviews__inner
+				.container.container--section-reviews
+					h2.section-title.section-title--section-reviews ОТЗЫВЫ
+					.secreviews-flex
+						.secreviews-card
+							.secreviews-card__pic.js-open-video(href="img/vid1.MOV")
+								img(src="img/reviews-user-1.jpg", alt="")
+								| <svg class="play" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="27" cy="27" r="27" fill="black" fill-opacity="0.7"/><path d="M39.5 26.134C40.1667 26.5189 40.1667 27.4811 39.5 27.866L21.5 38.2583C20.8333 38.6432 20 38.1621 20 37.3923L20 16.6077C20 15.8379 20.8333 15.3568 21.5 15.7417L39.5 26.134Z" fill="#C4C4C4"/></svg>
 
-						.secreviews-card__info
-							.secreviews-card__name Олег
-							.secreviews-card__text Привет, друзья, мое имя Олег, мне 52 года, в трейдинге я оказался очень случайно. Сначала тыкался-мыкался, пробовал различные каналы с сигналами, не могу сказать что много денег “слил”, но потратился. Прошел полный курс у Павла и могу сказать точно: “Количество профитных сделок у меня прибавилось на порядок” Графики я уже осознаю и иногда даже прогнозирую для себя какие-то сделки. Рекомендую обучаться у Павла.
-					.secreviews-card
-						.secreviews-card__pic.js-open-video(href="img/vid2.MOV")
-							img(src="img/reviews-user-2.jpg", alt="")
-							| <svg class="play" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="27" cy="27" r="27" fill="black" fill-opacity="0.7"/><path d="M39.5 26.134C40.1667 26.5189 40.1667 27.4811 39.5 27.866L21.5 38.2583C20.8333 38.6432 20 38.1621 20 37.3923L20 16.6077C20 15.8379 20.8333 15.3568 21.5 15.7417L39.5 26.134Z" fill="#C4C4C4"/></svg>
-						.secreviews-card__info
-							.secreviews-card__name Олег
-							.secreviews-card__text Павел, огромный-огромный привет. Я хочу выразить благодарность за те знания, за тот опыт, который Вы даете на своем обучении. И могу со стопроцентной увереностью сказать: “Все те знания, тот опыт и стратегии, которые Вы даете на обучении, полностью работают и оправдывают себя”. Приходя на обучение, у вас есть свой личный наставник и связь напрямую с Павлом. Вы можете без стеснений задавать любые вопросы.
-					.secreviews-card
-						.secreviews-card__pic.js-open-video(href="img/vid3.mp4")
-							img(src="img/reviews-user-3.jpg", alt="")
-							| <svg class="play" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="27" cy="27" r="27" fill="black" fill-opacity="0.7"/><path d="M39.5 26.134C40.1667 26.5189 40.1667 27.4811 39.5 27.866L21.5 38.2583C20.8333 38.6432 20 38.1621 20 37.3923L20 16.6077C20 15.8379 20.8333 15.3568 21.5 15.7417L39.5 26.134Z" fill="#C4C4C4"/></svg>
-						.secreviews-card__info
-							.secreviews-card__name Андрей
-							.secreviews-card__text Всем привет, хочу немножко рассказать про уроки от Паши. Раньше я уже знакомился с торговлей, изучал самостоятельно, но мне было сложно разобраться во всем самостоятельно.Я обратил внимание на то, насколько простым языком подан материал, наверное, поймет каждый. Пока обтачиваюсь, смотрю как это работает. Я думаю, уроки надо смотреть - это интересно и если этим заниматься, в итоге можно иметь успех.
-
-
-		section.section-form(style="background-image: url(img/secform-bg.jpg)")
-			.container.container--secform
-				form.secform-form(action="")
-					.secform-form__title готов достичь новых финансовых высот?
-					.secform-form__subtitle присоединяйся!
-					.secform-form__inputs
-						.secform-inp-row
-							.secform-inp-wrap
-								input.secform-inp(type="text", name="", placeholder="Имя")
-						.secform-inp-row
-							.secform-inp-wrap
-								input.secform-inp(type="text", name="", placeholder="Телефон")
-						.secform-inp-row
-							.secform-inp-wrap
-								input.secform-inp(type="text", name="", placeholder="E-mail (не обязательно)")
-						.secform-inp-row
-							.secform-inp-wrap
-								input.secform-inp(type="text", name="", placeholder="Ник Telegram (если есть)")
-						.secform-inp-row.secform-inp-row--textarea
-							.secform-textarea-wrap
-								textarea.secform-textarea(name="", placeholder="Сообщение (не обязательно)" )
-						.secform-inp-row.secform-inp-row--btn
-							button.btn.btn--square.secform-btn-submit(type="submit") Записаться
+							.secreviews-card__info
+								.secreviews-card__name Олег
+								.secreviews-card__text Привет, друзья, мое имя Олег, мне 52 года, в трейдинге я оказался очень случайно. Сначала тыкался-мыкался, пробовал различные каналы с сигналами, не могу сказать что много денег “слил”, но потратился. Прошел полный курс у Павла и могу сказать точно: “Количество профитных сделок у меня прибавилось на порядок” Графики я уже осознаю и иногда даже прогнозирую для себя какие-то сделки. Рекомендую обучаться у Павла.
+						.secreviews-card
+							.secreviews-card__pic.js-open-video(href="img/vid2.MOV")
+								img(src="img/reviews-user-2.jpg", alt="")
+								| <svg class="play" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="27" cy="27" r="27" fill="black" fill-opacity="0.7"/><path d="M39.5 26.134C40.1667 26.5189 40.1667 27.4811 39.5 27.866L21.5 38.2583C20.8333 38.6432 20 38.1621 20 37.3923L20 16.6077C20 15.8379 20.8333 15.3568 21.5 15.7417L39.5 26.134Z" fill="#C4C4C4"/></svg>
+							.secreviews-card__info
+								.secreviews-card__name Олег
+								.secreviews-card__text Павел, огромный-огромный привет. Я хочу выразить благодарность за те знания, за тот опыт, который Вы даете на своем обучении. И могу со стопроцентной увереностью сказать: “Все те знания, тот опыт и стратегии, которые Вы даете на обучении, полностью работают и оправдывают себя”. Приходя на обучение, у вас есть свой личный наставник и связь напрямую с Павлом. Вы можете без стеснений задавать любые вопросы.
+						.secreviews-card
+							.secreviews-card__pic.js-open-video(href="img/vid3.mp4")
+								img(src="img/reviews-user-3.jpg", alt="")
+								| <svg class="play" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="27" cy="27" r="27" fill="black" fill-opacity="0.7"/><path d="M39.5 26.134C40.1667 26.5189 40.1667 27.4811 39.5 27.866L21.5 38.2583C20.8333 38.6432 20 38.1621 20 37.3923L20 16.6077C20 15.8379 20.8333 15.3568 21.5 15.7417L39.5 26.134Z" fill="#C4C4C4"/></svg>
+							.secreviews-card__info
+								.secreviews-card__name Андрей
+								.secreviews-card__text Всем привет, хочу немножко рассказать про уроки от Паши. Раньше я уже знакомился с торговлей, изучал самостоятельно, но мне было сложно разобраться во всем самостоятельно.Я обратил внимание на то, насколько простым языком подан материал, наверное, поймет каждый. Пока обтачиваюсь, смотрю как это работает. Я думаю, уроки надо смотреть - это интересно и если этим заниматься, в итоге можно иметь успех.
 
 
+		section.section-form
+			.section-form__inner
+				.container.container--secform
+					form.secform-form(action="")
+						.secform-form__title готов достичь новых финансовых высот?
+						.secform-form__subtitle присоединяйся!
+						.secform-form__inputs
+							.secform-inp-row
+								.secform-inp-wrap
+									input.secform-inp(type="text", name="", placeholder="Имя")
+							.secform-inp-row
+								.secform-inp-wrap
+									input.secform-inp(type="text", name="", placeholder="Телефон")
+							.secform-inp-row
+								.secform-inp-wrap
+									input.secform-inp(type="text", name="", placeholder="E-mail (не обязательно)")
+							.secform-inp-row
+								.secform-inp-wrap
+									input.secform-inp(type="text", name="", placeholder="Ник Telegram (если есть)")
+							.secform-inp-row.secform-inp-row--textarea
+								.secform-textarea-wrap
+									textarea.secform-textarea(name="", placeholder="Сообщение (не обязательно)" )
+							.secform-inp-row.secform-inp-row--btn
+								button.btn.btn--square.secform-btn-submit(type="submit") Записаться
 
 
 
-		section.section-faq#faq(style="background-image: url(img/faq-bg.jpg)")
-			.container.container--section-faq
-				h2.section-title.section-title--section-faq F.A.Q.
-				.section-faq-main
-					.cf-accordeon.cf-accordeon--faq
-						.cf-accordeon-item.cf-accordeon-item--faq
-							.cf-accordeon-item__top.js-cf-accordeon-item__top
-								.cf-accordeon-item__heading Что входит в курс?
-							.cf-accordeon-item__content
-								.cf-accordeon-answer Курс состоит из пяти блоков, в каждом блоке видеоролики в записи, общей длительностью более пяти часов. С каждым уроком Вы получите методические материалы, для самостоятельного изучения, и домашние задания двух уровней сложности. Домашние задания проверяются, их выполнение обязательно.
-						.cf-accordeon-item.cf-accordeon-item--faq
-							.cf-accordeon-item__top.js-cf-accordeon-item__top
-								.cf-accordeon-item__heading Сколько длится обучение?
-							.cf-accordeon-item__content
-								.cf-accordeon-answer Курс составлен таким образом, чтобы Вы могли обучаться в свободное время. Но это не означает что нужно затягивать. Оптимально пройти курс в течение месяца. Доступ ко всем урокам и материалам сохранится после прохождения курса.
-						.cf-accordeon-item.cf-accordeon-item--faq
-							.cf-accordeon-item__top.js-cf-accordeon-item__top
-								.cf-accordeon-item__heading Какой размер депозита необходим для обучения?
-							.cf-accordeon-item__content
-								.cf-accordeon-answer Задача этого курса - дать Вам все необходимые знания для старта своей карьеры трейдера. Поэтому, все обучение происходит на демонстрационном счете - это убережет Вас от потери реальных денег. 
-						.cf-accordeon-item.cf-accordeon-item--faq
-							.cf-accordeon-item__top.js-cf-accordeon-item__top
-								.cf-accordeon-item__heading Почему нельзя оплатить обучение после прохождения курса?
-							.cf-accordeon-item__content
-								.cf-accordeon-answer Все дело в психологии, человеческий мозг обесценивает все, что достается ему легко. Таким образом, ученик, получивший курс бесплатно, попросту не проходит его. Мозг найдет сотни объективных причин, тем не менее, результат всегда один - ученик не проходит обучение. Заплатив реальные деньги - Вы будете мотивированны получить ценность в ответ, и обязательно получите ее.   
-						.cf-accordeon-item.cf-accordeon-item--faq
-							.cf-accordeon-item__top.js-cf-accordeon-item__top
-								.cf-accordeon-item__heading Сколько стоит обучение?
-							.cf-accordeon-item__content
-								.cf-accordeon-answer Курс преподаетсяется по двум тарифам. Объем и полезность информации, при этом, не отличается. Билет "Individual" дает больше бонусов во время и после обучения, кроме этого, Вашем обучением занимаюсь лично я. Я не хочу жертвовать качеством обучения, соответственно, количество учеников, которых я могу обучить по билету "Individual" - ограничено. Вне зависимости от билета, все домашние задания проверяю лично я. Стоимость обучения по билету "Standard" - $500, по билету "Individual" - $1500. Более подробно о каждом билете Вы можете узнать в блоке "Стоимость".
-						.cf-accordeon-item.cf-accordeon-item--faq
-							.cf-accordeon-item__top.js-cf-accordeon-item__top
-								.cf-accordeon-item__heading Возможно ли оформить рассрочку?
-							.cf-accordeon-item__content
-								.cf-accordeon-answer Разумеется, Вы можете оформить рассрочку на 4, 6 или 12 месяцев, без переплат и первоначального взноса. Таким образом, у вас будет целый месяц на то чтобы пройти курс и даже получить первую реальную прибыль, которая может привысить первый взнос.
+
+
+		section.section-faq#faq
+			.section-faq__inner
+				.container.container--section-faq
+					h2.section-title.section-title--section-faq F.A.Q.
+					.section-faq-main
+						.cf-accordeon.cf-accordeon--faq
+							.cf-accordeon-item.cf-accordeon-item--faq
+								.cf-accordeon-item__top.js-cf-accordeon-item__top
+									.cf-accordeon-item__heading Что входит в курс?
+								.cf-accordeon-item__content
+									.cf-accordeon-answer Курс состоит из пяти блоков, в каждом блоке видеоролики в записи, общей длительностью более пяти часов. С каждым уроком Вы получите методические материалы, для самостоятельного изучения, и домашние задания двух уровней сложности. Домашние задания проверяются, их выполнение обязательно.
+							.cf-accordeon-item.cf-accordeon-item--faq
+								.cf-accordeon-item__top.js-cf-accordeon-item__top
+									.cf-accordeon-item__heading Сколько длится обучение?
+								.cf-accordeon-item__content
+									.cf-accordeon-answer Курс составлен таким образом, чтобы Вы могли обучаться в свободное время. Но это не означает что нужно затягивать. Оптимально пройти курс в течение месяца. Доступ ко всем урокам и материалам сохранится после прохождения курса.
+							.cf-accordeon-item.cf-accordeon-item--faq
+								.cf-accordeon-item__top.js-cf-accordeon-item__top
+									.cf-accordeon-item__heading Какой размер депозита необходим для обучения?
+								.cf-accordeon-item__content
+									.cf-accordeon-answer Задача этого курса - дать Вам все необходимые знания для старта своей карьеры трейдера. Поэтому, все обучение происходит на демонстрационном счете - это убережет Вас от потери реальных денег.
+							.cf-accordeon-item.cf-accordeon-item--faq
+								.cf-accordeon-item__top.js-cf-accordeon-item__top
+									.cf-accordeon-item__heading Почему нельзя оплатить обучение после прохождения курса?
+								.cf-accordeon-item__content
+									.cf-accordeon-answer Все дело в психологии, человеческий мозг обесценивает все, что достается ему легко. Таким образом, ученик, получивший курс бесплатно, попросту не проходит его. Мозг найдет сотни объективных причин, тем не менее, результат всегда один - ученик не проходит обучение. Заплатив реальные деньги - Вы будете мотивированны получить ценность в ответ, и обязательно получите ее.
+							.cf-accordeon-item.cf-accordeon-item--faq
+								.cf-accordeon-item__top.js-cf-accordeon-item__top
+									.cf-accordeon-item__heading Сколько стоит обучение?
+								.cf-accordeon-item__content
+									.cf-accordeon-answer Курс преподаетсяется по двум тарифам. Объем и полезность информации, при этом, не отличается. Билет "Individual" дает больше бонусов во время и после обучения, кроме этого, Вашем обучением занимаюсь лично я. Я не хочу жертвовать качеством обучения, соответственно, количество учеников, которых я могу обучить по билету "Individual" - ограничено. Вне зависимости от билета, все домашние задания проверяю лично я. Стоимость обучения по билету "Standard" - $500, по билету "Individual" - $1500. Более подробно о каждом билете Вы можете узнать в блоке "Стоимость".
+							.cf-accordeon-item.cf-accordeon-item--faq
+								.cf-accordeon-item__top.js-cf-accordeon-item__top
+									.cf-accordeon-item__heading Возможно ли оформить рассрочку?
+								.cf-accordeon-item__content
+									.cf-accordeon-answer Разумеется, Вы можете оформить рассрочку на 4, 6 или 12 месяцев, без переплат и первоначального взноса. Таким образом, у вас будет целый месяц на то чтобы пройти курс и даже получить первую реальную прибыль, которая может привысить первый взнос.
+
+
+							.cf-accordeon-item.cf-accordeon-item--faq
+								.cf-accordeon-item__top.js-cf-accordeon-item__top
+									.cf-accordeon-item__heading one more
+								.cf-accordeon-item__content
+									.cf-accordeon-answer one more text
 
 
 

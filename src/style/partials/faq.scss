@@ -1,5 +1,11 @@
 .section-faq {
-	padding: 119px 0;
+	background: radial-gradient(70.19% 78.06% at 17.48% 17.17%, #191919 0%, #141414 100%);
+	background-size: 100% 3000px;
+	&__inner{
+		background: url(../img/patterns/pattern-olympic.svg) repeat center top;
+
+		padding: 119px 0;
+	}
 }
 
 .container--section-faq {}
