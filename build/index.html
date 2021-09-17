@@ -40,7 +40,7 @@
               <div class="main-banner-info">
                 <h1 class="main-banner-info__h1">курс по трейдингу<br class="dd1	"> криптовалют</h1>
                 <div class="main-banner-info__desc">Это не волшебная кнопка с надписью “Бесконечные деньги”. Это полезная и структурированная информация, знания и опыт, которые помогут новичку не потерять деньги в трейдинге, а постепенно и упорно увеличивать депозит.</div>
-                <div class="main-banner-info__buttons"><a class="btn btn--square" href="">Записаться</a><a class="btn btn--dashed">Обратная связь</a></div>
+                <div class="main-banner-info__buttons"><a class="btn btn--square js-open-popup-inline" href="#modal-sign-up">Записаться</a><a class="btn btn--dashed js-open-popup-inline" href="#modal-feedback">Обратная связь</a></div>
                 <div class="main-banner-advantages">
                   <div class="main-banner-advantage">
                     <div class="main-banner-advantage__val">100+</div>
@@ -299,7 +299,7 @@
                       <div class="section-prices-li">$5 бонусами за каждый пройденный урок;</div>
                       <div class="section-prices-li">Право на участие в конкурсе;</div>
                     </div>
-                    <div class="section-prices-card__btn-wrap"><a class="btn btn--square" href=""> Записаться</a></div>
+                    <div class="section-prices-card__btn-wrap"><a class="btn btn--square js-set-modal-tarif js-open-popup-inline" href="#modal-sign-up" data-tarif="silver"> Записаться</a></div>
                   </div>
                 </div>
                 <div class="section-prices-card">
@@ -314,7 +314,7 @@
                       <div class="section-prices-li">Доступ в закрытый чат по практике трейдинга. В нем я объясняю свои сделки в реальном времени, и делюсь личными инвестиционными идеями;</div>
                       <div class="section-prices-li section-prices-li--star">Обучение по этому билету подразумевает личные занятия, соответственно, <span class="color-gold">количество мест ограничено</span>. Так я смогу уделить достаточно внимания каждому ученику, не жертвуя качеством обучения.</div>
                     </div>
-                    <div class="section-prices-card__btn-wrap"><a class="btn btn--square" href=""> Записаться</a></div>
+                    <div class="section-prices-card__btn-wrap"><a class="btn btn--square js-set-modal-tarif js-open-popup-inline" href="#modal-sign-up" data-tarif="gold"> Записаться</a></div>
                   </div>
                 </div>
               </div>
@@ -417,27 +417,27 @@
                 <div class="secform-form__inputs">
                   <div class="secform-inp-row">
                     <div class="secform-inp-wrap">
-                      <input class="secform-inp" type="text" name="" placeholder="Имя">
+                      <input class="secform-inp" type="text" name="name" placeholder="Имя">
                     </div>
                   </div>
                   <div class="secform-inp-row">
                     <div class="secform-inp-wrap">
-                      <input class="secform-inp" type="text" name="" placeholder="Телефон">
+                      <input class="secform-inp" type="tel" name="tel" placeholder="Телефон">
                     </div>
                   </div>
                   <div class="secform-inp-row">
                     <div class="secform-inp-wrap">
-                      <input class="secform-inp" type="text" name="" placeholder="E-mail (не обязательно)">
+                      <input class="secform-inp" type="email" name="email" placeholder="E-mail (не обязательно)">
                     </div>
                   </div>
                   <div class="secform-inp-row">
                     <div class="secform-inp-wrap">
-                      <input class="secform-inp" type="text" name="" placeholder="Ник Telegram (если есть)">
+                      <input class="secform-inp" type="text" name="telegram" placeholder="Ник Telegram (если есть)">
                     </div>
                   </div>
                   <div class="secform-inp-row secform-inp-row--textarea">
                     <div class="secform-textarea-wrap">
-                      <textarea class="secform-textarea" name="" placeholder="Сообщение (не обязательно)"></textarea>
+                      <textarea class="secform-textarea" name="text" placeholder="Сообщение (не обязательно)"></textarea>
                     </div>
                   </div>
                   <div class="secform-inp-row secform-inp-row--btn">
@@ -532,8 +532,8 @@
                     <div class="foo-contact__type">По всем вопросам:</div><a class="foo-contact__val" href="mailto:Litvinovtrading@gmail.com">Litvinovtrading@gmail.com</a>
                   </div>
                 </div>
-                <div class="foo-conf"><a class="foo-conf__link js-open-popup-inline" href="#foo-privacy">Политика конфиденциальности</a>
-                  <div class="foo-conf__link foo-conf__link--delimiter">|</div><a class="foo-conf__link js-open-popup-inline" href="#foo-oferta">Условия оферты</a>
+                <div class="foo-conf"><a class="foo-conf__link js-open-popup-inline" href="#foo-oferta">Политика конфиденциальности</a>
+                  <div class="foo-conf__link foo-conf__link--delimiter"> |</div><a class="foo-conf__link js-open-popup-inline" href="#foo-oferta">Условия оферты</a>
                 </div>
               </div>
             </div>
@@ -589,7 +589,7 @@
                   <button class="btn btn--square footer-form__btn" type="submit">Записаться</button>
                 </div>
               </form>
-              <div class="foo-btn-sign-up-m-wrap dt2 dm1"><a class="btn btn--square foo-btn-sign-up-m" href="#">Записаться</a><a class="btn btn--square btn--square--transparent-dark foo-btn-sign-up-m dm1" href="#">Обратная связь</a></div>
+              <div class="foo-btn-sign-up-m-wrap dt2 dm1"><a class="btn btn--square foo-btn-sign-up-m js-open-popup-inline" href="#modal-sign-up">Записаться</a><a class="btn btn--square btn--square--transparent-dark foo-btn-sign-up-m dm1 js-open-popup-inline" href="#modal-feedback">Обратная связь</a></div>
             </div>
             <div class="footer-col footer-col--5 dt2 dm1">
               <div class="foo-contacts">
@@ -606,16 +606,87 @@
     <div class="top-btn-wrap container">
       <div class="top-btn js-top-btn" id="top-btn"><svg width="43" height="29" viewBox="0 0 43 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.3916 3.5L2.99995 25.7657" stroke="#D1A954" stroke-width="3" stroke-linecap="round"/><path d="M22.3916 3.5L40.7833 25.7657" stroke="#D1A954" stroke-width="3" stroke-linecap="round"/></svg></div>
     </div>
-    <div class="my-modal my-modal--oferta mfp-hide" id="foo-privacy">
+    <!--#foo-privacy.my-modal.my-modal--oferta.mfp-hide
+    .my-modal__inner
+    	.my-modal__text
+    		h3 Условия оферты
+    		p Условия оферты Условия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия оферты
+    		p Условия оферты Условия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия оферты
+    		p Условия оферты Условия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия оферты
+    		p Условия оферты Условия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия оферты
+    		p Условия оферты Условия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия оферты
+    
+    
+    -->
+    <div class="my-modal my-modal--type-sign-up mfp-hide" id="modal-sign-up">
       <div class="my-modal__inner">
-        <div class="my-modal__text">
-          <h3>Условия оферты</h3>
-          <p>Условия оферты Условия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия оферты</p>
-          <p>Условия оферты Условия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия оферты</p>
-          <p>Условия оферты Условия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия оферты</p>
-          <p>Условия оферты Условия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия оферты</p>
-          <p>Условия оферты Условия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия оферты</p>
-        </div>
+        <form class="secform-form secform-form--modal" action="">
+          <div class="secform-form__title">готов достичь новых финансовых высот?</div>
+          <div class="secform-form__inputs">
+            <div class="secform-inp-row">
+              <div class="secform-inp-wrap">
+                <input class="secform-inp" type="text" name="name" placeholder="Имя">
+              </div>
+            </div>
+            <div class="secform-inp-row">
+              <div class="secform-inp-wrap">
+                <input class="secform-inp" type="tel" name="tel" placeholder="Телефон">
+              </div>
+            </div>
+            <div class="secform-inp-row">
+              <div class="secform-inp-wrap">
+                <input class="secform-inp" type="email" name="email" placeholder="E-mail (не обязательно)">
+              </div>
+            </div>
+            <div class="secform-inp-row">
+              <div class="secform-inp-wrap">
+                <input class="secform-inp" type="text" name="telegram" placeholder="Ник Telegram (если есть)">
+              </div>
+            </div>
+            <div class="secform-inp-row secform-inp-row--textarea">
+              <div class="secform-textarea-wrap">
+                <textarea class="secform-textarea" name="text" placeholder="Сообщение (не обязательно)"></textarea>
+              </div>
+            </div>
+            <div class="secform-inp-row secform-inp-row--btn">
+              <input class="hide" id="tarif-inp" type="text" name="tarif">
+              <button class="btn btn--square secform-btn-submit" type="submit">Отправить заявку</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="my-modal my-modal--type-sign-up mfp-hide" id="modal-feedback">
+      <div class="my-modal__inner">
+        <form class="secform-form secform-form--modal" action="">
+          <div class="secform-form__title">готов достичь новых финансовых высот?</div>
+          <div class="secform-form__inputs">
+            <div class="secform-inp-row">
+              <div class="secform-inp-wrap">
+                <input class="secform-inp" type="text" name="name" placeholder="Имя">
+              </div>
+            </div>
+            <div class="secform-inp-row">
+              <div class="secform-inp-wrap">
+                <input class="secform-inp" type="email" name="email" placeholder="E-mail">
+              </div>
+            </div>
+            <div class="secform-inp-row">
+              <div class="secform-inp-wrap">
+                <input class="secform-inp" type="text" name="telegram" placeholder="Ник Telegram (если есть)">
+              </div>
+            </div>
+            <div class="secform-inp-row secform-inp-row--textarea">
+              <div class="secform-textarea-wrap">
+                <textarea class="secform-textarea" name="text" placeholder="Сообщение (не обязательно)"></textarea>
+              </div>
+            </div>
+            <div class="secform-inp-row secform-inp-row--btn">
+              <input class="hide" id="tarif-inp" type="text" name="tarif">
+              <button class="btn btn--square secform-btn-submit" type="submit">Отправить заявку</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
     <div class="my-modal my-modal--privacy mfp-hide" id="foo-oferta">

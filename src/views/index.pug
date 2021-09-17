@@ -201,7 +201,7 @@ block main
 									.section-prices-li Право на участие в конкурсе;
 
 								.section-prices-card__btn-wrap
-									a.btn.btn--square(href="")  Записаться
+									a.btn.btn--square.js-set-modal-tarif.js-open-popup-inline(href="#modal-sign-up" data-tarif="silver")  Записаться
 
 						.section-prices-card
 							.section-prices-card__pic
@@ -217,7 +217,7 @@ block main
 									.section-prices-li.section-prices-li--star Обучение по этому билету подразумевает личные занятия, соответственно, <span class="color-gold">количество мест ограничено</span>. Так я смогу уделить достаточно внимания каждому ученику, не жертвуя качеством обучения.
 
 								.section-prices-card__btn-wrap
-									a.btn.btn--square(href="")  Записаться
+									a.btn.btn--square.js-set-modal-tarif.js-open-popup-inline(href="#modal-sign-up" data-tarif="gold")  Записаться
 
 
 
@@ -307,19 +307,19 @@ block main
 						.secform-form__inputs
 							.secform-inp-row
 								.secform-inp-wrap
-									input.secform-inp(type="text", name="", placeholder="Имя")
+									input.secform-inp(type="text", name="name", placeholder="Имя")
 							.secform-inp-row
 								.secform-inp-wrap
-									input.secform-inp(type="text", name="", placeholder="Телефон")
+									input.secform-inp(type="tel", name="tel", placeholder="Телефон")
 							.secform-inp-row
 								.secform-inp-wrap
-									input.secform-inp(type="text", name="", placeholder="E-mail (не обязательно)")
+									input.secform-inp(type="email", name="email", placeholder="E-mail (не обязательно)")
 							.secform-inp-row
 								.secform-inp-wrap
-									input.secform-inp(type="text", name="", placeholder="Ник Telegram (если есть)")
+									input.secform-inp(type="text", name="telegram", placeholder="Ник Telegram (если есть)")
 							.secform-inp-row.secform-inp-row--textarea
 								.secform-textarea-wrap
-									textarea.secform-textarea(name="", placeholder="Сообщение (не обязательно)" )
+									textarea.secform-textarea(name="text", placeholder="Сообщение (не обязательно)" )
 							.secform-inp-row.secform-inp-row--btn
 								button.btn.btn--square.secform-btn-submit(type="submit") Записаться
 

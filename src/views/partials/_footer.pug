@@ -13,8 +13,8 @@
 								.foo-contact__type По всем вопросам:
 								a.foo-contact__val(href="mailto:Litvinovtrading@gmail.com") Litvinovtrading@gmail.com
 						.foo-conf
-							a.foo-conf__link.js-open-popup-inline(href="#foo-privacy") Политика конфиденциальности
-							.foo-conf__link.foo-conf__link--delimiter |
+							a.foo-conf__link.js-open-popup-inline(href="#foo-oferta") Политика конфиденциальности
+							.foo-conf__link.foo-conf__link--delimiter  |
 							a.foo-conf__link.js-open-popup-inline(href="#foo-oferta") Условия оферты
 				.footer-col.footer-col--2
 					.footer-menu-opener.js-footer-menu-opener
@@ -73,8 +73,8 @@
 							button.btn.btn--square.footer-form__btn(type="submit") Записаться
 
 					.foo-btn-sign-up-m-wrap.dt2.dm1
-						a.btn.btn--square.foo-btn-sign-up-m(href="#") Записаться
-						a.btn.btn--square.btn--square--transparent-dark.foo-btn-sign-up-m.dm1(href="#") Обратная связь
+						a.btn.btn--square.foo-btn-sign-up-m.js-open-popup-inline(href="#modal-sign-up") Записаться
+						a.btn.btn--square.btn--square--transparent-dark.foo-btn-sign-up-m.dm1.js-open-popup-inline(href="#modal-feedback") Обратная связь
 
 
 				.footer-col.footer-col--5.dt2.dm1
@@ -90,7 +90,7 @@
 	.top-btn.js-top-btn#top-btn
 		| <svg width="43" height="29" viewBox="0 0 43 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.3916 3.5L2.99995 25.7657" stroke="#D1A954" stroke-width="3" stroke-linecap="round"/><path d="M22.3916 3.5L40.7833 25.7657" stroke="#D1A954" stroke-width="3" stroke-linecap="round"/></svg>
 
-#foo-privacy.my-modal.my-modal--oferta.mfp-hide
+//#foo-privacy.my-modal.my-modal--oferta.mfp-hide
 
 	.my-modal__inner
 		.my-modal__text
@@ -102,8 +102,56 @@
 			p Условия оферты Условия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия офертыУсловия оферты
 
 
-#foo-oferta.my-modal.my-modal--privacy.mfp-hide
+#modal-sign-up.my-modal.my-modal--type-sign-up.mfp-hide
+	.my-modal__inner
+		form.secform-form.secform-form--modal(action="")
+			.secform-form__title готов достичь новых финансовых высот?
+			.secform-form__inputs
 
+				.secform-inp-row
+					.secform-inp-wrap
+						input.secform-inp(type="text", name="name", placeholder="Имя")
+				.secform-inp-row
+					.secform-inp-wrap
+						input.secform-inp(type="tel", name="tel", placeholder="Телефон")
+				.secform-inp-row
+					.secform-inp-wrap
+						input.secform-inp(type="email", name="email", placeholder="E-mail (не обязательно)")
+				.secform-inp-row
+					.secform-inp-wrap
+						input.secform-inp(type="text", name="telegram", placeholder="Ник Telegram (если есть)")
+				.secform-inp-row.secform-inp-row--textarea
+					.secform-textarea-wrap
+						textarea.secform-textarea(name="text", placeholder="Сообщение (не обязательно)" )
+				.secform-inp-row.secform-inp-row--btn
+					input#tarif-inp.hide(type="text" name="tarif")
+					button.btn.btn--square.secform-btn-submit(type="submit") Отправить заявку
+
+#modal-feedback.my-modal.my-modal--type-sign-up.mfp-hide
+	.my-modal__inner
+		form.secform-form.secform-form--modal(action="")
+			.secform-form__title готов достичь новых финансовых высот?
+			.secform-form__inputs
+				.secform-inp-row
+					.secform-inp-wrap
+						input.secform-inp(type="text", name="name", placeholder="Имя")
+				.secform-inp-row
+					.secform-inp-wrap
+						input.secform-inp(type="email", name="email", placeholder="E-mail")
+				.secform-inp-row
+					.secform-inp-wrap
+						input.secform-inp(type="text", name="telegram", placeholder="Ник Telegram (если есть)")
+				.secform-inp-row.secform-inp-row--textarea
+					.secform-textarea-wrap
+						textarea.secform-textarea(name="text", placeholder="Сообщение (не обязательно)" )
+				.secform-inp-row.secform-inp-row--btn
+					input#tarif-inp.hide(type="text" name="tarif")
+					button.btn.btn--square.secform-btn-submit(type="submit") Отправить заявку
+
+
+
+
+#foo-oferta.my-modal.my-modal--privacy.mfp-hide
 	.my-modal__inner
 		.my-modal__text
 			h3 Политика конфиденциальности
