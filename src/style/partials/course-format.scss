@@ -1,36 +1,63 @@
 .course-format {
-	background-position: center center;
-	background-size: cover;
-	padding: 152px 0 184px;
-	background: radial-gradient(100% 100% at 87.92% 100%, #2B2B2B 0%, #202020 100%);
-	background-size: 100% 3000px;
-	background-repeat: no-repeat;
 	position: relative;
 	overflow: hidden;
+	padding: 152px 0 184px;
+	background: radial-gradient(100% 100% at 87.92% 100%, #2B2B2B 0%, #202020 100%);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-size: 100% 3000px;
+	z-index: 1;
+
+	@media screen and (max-width: 1199px) {
+		padding-bottom: 107px;
+	}
+
+	@media screen and (max-width: 991px) {
+		padding-top: 98px;
+		padding-bottom: 94px;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 }
 
 .sformat-art {
 	position: absolute;
 	display: block;
+	z-index: 1;
+
+
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 
 	&--1 {
-		left: calc(50% + 396px );
 		top: 64px;
+		left: calc(50% + 396px);
 	}
 
 	&--2 {
-		right: calc(50% + 227px );
 		top: 470px;
+		right: calc(50% + 227px);
 	}
 
 	&--3 {
-		left: calc(50% + 181px);
 		//top: 358px;
 		top: 320px;
+		left: calc(50% + 181px);
 	}
 }
 
 .container {
+	position: relative;
+	z-index: 2;
+
 	&--course-format {}
 }
 
@@ -42,38 +69,117 @@
 	font-weight: 900;
 	line-height: 44px;
 
-	&--course-format {}
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {
+		font-size: 24px;
+		line-height: 29px;
+		text-align: center;
+		letter-spacing: 0.15em;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+
+	&--course-format {
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
+	}
 }
 
 .course-format__subtitle {
+	margin-top: 20px;
 	letter-spacing: 0.055em;
 	text-transform: uppercase;
 	color: rgba(255, 255, 255, 0.7);
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 150%;
-	margin-top: 20px;
+
+	@media screen and (max-width: 1199px) {
+		font-size: 14px;
+		line-height: 150%;
+		letter-spacing: 0.05em;
+	}
+
+	@media screen and (max-width: 991px) {
+		text-align: center;
+		margin-top: 34px;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 }
 
 .course-format__desc {
+	margin-top: 31px;
 	/* or 24px */
 	color: rgba(255, 255, 255, 0.3);
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 150%;
-	margin-top: 31px;
+
+	@media screen and (max-width: 1199px) {
+		font-size: 14px;
+		margin-top: 34px;
+	}
+
+	@media screen and (max-width: 991px) {
+		margin-top: 14px;
+		text-align: center;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 }
 
 .course-format-advantages {
 	display: flex;
-	justify-content: space-between;
 	align-items: stretch;
+	justify-content: space-between;
 	margin-top: 63px;
 
+	@media screen and (max-width: 1199px) {
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 75px;
+		width: 845px;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: -74px;
+	}
+
+	@media screen and (max-width: 991px) {
+		margin-top: 57px;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+
 	&__delimiter {
-		width: 2px;
 		display: block;
+		width: 2px;
 		background: rgba(255, 255, 255, 0.05);
+
+		@media screen and (max-width: 1199px) {
+			display: none;
+		}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 }
 
@@ -81,9 +187,42 @@
 	display: flex;
 	align-items: center;
 
+	@media screen and (max-width: 1199px) {
+		padding: 0 50px;
+		margin-bottom: 74px;
+
+		&:nth-child(1),
+		&:nth-child(3) {
+			padding: 0 75px;
+		}
+
+		&:nth-child(5) {
+
+			margin-left: -50px;
+		}
+
+		&:nth-child(9) {
+			margin-right: -50px;
+		}
+	}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+
 	&__pic {
 		width: auto;
 		height: 45px;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 
 		img {
 			width: auto;
@@ -93,6 +232,14 @@
 
 	&__info {
 		margin-left: 20px;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 
 	&__name {
@@ -100,15 +247,31 @@
 		font-size: 18px;
 		font-weight: 900;
 		line-height: 22px;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 
 	&__desc {
+		margin-top: 5px;
+		margin-bottom: -2px;
 		color: rgba(255, 255, 255, 0.3);
 		font-size: 14px;
 		font-weight: 500;
 		line-height: 17px;
-		margin-top: 5px;
-		margin-bottom: -2px;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 }
 
@@ -116,14 +279,50 @@
 	display: flex;
 	margin-top: 112px;
 
+	@media screen and (max-width: 1199px) {
+		margin-top: 78px;
+	}
+
+	@media screen and (max-width: 991px) {
+		flex-direction: column;
+		align-items: center;
+		margin-top: 65px;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+
 	&__left {
 		flex-grow: 1;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 
 	&__right {
-		min-width: 322px;
 		width: 322px;
+		min-width: 322px;
 		margin-left: 69px;
+
+		@media screen and (max-width: 1199px) {
+			width: 287px;
+			min-width: 287px;
+			margin-left: 21px;
+		}
+
+		@media screen and (max-width: 991px) {
+			display: none;
+		}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 }
 
@@ -133,10 +332,39 @@
 	font-size: 36px;
 	font-weight: 900;
 	line-height: 44px;
+
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {
+		font-weight: 900;
+		font-size: 24px;
+		line-height: 29px;
+		color: rgba(255, 255, 255, 0.9);
+		text-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5);
+		text-align: center;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 }
 
 .cf-accordeon {
 	margin-top: 78px;
+
+	@media screen and (max-width: 1199px) {
+		margin-top: 66px;
+	}
+
+	@media screen and (max-width: 991px) {
+		width: 768px;
+		max-width: 100%;
+		margin-top: 44px;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 }
 
 .cf-accordeon-item {
@@ -145,27 +373,56 @@
 	padding: 20px 0 20px;
 	transition: .3s;
 
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {
+		padding: 22px 0;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+
 	&__top {
 		position: relative;
 		cursor: pointer;
 
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
+
 		&::before,
 		&::after {
+			position: absolute;
+			top: 11px;
+			/*right: 22px;
+			top: -1px;*/
+			right: 26px;
 			display: block;
 			width: 26px;
 			height: 2px;
 			content: '';
-			background-size: contain;
-			position: absolute;
-			/*right: 22px;
-			top: -1px;*/
-			right: 26px;
-			top: 11px;
-			background: #6C6C6C;
 			transition: .3s;
-			transform-origin: center center;
 			//margin-right: -12px;
 			transform: translate(50%, 50%);
+			transform-origin: center center;
+			background: #6C6C6C;
+			background-size: contain;
+
+			@media screen and (max-width: 1199px) {}
+
+			@media screen and (max-width: 991px) {
+				top: 9px;
+				right: 35px;
+			}
+
+			@media screen and (max-width: 766px) {}
+
+			@media screen and (max-width: 575px) {}
 		}
 
 		&::before {}
@@ -177,6 +434,14 @@
 
 	&__content {
 		display: none;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 
 	&::before,
@@ -187,24 +452,64 @@
 		width: 100%;
 		height: 2px;
 		content: '';
-		background: rgba(255, 255, 255, 0.1);
 		transition-duration: .3s;
+		background: rgba(255, 255, 255, 0.1);
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 
 	&::before {
 		top: -2px;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 
 	&::after {
 		bottom: 0;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 
 	&--active {
 		z-index: 5;
 
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
+
 		.cf-accordeon-item__heading {
-			color: #FFFFFF;
 			transition: .3s;
+			color: #FFFFFF;
+
+			@media screen and (max-width: 1199px) {}
+
+			@media screen and (max-width: 991px) {}
+
+			@media screen and (max-width: 766px) {}
+
+			@media screen and (max-width: 575px) {}
 		}
 
 		.cf-accordeon-item__top {
@@ -213,6 +518,14 @@
 			&::after {
 				width: 40px;
 				background: #fff;
+
+				@media screen and (max-width: 1199px) {}
+
+				@media screen and (max-width: 991px) {}
+
+				@media screen and (max-width: 766px) {}
+
+				@media screen and (max-width: 575px) {}
 			}
 
 			&::before {
@@ -227,6 +540,14 @@
 		&::before,
 		&::after {
 			background: rgba(255, 255, 255, 0.6);
+
+			@media screen and (max-width: 1199px) {}
+
+			@media screen and (max-width: 991px) {}
+
+			@media screen and (max-width: 766px) {}
+
+			@media screen and (max-width: 575px) {}
 		}
 
 		.cf-accordeon-item__content {}
@@ -234,6 +555,7 @@
 }
 
 .cf-accordeon-item__heading {
+	padding: 0 10px;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	color: #AEAEAE;
@@ -241,7 +563,17 @@
 	font-weight: 900;
 	font-style: normal;
 	line-height: 29px;
-	padding: 0 10px;
+
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 }
 
 .cf-accordeon-cols {
@@ -250,48 +582,120 @@
 	justify-content: space-between;
 	padding: 39px 0px 50px;
 
+	@media screen and (max-width: 1199px) {
+		padding: 39px 8px 45px 0;
+	}
+
+	@media screen and (max-width: 991px) {
+		padding: 45px 57px 50px 0;}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+
 	&__col {
-		padding-left: 35px;
 		width: calc(50% - 21px);
+		padding-left: 35px;
+
+		@media screen and (max-width: 1199px) {
+			padding-left: 20px;
+		}
+
+		@media screen and (max-width: 991px) {
+			padding-left: 30px;}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 }
 
 .cf-accordeon__list-title {
-	font-style: normal;
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 22px;
-	/* identical to box height */
-
-
 	color: rgba(255, 255, 255, 0.8);
+	font-size: 18px;
+	font-weight: bold;
+	font-style: normal;
+	line-height: 22px;
+
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 }
 
 .cf-accordeon-list {
-	list-style: none;
 	margin-top: 27px;
+	list-style: none;
+
+	@media screen and (max-width: 1199px) {
+		margin-top: 25px;
+	}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 
 	&__li {
 		list-style: none;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 26px;
 		color: rgba(255, 255, 255, 0.6);
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 26px;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {
+			font-size: 14px;
+			line-height: 17px;    margin-top: 14px;
+		}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 
 		&+.cf-accordeon-list__li {
 			margin-top: 15px;
+
+			@media screen and (max-width: 1199px) {
+				margin-top: 14px;
+			}
+
+			@media screen and (max-width: 991px) {}
+
+			@media screen and (max-width: 766px) {}
+
+			@media screen and (max-width: 575px) {}
 		}
 	}
 }
 
 .course-format-in-course {
 	display: block;
-	list-style: none;
 	margin-top: 74px;
+	list-style: none;
+
+	@media screen and (max-width: 1199px) {
+		margin-top: 65px;
+	}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 
 	&__item {
 		position: relative;
 		display: block;
+		margin-left: 22px;
 		list-style: none;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
@@ -299,7 +703,18 @@
 		font-size: 18px;
 		font-weight: 500;
 		line-height: 150%;
-		margin-left: 22px;
+
+		@media screen and (max-width: 1199px) {
+			font-size: 16px;
+			line-height: 143.4%;
+			margin-right: -5px;
+		}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 
 		&::before {
 			position: absolute;
@@ -311,11 +726,30 @@
 			content: "";
 			border-radius: 50%;
 			background: #C4C4C4;
+
+			@media screen and (max-width: 1199px) {
+				top: 4px;
+			}
+
+			@media screen and (max-width: 991px) {}
+
+			@media screen and (max-width: 766px) {}
+
+			@media screen and (max-width: 575px) {}
 		}
 
 		&+.course-format-in-course__item {
 			margin-top: 50px;
 
+			@media screen and (max-width: 1199px) {
+				margin-top: 25px;
+			}
+
+			@media screen and (max-width: 991px) {}
+
+			@media screen and (max-width: 766px) {}
+
+			@media screen and (max-width: 575px) {}
 		}
 	}
 }
