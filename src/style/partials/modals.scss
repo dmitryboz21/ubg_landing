@@ -129,15 +129,54 @@
 	}
 
 	.mfp-content {
-		width: 608px !important;
+		width: 720px !important;
 		max-width: calc(284 / 506 * (100vh - 80px)) !important;
 	}
+
+	.mfp-iframe-scaler {
+		padding-top: 178.169%;
+	}
+
+	@media screen and (max-width: 750px) {
+
+		.mfp-iframe-holder .mfp-close {
+			top: 0;
+			right: 0;
+		}
+
+	}
+	@media screen and (max-width: 720px) {
+		.mfp-content {
+			width: 100% !important;
+		}
+	}
+
 }
 
+.myPopupMainClass--video--type2 {
+	.mfp-content {
+		width: 720px !important;
+		max-width: calc(720 / 706 * (100vh - 80px)) !important;
+	}
 
-.mfp-iframe-scaler {
-	padding-top: 178.169%;
+	.mfp-iframe-scaler {
+		padding-top: 98.0555555556%;
+	}
+
+	@media screen and (max-width: 750px) {
+		.mfp-content {
+			width: calc(100% - 15px * 2) !important;
+		}
+	}
+
+	@media screen and (max-width: 720px) {
+		.mfp-content {
+			width: 100% !important;
+		}
+	}
+
 }
+
 
 .my-modal--type-sign-up {
 	@media screen and (min-width: 1000px) {
