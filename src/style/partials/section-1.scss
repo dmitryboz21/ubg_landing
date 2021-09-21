@@ -150,9 +150,9 @@
 		@media screen and (max-width: 575px) {
 			align-items: center;
 			margin-top: 37px;
-			margin-left: -10px;
-			width: calc(100% + 10px);
-			justify-content: space-between;
+			margin-left: -24px;
+			width: calc(100% + 24px);
+			justify-content: center;
 		}
 
 		.btn {
@@ -167,7 +167,8 @@
 			@media screen and (max-width: 766px) {}
 
 			@media screen and (max-width: 575px) {
-				margin-left: 10px;
+				margin-left: 24px;
+
 			}
 		}
 	}
