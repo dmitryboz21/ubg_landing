@@ -226,30 +226,35 @@ body {
 	.dd1 {
 		display: block;
 	}
+	.nbspd1{white-space: nowrap;}
 }
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
 	.dd2 {
 		display: block;
 	}
+	.nbspd2{white-space: nowrap;}
 }
 
 @media screen and (max-width: 991px) and (min-width: 767px) {
 	.dt1 {
 		display: block;
 	}
+	.nbspt1{white-space: nowrap;}
 }
 
 @media screen and (max-width: 766px) and (min-width: 576px) {
 	.dt2 {
 		display: block;
 	}
+	.nbspt2{white-space: nowrap;}
 }
 
 @media screen and (max-width: 575px) {
 	.dm1 {
 		display: block;
 	}
+	.nbspm1{white-space: nowrap;}
 }
 
 section {
