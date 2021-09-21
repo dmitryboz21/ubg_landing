@@ -4,19 +4,54 @@
     background: #000;
 
     background: radial-gradient(73.32% 120.82% at 15.21% 0%, #141414 0%, #1E1E1E 100%);
-	//background: radial-gradient(59.83% 114.74% at 81.15% 100%, #0B0B0C 0%, #313131 100%);
+    //background: radial-gradient(59.83% 114.74% at 81.15% 100%, #0B0B0C 0%, #313131 100%);
+
+    @media screen and (max-width: 1199px) {}
+
+    @media screen and (max-width: 991px) {}
+
+    @media screen and (max-width: 766px) {}
+
+    @media screen and (max-width: 575px) {}
+
     background-size: 100% 2000px;
+
     &__inner {
         display: block;
         padding: 150px 0 150px;
-		background: url(../img/patterns/pattern-s1.svg) repeat center top;
+        background: url(../img/patterns/pattern-s1.svg) repeat center top;
+
+        @media screen and (max-width: 1199px) {}
+
+        @media screen and (max-width: 991px) {}
+
+        @media screen and (max-width: 766px) {}
+
+        @media screen and (max-width: 575px) {}
     }
 }
 
-.container--section-prices {}
+.container--section-prices {
+
+    @media screen and (max-width: 1199px) {}
+
+    @media screen and (max-width: 991px) {}
+
+    @media screen and (max-width: 766px) {}
+
+    @media screen and (max-width: 575px) {}
+}
 
 .section-title--section-prices {
     letter-spacing: 0.1em;
+
+    @media screen and (max-width: 1199px) {}
+
+    @media screen and (max-width: 991px) {}
+
+    @media screen and (max-width: 766px) {}
+
+    @media screen and (max-width: 575px) {}
 }
 
 
@@ -29,12 +64,28 @@
 
 
     color: rgba(255, 255, 255, 0.6);
+
+    @media screen and (max-width: 1199px) {}
+
+    @media screen and (max-width: 991px) {}
+
+    @media screen and (max-width: 766px) {}
+
+    @media screen and (max-width: 575px) {}
 }
 
 .section-prices-flex {
     display: flex;
     justify-content: space-between;
     margin-top: 66px;
+
+    @media screen and (max-width: 1199px) {}
+
+    @media screen and (max-width: 991px) {}
+
+    @media screen and (max-width: 766px) {}
+
+    @media screen and (max-width: 575px) {}
 }
 
 .section-prices-card {
@@ -45,18 +96,50 @@
     box-shadow: 0px 7px 24px rgba(0, 0, 0, 0.3);
     border-radius: 15px 15px 10px 10px;
 
+    @media screen and (max-width: 1199px) {}
+
+    @media screen and (max-width: 991px) {}
+
+    @media screen and (max-width: 766px) {}
+
+    @media screen and (max-width: 575px) {}
+
     &__pic {
         width: 100%;
+
+        @media screen and (max-width: 1199px) {}
+
+        @media screen and (max-width: 991px) {}
+
+        @media screen and (max-width: 766px) {}
+
+        @media screen and (max-width: 575px) {}
 
         img {
             width: 100%;
             height: auto;
             border-radius: 12px 12px 0 0;
+
+            @media screen and (max-width: 1199px) {}
+
+            @media screen and (max-width: 991px) {}
+
+            @media screen and (max-width: 766px) {}
+
+            @media screen and (max-width: 575px) {}
         }
     }
 
     &__content {
         padding: 30px 30px 43px;
+
+        @media screen and (max-width: 1199px) {}
+
+        @media screen and (max-width: 991px) {}
+
+        @media screen and (max-width: 766px) {}
+
+        @media screen and (max-width: 575px) {}
     }
 
 
@@ -67,6 +150,14 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+
+    @media screen and (max-width: 1199px) {}
+
+    @media screen and (max-width: 991px) {}
+
+    @media screen and (max-width: 766px) {}
+
+    @media screen and (max-width: 575px) {}
 }
 
 .section-prices-ul {
@@ -87,6 +178,14 @@
 
     text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
 
+    @media screen and (max-width: 1199px) {}
+
+    @media screen and (max-width: 991px) {}
+
+    @media screen and (max-width: 766px) {}
+
+    @media screen and (max-width: 575px) {}
+
     &--silver {
         .section-prices-li::before {
             background: #6F6F6F;
@@ -100,6 +199,14 @@
     position: relative;
     display: block;
     padding-left: 17px;
+
+    @media screen and (max-width: 1199px) {}
+
+    @media screen and (max-width: 991px) {}
+
+    @media screen and (max-width: 766px) {}
+
+    @media screen and (max-width: 575px) {}
 
     &--white {
         color: #ffffff;
@@ -117,6 +224,14 @@
         position: absolute;
         left: 1px;
         top: 10px;
+
+        @media screen and (max-width: 1199px) {}
+
+        @media screen and (max-width: 991px) {}
+
+        @media screen and (max-width: 766px) {}
+
+        @media screen and (max-width: 575px) {}
     }
 
 
@@ -127,15 +242,39 @@
             width: 12px;
             height: 12px;
             border-radius: 0;
+
+            @media screen and (max-width: 1199px) {}
+
+            @media screen and (max-width: 991px) {}
+
+            @media screen and (max-width: 766px) {}
+
+            @media screen and (max-width: 575px) {}
         }
     }
 
     b {
         letter-spacing: 0.07em;
+
+        @media screen and (max-width: 1199px) {}
+
+        @media screen and (max-width: 991px) {}
+
+        @media screen and (max-width: 766px) {}
+
+        @media screen and (max-width: 575px) {}
     }
 
     &+.section-prices-li {
         margin-top: 20px;
+
+        @media screen and (max-width: 1199px) {}
+
+        @media screen and (max-width: 991px) {}
+
+        @media screen and (max-width: 766px) {}
+
+        @media screen and (max-width: 575px) {}
     }
 
 
@@ -143,14 +282,38 @@
 
 .color-gold {
     color: #d1a954;
+
+    @media screen and (max-width: 1199px) {}
+
+    @media screen and (max-width: 991px) {}
+
+    @media screen and (max-width: 766px) {}
+
+    @media screen and (max-width: 575px) {}
 }
 
 .section-prices-card__btn-wrap {
     margin-top: 39px;
 
+    @media screen and (max-width: 1199px) {}
+
+    @media screen and (max-width: 991px) {}
+
+    @media screen and (max-width: 766px) {}
+
+    @media screen and (max-width: 575px) {}
+
     .btn {
         width: 100%;
         text-transform: uppercase;
         letter-spacing: 0.1em;
+
+        @media screen and (max-width: 1199px) {}
+
+        @media screen and (max-width: 991px) {}
+
+        @media screen and (max-width: 766px) {}
+
+        @media screen and (max-width: 575px) {}
     }
 }
