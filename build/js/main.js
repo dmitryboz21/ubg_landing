@@ -44,8 +44,8 @@ $(document).ready(function () {
 		}
 	});
 });
-topBtnShow=false;
-$(document).ready(function() {
+topBtnShow = false;
+$(document).ready(function () {
 	// $("input[name='phone']").mask(" +7 (999) 999-99-99");
 
 
@@ -66,7 +66,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.js-set-modal-tarif').click(function(){
+	$('.js-set-modal-tarif').click(function () {
 		$('#tarif-inp').val($(this).attr('data-tarif'));
 	});
 
@@ -80,44 +80,84 @@ $(document).ready(function() {
 		mainClass: "myPopupMainClass",
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><svg class="js-mfp-close-svg" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="42.544" y1="14.2052" x2="14.2052" y2="42.544" stroke="white" stroke-width="2"/><line x1="14.2086" y1="14.1298" x2="42.5474" y2="42.4686" stroke="white" stroke-width="2"/></svg></button>',
 		callbacks: {
-		  open: function() {
-			$.magnificPopup.instance.close = function() {
-				$('#tarif-inp').val('');
+			open: function () {
+				$.magnificPopup.instance.close = function () {
+					$('#tarif-inp').val('');
 
-			  // Call the original close method to close the popup
-			  $.magnificPopup.proto.close.call(this);
-			};
-		  }
+					// Call the original close method to close the popup
+					$.magnificPopup.proto.close.call(this);
+				};
+			}
 		}
 
 	});
 
-	$('.js-open-video').magnificPopup({
+	/*$('.js-open-video').magnificPopup({
 		type: 'iframe',
 		closeBtnInside: true,
 		mainClass: "myPopupMainClass myPopupMainClass--video",
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><svg class="js-mfp-close-svg" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="42.544" y1="14.2052" x2="14.2052" y2="42.544" stroke="white" stroke-width="2"/><line x1="14.2086" y1="14.1298" x2="42.5474" y2="42.4686" stroke="white" stroke-width="2"/></svg></button>'
 
+	});*/
+	var player;
+	$('.js-open-video').magnificPopup({
+		type: 'inline',
+		closeBtnInside: true,
+		mainClass: 'custom-popup-class',
+		mainClass: "myPopupMainClass myPopupMainClass--video",
+		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><svg class="js-mfp-close-svg" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="42.544" y1="14.2052" x2="14.2052" y2="42.544" stroke="white" stroke-width="2"/><line x1="14.2086" y1="14.1298" x2="42.5474" y2="42.4686" stroke="white" stroke-width="2"/></svg></button>',
+		callbacks: {
+			open: function () {
+				//console.log(this.st.el[0].getAttribute('data-href'));
+				$('#video-content').append('<video controls width="720" height="1280" autoplay="true" ><source src="'+this.st.el[0].getAttribute('data-href')+'" type="video/mp4"></video>');
+				$('#video-content').find('video')[0].play();
+				player = $('#video-content').find('video');
+			},
+			close: function () {
+				player[0].pause();
+				player[0].remove();
+			}
+		}
+	});
+
+	$('.js-open-video-type-2').magnificPopup({
+		type: 'inline',
+		closeBtnInside: true,
+		mainClass: 'custom-popup-class',
+		mainClass: "myPopupMainClass myPopupMainClass--video myPopupMainClass--video--type2",
+		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><svg class="js-mfp-close-svg" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="42.544" y1="14.2052" x2="14.2052" y2="42.544" stroke="white" stroke-width="2"/><line x1="14.2086" y1="14.1298" x2="42.5474" y2="42.4686" stroke="white" stroke-width="2"/></svg></button>',
+		callbacks: {
+			open: function () {
+				//console.log(this.st.el[0].getAttribute('data-href'));
+				$('#video-content').append('<video controls width="720" height="706" autoplay="true" ><source src="'+this.st.el[0].getAttribute('data-href')+'" type="video/mp4"></video>');
+				$('#video-content').find('video')[0].play();
+				player = $('#video-content').find('video');
+			},
+			close: function () {
+				player[0].pause();
+				player[0].remove();
+			}
+		}
 	});
 
 
-	$('.js-open-video-type-2').magnificPopup({
+	/*$('.js-open-video-type-2').magnificPopup({
 		type: 'iframe',
 		closeBtnInside: true,
 		mainClass: "myPopupMainClass myPopupMainClass--video myPopupMainClass--video--type2",
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><svg class="js-mfp-close-svg" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="42.544" y1="14.2052" x2="14.2052" y2="42.544" stroke="white" stroke-width="2"/><line x1="14.2086" y1="14.1298" x2="42.5474" y2="42.4686" stroke="white" stroke-width="2"/></svg></button>'
 
-	});
+	});*/
 
 
-	$('body').on('click', '.js-mfp-close-svg', function() {
+	$('body').on('click', '.js-mfp-close-svg', function () {
 		$(this).parent().click();
 	});
-	$('.js-footer-menu-opener').click(function() {
+	$('.js-footer-menu-opener').click(function () {
 		$(this).toggleClass('footer-menu-opener--open')
 		$('.footer-menu-wrap').slideToggle(300);
 	});
-	$('body').on('click', '.js-cf-accordeon-item__top', function() {
+	$('body').on('click', '.js-cf-accordeon-item__top', function () {
 		var item = $(this).closest('.cf-accordeon-item');
 		if (item.hasClass('cf-accordeon-item--active')) {
 			item.removeClass('cf-accordeon-item--active');
@@ -128,10 +168,10 @@ $(document).ready(function() {
 			item.siblings('.cf-accordeon-item--active').removeClass('cf-accordeon-item--active').find('.cf-accordeon-item__content').slideUp(400);
 		}
 	});
-	$('.sh-menu-item__link, .footer-menu__item a').on( 'click', function(){
+	$('.sh-menu-item__link, .footer-menu__item a').on('click', function () {
 		var el = $(this);
 		var dest = el.attr('href'); // получаем направление
-		if(dest !== undefined && dest !== '') { // проверяем существование
+		if (dest !== undefined && dest !== '') { // проверяем существование
 			$('html').animate({
 				scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
 			}, 500 // скорость прокрутки
