@@ -226,35 +226,50 @@ body {
 	.dd1 {
 		display: block;
 	}
-	.nbspd1{white-space: nowrap;}
+
+	.nbspd1 {
+		white-space: nowrap;
+	}
 }
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
 	.dd2 {
 		display: block;
 	}
-	.nbspd2{white-space: nowrap;}
+
+	.nbspd2 {
+		white-space: nowrap;
+	}
 }
 
 @media screen and (max-width: 991px) and (min-width: 767px) {
 	.dt1 {
 		display: block;
 	}
-	.nbspt1{white-space: nowrap;}
+
+	.nbspt1 {
+		white-space: nowrap;
+	}
 }
 
 @media screen and (max-width: 766px) and (min-width: 576px) {
 	.dt2 {
 		display: block;
 	}
-	.nbspt2{white-space: nowrap;}
+
+	.nbspt2 {
+		white-space: nowrap;
+	}
 }
 
 @media screen and (max-width: 575px) {
 	.dm1 {
 		display: block;
 	}
-	.nbspm1{white-space: nowrap;}
+
+	.nbspm1 {
+		white-space: nowrap;
+	}
 }
 
 section {
@@ -315,4 +330,150 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
 	background-color: #D1A954;
 
+}
+
+.iti__flag {
+	width: 19px;
+	box-shadow: 0 0 1px 0 #888;
+	background-repeat: no-repeat;
+	background: #dbdbdb;
+	background-position: 20px 0;
+
+	&.iti__by {
+		height: 19px;
+		background: url(../img/by.svg);
+	}
+
+	&.iti__kz {
+		height: 19px;
+		background: url(../img/kz.svg);
+	}
+
+	&.iti__ru {
+		height: 19px;
+		background: url(../img/ru.svg);
+	}
+
+	&.iti__ua {
+		height: 19px;
+		background: url(../img/ua.svg);
+	}
+
+	&.iti__by,
+	&.iti__kz,
+	&.iti__ru,
+	&.iti__ua {
+		height: 12px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
+
+
+
+
+.iti__arrow {
+	border: none !important;
+	width: 9px;
+	height: 7px;
+	background: url(../img/dropbox-arrow.svg) no-repeat center center;
+	background-size: contain;
+	transition-duration: .2s;
+
+}
+
+.iti__arrow--up {
+	transform: rotate(180deg);
+}
+
+.iti.iti--allow-dropdown {
+	width: 100%;
+}
+.secform-inp.js-phone-inp{
+	padding-left: 75px !important;
+}
+.iti__selected-flag {
+	padding-left: 0;
+	padding-right: 0;
+	padding: 6px 0 8px;width: 75px;
+
+	.iti__flag {
+		margin-left: 0;
+		margin-top: -2px;
+	}
+}
+.iti__flag {}
+
+.iti__flag-container {
+	&::before {}
+}
+
+
+.iti__flag-container {
+	position: absolute;
+	bottom: 0;
+	right: 0 !important;
+	left: 0;
+	height: 0 !important;
+}
+
+.iti__country-list {
+	overflow: hidden;
+	width: 100%;
+	max-width: 262px;
+	margin-top: 8px;
+	background: #323232;
+	border: none;
+	padding: 16px 0;
+	border-radius: 1px;
+	transition-duration: .2s;
+
+	&.iti__hide {
+		display: block;
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+.iti__country {
+	display: flex;
+	align-items: center;
+	padding: 6px 20px;
+	text-decoration: 0.2s;
+
+	.iti__flag {
+		margin-left: 7px;
+	}
+}
+
+.iti__country.iti__highlight {
+	background: #444444;
+
+}
+
+.iti__highlight {}
+
+
+.iti__flag-box {
+	order: 9;
+}
+
+.iti__country-name {
+	flex-grow: 1;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 100%;
+	color: rgba(255, 255, 255, 0.9);
+
+
+}
+
+.iti__dial-code, .iti--separate-dial-code .iti__selected-dial-code {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 100%;
+	color: rgba(255, 255, 255, 0.9);
 }

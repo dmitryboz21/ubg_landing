@@ -63,7 +63,7 @@ $(document).ready(function () {
 		callbacks: {
 			open: function () {
 				//console.log(this.st.el[0].getAttribute('data-href'));
-				$('#video-content').append('<video controls width="720" height="1280" autoplay="true" ><source src="'+this.st.el[0].getAttribute('data-href')+'" type="video/mp4"></video>');
+				$('#video-content').append('<video controls width="720" height="1280" autoplay="true" ><source src="' + this.st.el[0].getAttribute('data-href') + '" type="video/mp4"></video>');
 				$('#video-content').find('video')[0].play();
 				player = $('#video-content').find('video');
 			},
@@ -83,7 +83,7 @@ $(document).ready(function () {
 		callbacks: {
 			open: function () {
 				//console.log(this.st.el[0].getAttribute('data-href'));
-				$('#video-content').append('<video controls width="720" height="706" autoplay="true" ><source src="'+this.st.el[0].getAttribute('data-href')+'" type="video/mp4"></video>');
+				$('#video-content').append('<video controls width="720" height="706" autoplay="true" ><source src="' + this.st.el[0].getAttribute('data-href') + '" type="video/mp4"></video>');
 				$('#video-content').find('video')[0].play();
 				player = $('#video-content').find('video');
 			},
@@ -153,5 +153,124 @@ $(document).ready(function () {
 		$("html, body").animate({
 			scrollTop: 0
 		}, 1000);
+	});
+	var defaultCountry="ua";
+	$('.js-phone-inp').intlTelInput({
+		initialCountry: defaultCountry,
+		onlyCountries: ["by", "kz", "ru", "ua"],
+		localizedCountries: {
+			"by": "Беларусь",
+			"kz": "Казахстан",
+			"ru": "Россия",
+			"ua": "Украина"
+		},
+		separateDialCode: true,
+		nationalMode: false
+		//utilsScript: "js/utils.js"
+		// any initialisation options go here
+	});
+	/*
+		var reset = function (inp) {
+			inp.classList.remove("error");
+			errorMsg.innerHTML = "";
+			errorMsg.classList.add("hide");
+			validMsg.classList.add("hide");
+		};
+
+		// on blur: validate
+		('.js-phone-inp').addEventListener('blur', function () {
+			var inp=$(this);
+
+			reset(inp);
+			if (inp.value.trim()) {
+				if(inp.intlTelInput('isValidNumber') {
+					inp.intlTelInput("isValidNumber"))
+					validMsg.classList.remove("hide");
+				} else {
+					input.classList.add("error");
+					var errorCode = iti.getValidationError();
+					errorMsg.innerHTML = errorMap[errorCode];
+					errorMsg.classList.remove("hide");
+				}
+			}
+		});
+
+
+		input.addEventListener('change', reset);
+		input.addEventListener('keyup', reset);
+		*/
+
+	$.jMaskGlobals = {
+		translation: {
+			'n': {pattern: /\d/},
+		}
+	};
+	/*var masksArray = {
+		'by': '+375 (nn) nnn-nn-nn',
+		'kz': '+7 (nn) nnn-nn-nn',
+		'ru': '+7 (nnn) nnn-nn-nn',
+		'ua': '+380 (nn) nnn-nn-nn'
+	}
+
+	var placeholdersArray = {
+		'by': '+375 (__) ___-__-__',
+		'kz': '+7 (__) ___-__-__',
+		'ru': '+7 (___) ___-__-__',
+		'ua': '+380 (__) ___-__-__'
+	}*/
+	var masksArray = {
+		'by': '(nn) nnn-nn-nn',
+		'kz': '(nnn) nnn-nn-nn',
+		'ru': '(nnn) nnn-nn-nn',
+		'ua': '(nn) nnn-nn-nn'
+	}
+
+	var placeholdersArray = {
+		'by': '(__) ___-__-__',
+		'kz': '(___) ___-__-__',
+		'ru': '(___) ___-__-__',
+		'ua': '(__) ___-__-__'
+	}
+
+	var countryCodes = {
+		'by': '+375',
+		'kz': '+7',
+		'ru': '+7',
+		'ua': '+380'
+	}
+
+
+
+	$('.js-phone-inp').attr('placeholder', placeholdersArray[defaultCountry]);
+	$('.js-phone-inp').mask(masksArray[defaultCountry],{
+		clearIfNotMatch: true,
+		translation: {
+			'n': {pattern: /\d/},
+			/*'r': {
+			  pattern: /[\/]/,
+			  fallback: '/'
+			},*/
+			placeholder:placeholdersArray[defaultCountry]
+		}
+
+
+	});
+	$('.js-phone-inp').on("countrychange", function (e, ) {
+		var countryData=$(this).intlTelInput('getSelectedCountryData');
+
+		$(this).val('');
+		$('.js-phone-inp').attr('placeholder', placeholdersArray[countryData.iso2]);
+		$(this).mask(masksArray[countryData.iso2],{
+
+		translation: {
+			'n': {pattern: /\d/},
+			/*'r': {
+			  pattern: /[\/]/,
+			  fallback: '/'
+			},*/
+			placeholder:placeholdersArray[countryData.iso2]
+		}
+		});
+		// do something with iti.getSelectedCountryData()
 	});
 });
