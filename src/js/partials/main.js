@@ -273,4 +273,15 @@ $(document).ready(function () {
 		});
 		// do something with iti.getSelectedCountryData()
 	});
+
+
+	$('.js-section-prices__read-more').click(function(){
+		$(this).closest('.section-prices-card').toggleClass('section-prices-card--mob-open');
+		$(this).siblings('.section-prices-ul').stop().slideToggle(600);
+	});
+
+
+
+
+
 });

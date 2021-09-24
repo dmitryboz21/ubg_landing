@@ -1,352 +1,425 @@
 .section-prices {
-    overflow: hidden;
-    position: relative;
-    background: #000;
+	overflow: hidden;
+	position: relative;
+	background: #000;
 
-    background: radial-gradient(73.32% 120.82% at 15.21% 0%, #141414 0%, #1E1E1E 100%);
-    //background: radial-gradient(59.83% 114.74% at 81.15% 100%, #0B0B0C 0%, #313131 100%);
+	background: radial-gradient(73.32% 120.82% at 15.21% 0%, #141414 0%, #1E1E1E 100%);
+	//background: radial-gradient(59.83% 114.74% at 81.15% 100%, #0B0B0C 0%, #313131 100%);
 
-    @media screen and (max-width: 1199px) {}
+	@media screen and (max-width: 1199px) {}
 
-    @media screen and (max-width: 991px) {}
+	@media screen and (max-width: 991px) {}
 
-    @media screen and (max-width: 766px) {}
+	@media screen and (max-width: 766px) {}
 
-    @media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {}
 
-    background-size: 100% 2000px;
+	background-size: 100% 2000px;
 
-    &__inner {
-        display: block;
-        padding: 150px 0 150px;
-        background: url(../img/patterns/pattern-s1.svg) repeat center top;
+	&__inner {
+		display: block;
+		padding: 150px 0 150px;
+		background: url(../img/patterns/pattern-s1.svg) repeat center top;
 
-        @media screen and (max-width: 1199px) {}
+		@media screen and (max-width: 1199px) {}
 
-        @media screen and (max-width: 991px) {
-            padding: 75px 0 75px;
-        }
+		@media screen and (max-width: 991px) {
+			padding: 75px 0 75px;
+		}
 
-        @media screen and (max-width: 766px) {
-            padding: 71px 0 75px;
-        }
+		@media screen and (max-width: 766px) {
+			padding: 71px 0 70px;
+		}
 
-        @media screen and (max-width: 575px) {}
-    }
+		@media screen and (max-width: 575px) {
+			padding: 31px 0 54px;
+		}
+	}
+
+	&__read-more {
+		display: none;
+
+		@media screen and (max-width: 766px) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: rgba(255, 255, 255, 0.7);
+			cursor: pointer;
+			padding: 13px 0;
+			transition-duration: .3s;
+
+			span {
+				display: block;
+				margin-left: 11px;
+			}
+
+			svg {
+				transition-duration: .3s;
+
+				path,
+				line {
+					transition-duration: .3s;
+				}
+			}
+		}
+
+		@media screen and (max-width: 575px) {}
+	}
 }
+
+.section-prices-card--mob-open {
+	.section-prices__read-more {
+
+		color: #FFFFFF;
+
+		svg {
+			transform: rotate(180deg);
+
+			path,
+			line {
+				stroke: #FFFFFF;
+			}
+
+		}
+	}
+}
+
+
+
+
 
 .container--section-prices {
 
-    @media screen and (max-width: 1199px) {}
+	@media screen and (max-width: 1199px) {}
 
-    @media screen and (max-width: 991px) {}
+	@media screen and (max-width: 991px) {}
 
-    @media screen and (max-width: 766px) {}
+	@media screen and (max-width: 766px) {}
 
-    @media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {}
 }
 
 .section-title--section-prices {
-    letter-spacing: 0.1em;
+	letter-spacing: 0.1em;
 
-    @media screen and (max-width: 1199px) {}
+	@media screen and (max-width: 1199px) {}
 
-    @media screen and (max-width: 991px) {}
+	@media screen and (max-width: 991px) {}
 
-    @media screen and (max-width: 766px) {}
+	@media screen and (max-width: 766px) {}
 
-    @media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {}
 }
 
 
 .section-prices-desc {
-    margin-top: 19px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    /* or 24px */
+	margin-top: 19px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	/* or 24px */
 
 
-    color: rgba(255, 255, 255, 0.6);
+	color: rgba(255, 255, 255, 0.6);
 
-    @media screen and (max-width: 1199px) {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 150%;
-    }
+	@media screen and (max-width: 1199px) {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 150%;
+	}
 
-    @media screen and (max-width: 991px) {
-        text-align: center;
-        margin-top: 16px;
-    }
+	@media screen and (max-width: 991px) {
+		text-align: center;
+		margin-top: 16px;
+	}
 
-    @media screen and (max-width: 766px) {}
+	@media screen and (max-width: 766px) {}
 
-    @media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {}
 }
 
 .section-prices-flex {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 66px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 66px;
 
-    @media screen and (max-width: 1199px) {
-        margin-top: 75px;
-    }
+	@media screen and (max-width: 1199px) {
+		margin-top: 75px;
+	}
 
-    @media screen and (max-width: 991px) {
-        margin-top: 49px;
-    }
+	@media screen and (max-width: 991px) {
+		margin-top: 49px;
+	}
 
-    @media screen and (max-width: 766px) {
-        margin-top: 33px;}
+	@media screen and (max-width: 766px) {
 
-    @media screen and (max-width: 575px) {}
+		align-items: flex-start;
+		margin-top: 33px;
+	}
+
+	@media screen and (max-width: 575px) {
+		display: block;
+	}
 }
 
 .section-prices-card {
-    display: flex;
-    flex-direction: column;
-    width: 488px;
-    background: #323232;
-    box-shadow: 0px 7px 24px rgba(0, 0, 0, 0.3);
-    border-radius: 15px 15px 10px 10px;
+	display: flex;
+	flex-direction: column;
+	width: 488px;
+	background: #323232;
+	box-shadow: 0px 7px 24px rgba(0, 0, 0, 0.3);
+	border-radius: 15px 15px 10px 10px;
 
-    @media screen and (max-width: 1199px) {
-        max-width: calc(50% - 16px / 2);
-    }
+	@media screen and (max-width: 1199px) {
+		max-width: calc(50% - 16px / 2);
+	}
 
-    @media screen and (max-width: 991px) {
-        max-width: calc(50% - 15px);
-    }
+	@media screen and (max-width: 991px) {
+		max-width: calc(50% - 15px);
+	}
 
-    @media screen and (max-width: 766px) {}
+	@media screen and (max-width: 766px) {}
 
-    @media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {
+		width: 100%;
+		max-width: 100%;
 
-    &__pic {
-        width: 100%;
+		&+.section-prices-card{
+			margin-top: 30px;
+		}
+	}
 
-        @media screen and (max-width: 1199px) {}
+	&__pic {
+		width: 100%;
 
-        @media screen and (max-width: 991px) {}
+		@media screen and (max-width: 1199px) {}
 
-        @media screen and (max-width: 766px) {}
+		@media screen and (max-width: 991px) {}
 
-        @media screen and (max-width: 575px) {}
+		@media screen and (max-width: 766px) {}
 
-        img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px 12px 0 0;
+		@media screen and (max-width: 575px) {}
 
-            @media screen and (max-width: 1199px) {}
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: 12px 12px 0 0;
 
-            @media screen and (max-width: 991px) {}
+			@media screen and (max-width: 1199px) {}
 
-            @media screen and (max-width: 766px) {}
+			@media screen and (max-width: 991px) {}
 
-            @media screen and (max-width: 575px) {}
-        }
-    }
+			@media screen and (max-width: 766px) {}
 
-    &__content {
-        padding: 30px 30px 43px;
+			@media screen and (max-width: 575px) {}
+		}
+	}
 
-        @media screen and (max-width: 1199px) {}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		padding: 30px 30px 43px;
 
-        @media screen and (max-width: 991px) {
-            padding: 32px 24px 43px;
-        }
+		@media screen and (max-width: 1199px) {}
 
-        @media screen and (max-width: 766px) {}
+		@media screen and (max-width: 991px) {
+			padding: 32px 24px 43px;
+		}
 
-        @media screen and (max-width: 575px) {}
-    }
+		@media screen and (max-width: 766px) {
+			padding: 32px 0 30px;
+		}
+
+		@media screen and (max-width: 575px) {}
+	}
 
 
 }
 
-
-.section-prices-card__content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-
-    @media screen and (max-width: 1199px) {}
-
-    @media screen and (max-width: 991px) {}
-
-    @media screen and (max-width: 766px) {}
-
-    @media screen and (max-width: 575px) {}
-}
 
 .section-prices-ul {
-    display: block;
-    flex-grow: 1;
-    list-style: none;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 150%;
+	display: block;
+	flex-grow: 1;
+	list-style: none;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 150%;
 
-    &--gold {}
+	&--gold {}
 
-    /* identical to box height, or 21px */
+	/* identical to box height, or 21px */
 
 
-    color: rgba(255, 255, 255, 0.8);
+	color: rgba(255, 255, 255, 0.8);
 
-    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+	text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
 
-    @media screen and (max-width: 1199px) {}
+	@media screen and (max-width: 1199px) {}
 
-    @media screen and (max-width: 991px) {
-        font-size: 12px;
-        line-height: 150%;
-    }
+	@media screen and (max-width: 991px) {
+		font-size: 12px;
+		line-height: 150%;
+	}
 
-    @media screen and (max-width: 766px) {
-        display: none;
-    }
+	@media screen and (max-width: 766px) {
+		display: none;
+		padding: 17px 20px 13px 24px;
+		font-size: 10px;
+		line-height: 150%;
+	}
 
-    @media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {}
 
-    &--silver {
-        .section-prices-li::before {
-            background: #6F6F6F;
-        }
+	&--silver {
+		.section-prices-li::before {
+			background: #6F6F6F;
+		}
 
-    }
+	}
 }
 
 .section-prices-li {
-    list-style: none;
-    position: relative;
-    display: block;
-    padding-left: 17px;
+	list-style: none;
+	position: relative;
+	display: block;
+	padding-left: 17px;
 
-    @media screen and (max-width: 1199px) {}
+	@media screen and (max-width: 1199px) {}
 
-    @media screen and (max-width: 991px) {}
+	@media screen and (max-width: 991px) {}
 
-    @media screen and (max-width: 766px) {}
+	@media screen and (max-width: 766px) {
+		padding-left: 11px;
+	}
 
-    @media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {}
 
-    &--white {
-        color: #ffffff;
-    }
-
-
-    &::before {
-        background: #D1A954;
-        content: '';
-        display: block;
-        width: 10px;
-        height: 10px;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        position: absolute;
-        left: 1px;
-        top: 10px;
-
-        @media screen and (max-width: 1199px) {}
-
-        @media screen and (max-width: 991px) {
-            top: 9px;
-        }
-
-        @media screen and (max-width: 766px) {}
-
-        @media screen and (max-width: 575px) {}
-    }
+	&--white {
+		color: #ffffff;
+	}
 
 
-    &--star {
-        &::before {
-            background: url(../img/star.svg) no-repeat center center;
-            background-size: contain;
-            width: 12px;
-            height: 12px;
-            border-radius: 0;
+	&::before {
+		background: #D1A954;
+		content: '';
+		display: block;
+		width: 10px;
+		height: 10px;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		position: absolute;
+		left: 1px;
+		top: 10px;
 
-            @media screen and (max-width: 1199px) {}
+		@media screen and (max-width: 1199px) {}
 
-            @media screen and (max-width: 991px) {}
+		@media screen and (max-width: 991px) {
+			top: 9px;
+		}
 
-            @media screen and (max-width: 766px) {}
+		@media screen and (max-width: 766px) {
+			top: 7px;
+		}
 
-            @media screen and (max-width: 575px) {}
-        }
-    }
+		@media screen and (max-width: 575px) {}
+	}
 
-    b {
-        letter-spacing: 0.07em;
 
-        @media screen and (max-width: 1199px) {}
+	&--star {
+		&::before {
+			background: url(../img/star.svg) no-repeat center center;
+			background-size: contain;
+			width: 12px;
+			height: 12px;
+			border-radius: 0;
 
-        @media screen and (max-width: 991px) {}
+			@media screen and (max-width: 1199px) {}
 
-        @media screen and (max-width: 766px) {}
+			@media screen and (max-width: 991px) {}
 
-        @media screen and (max-width: 575px) {}
-    }
+			@media screen and (max-width: 766px) {}
 
-    &+.section-prices-li {
-        margin-top: 20px;
+			@media screen and (max-width: 575px) {}
+		}
+	}
 
-        @media screen and (max-width: 1199px) {}
+	b {
+		letter-spacing: 0.07em;
 
-        @media screen and (max-width: 991px) {
-            margin-top: 23px;
-        }
+		@media screen and (max-width: 1199px) {}
 
-        @media screen and (max-width: 766px) {}
+		@media screen and (max-width: 991px) {}
 
-        @media screen and (max-width: 575px) {}
-    }
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
+	}
+
+	&+.section-prices-li {
+		margin-top: 20px;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {
+			margin-top: 23px;
+		}
+
+		@media screen and (max-width: 766px) {
+			margin-top: 20px;
+		}
+
+		@media screen and (max-width: 575px) {}
+	}
 
 
 }
 
 .color-gold {
-    color: #d1a954;
+	color: #d1a954;
 
-    @media screen and (max-width: 1199px) {}
+	@media screen and (max-width: 1199px) {}
 
-    @media screen and (max-width: 991px) {}
+	@media screen and (max-width: 991px) {}
 
-    @media screen and (max-width: 766px) {}
+	@media screen and (max-width: 766px) {}
 
-    @media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {}
 }
 
 .section-prices-card__btn-wrap {
-    margin-top: 39px;
+	margin-top: 39px;
 
-    @media screen and (max-width: 1199px) {}
+	@media screen and (max-width: 1199px) {}
 
-    @media screen and (max-width: 991px) {
-        margin-top: 42px;
-    }
+	@media screen and (max-width: 991px) {
+		margin-top: 42px;
+	}
 
-    @media screen and (max-width: 766px) {}
+	@media screen and (max-width: 766px) {
+		margin-top: 17px;
+		padding: 0 20px;
+	}
 
-    @media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {}
 
-    .btn {
-        width: 100%;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
+	.btn {
+		width: 100%;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
 
-        @media screen and (max-width: 1199px) {}
+		@media screen and (max-width: 1199px) {}
 
-        @media screen and (max-width: 991px) {}
+		@media screen and (max-width: 991px) {}
 
-        @media screen and (max-width: 766px) {}
+		@media screen and (max-width: 766px) {}
 
-        @media screen and (max-width: 575px) {}
-    }
+		@media screen and (max-width: 575px) {}
+	}
 }
