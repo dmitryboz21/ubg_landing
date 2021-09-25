@@ -1,36 +1,121 @@
 .section-faq {
 	background: radial-gradient(70.19% 78.06% at 17.48% 17.17%, #191919 0%, #141414 100%);
 	background-size: 100% 3000px;
-	&__inner{
+
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+
+	&__inner {
 		background: url(../img/patterns/pattern-olympic.svg) repeat center top;
 
 		padding: 119px 0;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 }
 
-.container--section-faq {}
+.container--section-faq {
+	@media screen and (max-width: 1199px) {}
 
-.section-title--section-faq {}
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+}
+
+.section-title--section-faq {
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+}
 
 .section-faq-main {
 	width: 1005px;
 	max-width: 100%;
 	margin: 70px auto 0;
+
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
+
 	.cf-accordeon {
 		margin-top: 0 !important;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 }
 
 .cf-accordeon-item--faq {
-	&--active {}
-	&__top {}
-	&__content {}
+	&--active {
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
+	}
+
+	&__top {
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
+	}
+
+	&__content {
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
+	}
+
 	.cf-accordeon-item__heading {
 		font-weight: 900;
 		font-size: 18px;
 		line-height: 22px;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
+
+		@media screen and (max-width: 1199px) {}
+
+		@media screen and (max-width: 991px) {}
+
+		@media screen and (max-width: 766px) {}
+
+		@media screen and (max-width: 575px) {}
 	}
 }
 
@@ -41,4 +126,12 @@
 	/* or 24px */
 	color: rgba(255, 255, 255, 0.6);
 	padding: 20px 65px 30px 32px;
+
+	@media screen and (max-width: 1199px) {}
+
+	@media screen and (max-width: 991px) {}
+
+	@media screen and (max-width: 766px) {}
+
+	@media screen and (max-width: 575px) {}
 }

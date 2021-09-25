@@ -10,11 +10,19 @@
 		padding: 151px 0 150px;
 	}
 
-	@media screen and (max-width: 991px) {    padding: 76px 0;}
+	@media screen and (max-width: 991px) {
+		padding: 76px 0;
+	}
 
-	@media screen and (max-width: 766px) {}
+	@media screen and (max-width: 766px) {
+		padding: 76px 0 57px;
 
-	@media screen and (max-width: 575px) {}
+
+	}
+
+	@media screen and (max-width: 575px) {
+		padding: 31px 0;
+	}
 }
 
 .container--section-cert {
@@ -53,9 +61,13 @@
 		margin-top: 39px;
 	}
 
-	@media screen and (max-width: 766px) {}
+	@media screen and (max-width: 766px) {
+		margin-top: 29px;
+	}
 
-	@media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {
+		margin-top: 12px;
+	}
 
 	&__pic {
 		width: 652px;
@@ -98,14 +110,23 @@
 
 		@media screen and (max-width: 1199px) {
 			width: 385px;
+			max-width: 100%;
 		}
 
-		@media screen and (max-width: 991px) {width: 100%;
-		margin-top: 100px;}
+		@media screen and (max-width: 991px) {
+			width: 100%;
 
-		@media screen and (max-width: 766px) {}
+			margin-top: 40px;
+		}
 
-		@media screen and (max-width: 575px) {}
+		@media screen and (max-width: 766px) {
+			margin-top: 34px;
+		}
+
+		@media screen and (max-width: 575px) {
+			margin-top: 21px;
+		}
+
 	}
 }
 
@@ -125,6 +146,12 @@
 	@media screen and (max-width: 991px) {
 		font-size: 12px;
 		line-height: 120%;
+		display: flex;
+		justify-content: space-between;
+		width: 636px;
+		max-width: 100%;
+		margin: 0 auto;
+
 	}
 
 	@media screen and (max-width: 766px) {
@@ -135,6 +162,8 @@
 	@media screen and (max-width: 575px) {
 		font-size: 12px;
 		line-height: 140%;
+		width: 100%;
+		display: block;
 	}
 
 	&__li {
@@ -145,11 +174,16 @@
 
 		@media screen and (max-width: 1199px) {}
 
-		@media screen and (max-width: 991px) {}
+		@media screen and (max-width: 991px) {
+			padding-left: 18px;
+		}
 
 		@media screen and (max-width: 766px) {}
 
-		@media screen and (max-width: 575px) {}
+		@media screen and (max-width: 575px) {
+			width: 100%;
+			padding-left: 12px;
+		}
 
 		&::before {
 			position: absolute;
@@ -167,11 +201,15 @@
 				top: 8px;
 			}
 
-			@media screen and (max-width: 991px) {}
+			@media screen and (max-width: 991px) {
+				width: 8px;
+				height: 8px;
+			}
 
 			@media screen and (max-width: 766px) {}
 
-			@media screen and (max-width: 575px) {}
+			@media screen and (max-width: 575px) {
+				left: 4px;}
 		}
 
 		&+.scert-ul__li {
@@ -181,11 +219,17 @@
 				margin-top: 52px;
 			}
 
-			@media screen and (max-width: 991px) {}
+			@media screen and (max-width: 991px) {
+				margin-top: 0;
+				margin-left: 12px;
+			}
 
 			@media screen and (max-width: 766px) {}
 
-			@media screen and (max-width: 575px) {}
+			@media screen and (max-width: 575px) {
+				margin-left: 0;
+				margin-top: 15px;
+			}
 		}
 	}
 }

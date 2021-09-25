@@ -282,6 +282,11 @@ $(document).ready(function () {
 
 
 
+	$('.js-section-reviews__read-more').click(function(){
+		$(this).closest('.secreviews-card').toggleClass('module-card-opener--open');
+		$(this).siblings('.secreviews-card__text-wrap').stop().slideToggle(600);
+	});
+
 
 
 });

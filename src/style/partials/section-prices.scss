@@ -39,8 +39,8 @@
 	&__read-more {
 		display: none;
 
-		@media screen and (max-width: 766px) {
-			display: flex;
+		@media screen and (max-width: 991px) {
+			display: none;
 			align-items: center;
 			justify-content: center;
 			font-weight: 500;
@@ -66,13 +66,17 @@
 					transition-duration: .3s;
 				}
 			}
+
+		}
+		@media screen and (max-width: 766px) {
+			display: flex;
 		}
 
 		@media screen and (max-width: 575px) {}
 	}
 }
 
-.section-prices-card--mob-open {
+.section-prices-card--mob-open, .module-card-opener--open {
 	.section-prices__read-more {
 
 		color: #FFFFFF;
