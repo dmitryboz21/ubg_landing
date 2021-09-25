@@ -324,25 +324,37 @@ block main
 				.container.container--secform
 					form.secform-form(action="")
 						.secform-form__title готов достичь новых финансовых высот?
-						.secform-form__subtitle присоединяйся!
+						//.secform-form__subtitle присоединяйся!
 						.secform-form__inputs
 							.secform-inp-row
 								.secform-inp-wrap
-									input.secform-inp(type="text", name="name", placeholder="Имя")
+									input.secform-inp(type="text", name="name", placeholder="Как Вас зовут?")
+							.secform-info Выберите <span class="hidenomob">удобный</span> канал&nbsp;связи
+							.secform-inp-row
+								.secform-inp-wrap
+									input.secform-inp(type="text", name="telegram", placeholder="Ник Telegram")
 							.secform-inp-row
 								.secform-inp-wrap
 									input.secform-inp.js-phone-inp(type="tel", name="tel", placeholder="Телефон")
-							.secform-inp-row
-								.secform-inp-wrap
-									input.secform-inp(type="email", name="email", placeholder="E-mail (не обязательно)")
-							.secform-inp-row
-								.secform-inp-wrap
-									input.secform-inp(type="text", name="telegram", placeholder="Ник Telegram (если есть)")
-							.secform-inp-row.secform-inp-row--textarea
+							.secform-info Выберите ТАРИФ
+
+							.secform-inp-row.secform-inp-row--radio
+								.secform-radio-group
+									label.secform-radio
+										input.secform-radio__inp(type="radio", name="tarif-secform", value="STANDARD" , checked)
+										.secform-radio__indicator
+										.secform-radio__name Тариф “STANDARD”
+									label.secform-radio
+										input.secform-radio__inp(type="radio", name="tarif-secform", value="INDIVIDUAL" )
+										.secform-radio__indicator
+										.secform-radio__name Тариф “INDIVIDUAL”
+							//.secform-inp-row.secform-inp-row--textarea
 								.secform-textarea-wrap
 									textarea.secform-textarea(name="text", placeholder="Сообщение (не обязательно)" )
 							.secform-inp-row.secform-inp-row--btn
 								button.btn.btn--square.secform-btn-submit(type="submit") Записаться
+							.secform-privacy Нажимая на кнопку, Вы соглашаетесь с&nbsp;
+								a.js-open-popup-inline(href="#foo-oferta") политикой конфиденциальности и обработки данных
 
 
 

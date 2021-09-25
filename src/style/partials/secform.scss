@@ -25,6 +25,9 @@
 	.container--secform {
 		position: relative;
 		z-index: 2;
+		@media screen and (max-width: 575px) {
+			max-width: 100%;
+		}
 	}
 }
 
@@ -34,7 +37,7 @@
 	max-width: 100%;
 	background: #141414;
 	display: block;
-	padding: 53px 30px 50px;
+	padding: 40px 30px 45px;
 
 	@media screen and (max-width: 1199px) {}
 
@@ -42,7 +45,8 @@
 
 	@media screen and (max-width: 766px) {}
 
-	@media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {
+		padding: 20px 15px;}
 
 	&__title {
 		font-weight: 900;
@@ -59,7 +63,17 @@
 
 		@media screen and (max-width: 766px) {}
 
-		@media screen and (max-width: 575px) {}
+		@media screen and (max-width: 500px) {
+			font-size: 21px;
+		}
+
+		@media screen and (max-width: 401px) {
+			font-size: 18px;
+		}
+
+		@media screen and (max-width: 350px) {
+			font-size: 15px;
+		}
 	}
 
 	&__subtitle {
@@ -82,7 +96,7 @@
 	}
 
 	&__inputs {
-		margin-top: 30px;
+		margin-top: 46px;
 		width: 100%;
 
 		@media screen and (max-width: 1199px) {}
@@ -91,7 +105,9 @@
 
 		@media screen and (max-width: 766px) {}
 
-		@media screen and (max-width: 575px) {}
+		@media screen and (max-width: 575px) {
+			margin-top: 26px;
+		}
 	}
 }
 
@@ -239,4 +255,133 @@
 	&:active {}
 
 	&:focus {}
+}
+
+.secform-inp.js-phone-inp {
+	padding-bottom: 12px;
+}
+
+.secform-info {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 140%;
+
+	text-align: center;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+
+	color: #D1A954;
+	margin-top: 30px;
+
+	&+.secform-inp-row {
+		margin-top: 26px;
+
+		@media screen and (max-width: 575px) {
+			margin-top: 20px;
+		}
+	}
+
+	&+.secform-inp-row--radio {
+		margin-top: 16px;
+
+		@media screen and (max-width: 575px) {}
+	}
+
+	@media screen and (max-width: 575px) {
+		font-size: 14px;
+		margin-top: 20px;
+	}
+	@media screen and (max-width: 390px) {
+		font-size: 12px;
+	}
+}
+
+.secform-inp-row--radio {
+	&+.secform-inp-row--btn {
+		margin-top: 55px;
+
+		@media screen and (max-width: 575px) {
+			margin-top: 20px;
+		}
+	}
+}
+
+.secform-radio-group {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: -15px;
+
+}
+
+.secform-radio {
+	max-width: calc(50% - 8px);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+
+	@media screen and (max-width: 420px) {
+		max-width: 100%;
+		width: 100%;
+		justify-content: center;
+	}
+
+	&__inp {
+		display: none;
+
+		&:checked+.secform-radio__indicator {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__indicator {
+		display: block;
+		width: 16px;
+		height: 16px;
+		border: 2px solid rgba(255, 255, 255, 0.8);
+		border-radius: 50%;
+		position: relative;
+		margin-right: 7px;
+
+		&::before {
+			display: block;
+			content: '';
+			left: 2px;
+			top: 2px;
+			position: absolute;
+			border-radius: 50%;
+			background: #D1A954;
+			opacity: 0;
+			width: 8px;
+			height: 8px;
+			transition-duration: .3s;
+		}
+	}
+
+	&__name {
+		font-size: 12px;
+		line-height: 72.4%;
+		color: rgba(255, 255, 255, 0.8);
+	}
+}
+
+
+.secform-privacy {
+	font-size: 12px;
+	line-height: 140.4%;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.8);
+	margin-top: 14px;
+
+	a {
+		color: #ab8b47;
+		text-decoration: underline;
+	}
+	@media screen and (max-width: 350px) {
+		font-size: 10px;
+	}
 }

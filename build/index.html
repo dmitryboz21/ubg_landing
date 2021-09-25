@@ -431,11 +431,17 @@
             <div class="container container--secform">
               <form class="secform-form" action="">
                 <div class="secform-form__title">готов достичь новых финансовых высот?</div>
-                <div class="secform-form__subtitle">присоединяйся!</div>
+                <!--.secform-form__subtitle присоединяйся!-->
                 <div class="secform-form__inputs">
                   <div class="secform-inp-row">
                     <div class="secform-inp-wrap">
-                      <input class="secform-inp" type="text" name="name" placeholder="Имя">
+                      <input class="secform-inp" type="text" name="name" placeholder="Как Вас зовут?">
+                    </div>
+                  </div>
+                  <div class="secform-info">Выберите <span class="hidenomob">удобный</span> канал&nbsp;связи</div>
+                  <div class="secform-inp-row">
+                    <div class="secform-inp-wrap">
+                      <input class="secform-inp" type="text" name="telegram" placeholder="Ник Telegram">
                     </div>
                   </div>
                   <div class="secform-inp-row">
@@ -443,24 +449,29 @@
                       <input class="secform-inp js-phone-inp" type="tel" name="tel" placeholder="Телефон">
                     </div>
                   </div>
-                  <div class="secform-inp-row">
-                    <div class="secform-inp-wrap">
-                      <input class="secform-inp" type="email" name="email" placeholder="E-mail (не обязательно)">
+                  <div class="secform-info">Выберите ТАРИФ</div>
+                  <div class="secform-inp-row secform-inp-row--radio">
+                    <div class="secform-radio-group">
+                      <label class="secform-radio">
+                        <input class="secform-radio__inp" type="radio" name="tarif-secform" value="STANDARD" checked>
+                        <div class="secform-radio__indicator"></div>
+                        <div class="secform-radio__name">Тариф “STANDARD”</div>
+                      </label>
+                      <label class="secform-radio">
+                        <input class="secform-radio__inp" type="radio" name="tarif-secform" value="INDIVIDUAL">
+                        <div class="secform-radio__indicator"></div>
+                        <div class="secform-radio__name">Тариф “INDIVIDUAL”</div>
+                      </label>
                     </div>
                   </div>
-                  <div class="secform-inp-row">
-                    <div class="secform-inp-wrap">
-                      <input class="secform-inp" type="text" name="telegram" placeholder="Ник Telegram (если есть)">
-                    </div>
-                  </div>
-                  <div class="secform-inp-row secform-inp-row--textarea">
-                    <div class="secform-textarea-wrap">
-                      <textarea class="secform-textarea" name="text" placeholder="Сообщение (не обязательно)"></textarea>
-                    </div>
-                  </div>
+                  <!--.secform-inp-row.secform-inp-row--textarea
+                  .secform-textarea-wrap
+                  	textarea.secform-textarea(name="text", placeholder="Сообщение (не обязательно)" )
+                  -->
                   <div class="secform-inp-row secform-inp-row--btn">
                     <button class="btn btn--square secform-btn-submit" type="submit">Записаться</button>
                   </div>
+                  <div class="secform-privacy">Нажимая на кнопку, Вы соглашаетесь с&nbsp;<a class="js-open-popup-inline" href="#foo-oferta">политикой конфиденциальности и обработки данных</a></div>
                 </div>
               </form>
             </div>
@@ -613,7 +624,7 @@
               <div class="foo-contacts">
                 <div class="foo-contact"><a class="foo-contact__val" href="mailto:Litvinovtrading@gmail.com">Litvinovtrading@gmail.com</a></div>
               </div>
-              <div class="foo-conf"><a class="foo-conf__link js-open-popup-inline" href="#foo-privacy">Политика конфиденциальности</a>
+              <div class="foo-conf"><a class="foo-conf__link js-open-popup-inline" href="#foo-oferta">Политика конфиденциальности</a>
                 <div class="foo-conf__link foo-conf__link--delimiter">|</div><a class="foo-conf__link js-open-popup-inline" href="#foo-oferta">Условия оферты</a>
               </div>
             </div>

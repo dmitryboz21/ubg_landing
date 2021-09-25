@@ -272,6 +272,12 @@ body {
 	}
 }
 
+@media screen and (min-width: 576px) {
+	.hidenomob {
+		display: none;
+	}
+}
+
 section {
 	overflow: hidden;
 }

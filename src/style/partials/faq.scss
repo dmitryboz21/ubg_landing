@@ -17,11 +17,16 @@
 
 		@media screen and (max-width: 1199px) {}
 
-		@media screen and (max-width: 991px) {}
+		@media screen and (max-width: 991px) {
+			padding: 101px 0;
+		}
 
-		@media screen and (max-width: 766px) {}
+		@media screen and (max-width: 766px) {
+			padding: 71px 0;
+		}
 
-		@media screen and (max-width: 575px) {}
+		@media screen and (max-width: 575px) {
+			padding: 29px 0;}
 	}
 }
 
@@ -52,11 +57,16 @@
 
 	@media screen and (max-width: 1199px) {}
 
-	@media screen and (max-width: 991px) {}
+	@media screen and (max-width: 991px) {
+		margin-top: 59px;
+	}
 
-	@media screen and (max-width: 766px) {}
+	@media screen and (max-width: 766px) {
+		margin-top: 38px;
+	}
 
-	@media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {
+		margin-top: 20px;}
 
 	.cf-accordeon {
 		margin-top: 0 !important;
@@ -111,9 +121,19 @@
 
 		@media screen and (max-width: 1199px) {}
 
-		@media screen and (max-width: 991px) {}
+		@media screen and (max-width: 991px) {
+			font-weight: 900;
+			font-size: 14px;
+			line-height: 17px;
+			/* identical to box height */
 
-		@media screen and (max-width: 766px) {}
+			letter-spacing: 0.1em;
+		}
+
+		@media screen and (max-width: 766px) {
+			font-size: 12px;
+			line-height: 150%;
+		}
 
 		@media screen and (max-width: 575px) {}
 	}
@@ -127,11 +147,20 @@
 	color: rgba(255, 255, 255, 0.6);
 	padding: 20px 65px 30px 32px;
 
-	@media screen and (max-width: 1199px) {}
+	@media screen and (max-width: 1199px) {
+		padding: 24px 65px 32px 20px;
+	}
 
-	@media screen and (max-width: 991px) {}
+	@media screen and (max-width: 991px) {
+		padding: 27px 65px 13px 35px;
+		font-size: 12px;
+		line-height: 150%;
+	}
 
-	@media screen and (max-width: 766px) {}
+	@media screen and (max-width: 766px) {
+		padding: 32px 23px 7px 22px;
+	}
 
-	@media screen and (max-width: 575px) {}
+	@media screen and (max-width: 575px) {
+		padding: 27px 23px 0px 22px;}
 }

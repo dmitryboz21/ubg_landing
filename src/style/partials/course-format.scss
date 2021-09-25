@@ -462,7 +462,8 @@
 	}
 
 	@media screen and (max-width: 991px) {
-		width: 768px;
+		//width: 768px;
+		width: 100%;
 		max-width: 100%;
 		margin-top: 44px;
 	}
@@ -474,6 +475,7 @@
 		margin-right: -15px;
 		max-width: calc(100% + 30px);
 		margin-top: 37px;
+		width: auto;
 	}
 }
 
@@ -684,16 +686,19 @@
 	font-weight: 900;
 	font-style: normal;
 	line-height: 29px;
+    padding-right: 55px;
 
 	@media screen and (max-width: 1199px) {}
 
 	@media screen and (max-width: 991px) {
 		font-size: 18px;
 		line-height: 22px;
+		padding-right: 65px;
 	}
 
 	@media screen and (max-width: 766px) {
 		padding-left: 0;
+		padding-right: 50px;
 	}
 
 	@media screen and (max-width: 575px) {
