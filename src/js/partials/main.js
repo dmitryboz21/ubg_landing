@@ -287,4 +287,5 @@ $(document).ready(function () {
 		$(this).siblings('.secreviews-card__text-wrap').stop().slideToggle(600);
 	});
 
+
 });

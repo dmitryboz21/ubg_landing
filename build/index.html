@@ -598,26 +598,36 @@
                   </div></a></div>
             </div>
             <div class="footer-col footer-col--4">
-              <form class="footer-form dd1 dd2 dt1">
-                <div class="footer-form__inp-row">
-                  <div class="footer-form__inp-wrap">
-                    <input class="footer-form__inp" type="text" name="name" placeholder="Имя" required>
+              <form class="footer-form dd1 dd2 dt1" action="">
+                <div class="secform-inp-row">
+                  <div class="secform-inp-wrap">
+                    <input class="secform-inp" type="text" name="name" placeholder="Как Вас зовут?">
                   </div>
                 </div>
-                <div class="footer-form__inp-row">
-                  <div class="footer-form__inp-wrap">
-                    <input class="footer-form__inp" type="tel" name="tel" placeholder="Телефон" required>
+                <div class="secform-inp-row">
+                  <div class="secform-inp-wrap">
+                    <input class="secform-inp js-phone-inp" type="tel" name="tel" placeholder="Телефон">
                   </div>
                 </div>
-                <div class="footer-form__inp-row">
-                  <div class="footer-form__inp-wrap">
-                    <input class="footer-form__inp" type="email" name="email" placeholder="Ник Telegram (если есть)">
-                  </div>
+                <div class="secform-inp-row secform-inp-row--btn">
+                  <button class="btn btn--square secform-btn-submit" type="submit">ЗАКАЗАТЬ ЗВОНОК</button>
                 </div>
-                <div class="footer-form__btn-wrap">
-                  <button class="btn btn--square footer-form__btn" type="submit">Записаться</button>
-                </div>
+                <div class="secform-privacy">Нажимая на кнопку, Вы соглашаетесь с&nbsp;<a class="js-open-popup-inline" href="#foo-oferta">политикой конфиденциальности и обработки данных</a></div>
               </form>
+              <!--form.footer-form.dd1.dd2.dt1
+              .footer-form__inp-row
+              	.footer-form__inp-wrap
+              		input.footer-form__inp(type="text", name="name", placeholder="Имя", required)
+              .footer-form__inp-row
+              	.footer-form__inp-wrap
+              		input.footer-form__inp(type="tel", name="tel", placeholder="Телефон", required)
+              .footer-form__inp-row
+              	.footer-form__inp-wrap
+              		input.footer-form__inp(type="email", name="email", placeholder="Ник Telegram (если есть)")
+              .footer-form__btn-wrap
+              	button.btn.btn--square.footer-form__btn(type="submit") Записаться
+              
+              -->
               <div class="foo-btn-sign-up-m-wrap dt2 dm1"><a class="btn btn--square foo-btn-sign-up-m js-open-popup-inline" href="#modal-sign-up">Записаться</a><a class="btn btn--square btn--square--transparent-dark foo-btn-sign-up-m dm1 js-open-popup-inline" href="#modal-feedback">Обратная связь</a></div>
             </div>
             <div class="footer-col footer-col--5 dt2 dm1">
@@ -634,6 +644,9 @@
     </div>
     <div class="top-btn-wrap container">
       <div class="top-btn js-top-btn" id="top-btn"><svg width="43" height="29" viewBox="0 0 43 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.3916 3.5L2.99995 25.7657" stroke="#D1A954" stroke-width="3" stroke-linecap="round"/><path d="M22.3916 3.5L40.7833 25.7657" stroke="#D1A954" stroke-width="3" stroke-linecap="round"/></svg></div>
+      <div class="make-call-btn"> <svg class="make-call-btn__art" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="30" fill="#D1A954"/><path d="M21.4957 38.6881L18.6924 35.8848C17.4986 34.691 16.3911 33.414 15.3782 32.0635V32.0635C13.5712 29.6542 12.0766 27.0258 10.9299 24.2411L10.8318 24.0027C10.4256 23.0162 10.5369 21.8923 11.1287 21.0046L11.2798 20.7778C12.421 19.0661 13.9069 17.6115 15.6425 16.507L16.8473 15.7403C16.8764 15.7218 16.9149 15.7297 16.9343 15.7582L21.8859 23.0401C22.5151 23.9654 22.5771 25.164 22.0466 26.1493L20.45 29.1144C20.4409 29.1313 20.4424 29.152 20.4539 29.1673V29.1673C21.8538 31.0338 23.3843 32.7985 25.0341 34.4483L25.3848 34.799" stroke="#141414" stroke-width="3"/><path d="M21.4955 38.6881L24.2988 41.4914C25.4926 42.6851 26.7696 43.7927 28.1201 44.8056V44.8056C30.5294 46.6125 33.1577 48.1072 35.9425 49.2538L36.1809 49.352C37.1674 49.7582 38.2913 49.6469 39.179 49.0551L39.4058 48.9039C41.1175 47.7628 42.5721 46.2769 43.6766 44.5413L44.4433 43.3364C44.4618 43.3074 44.4538 43.2689 44.4254 43.2495L37.1435 38.2979C36.2182 37.6686 35.0195 37.6067 34.0343 38.1372L31.0692 39.7338C31.0523 39.7429 31.0316 39.7414 31.0163 39.7298V39.7298C29.1498 38.33 27.3851 36.7994 25.7353 35.1497L25.3846 34.799" stroke="#141414" stroke-width="3"/><path d="M38 29.4999C37.1716 29.4999 36.5 30.1715 36.5 30.9999C36.5 31.8284 37.1716 32.4999 38 32.4999V29.4999ZM43.5 23.9999C43.5 27.0375 41.0376 29.4999 38 29.4999V32.4999C42.6944 32.4999 46.5 28.6944 46.5 23.9999H43.5ZM32.5 23.9999C32.5 20.9624 34.9624 18.4999 38 18.4999V15.4999C33.3056 15.4999 29.5 19.3055 29.5 23.9999H32.5ZM38 18.4999C41.0376 18.4999 43.5 20.9624 43.5 23.9999H46.5C46.5 19.3055 42.6944 15.4999 38 15.4999V18.4999Z" fill="#141414"/><line x1="29.9815" y1="25.4008" x2="27.2151" y2="18.9707" stroke="#141414" stroke-width="3" stroke-linecap="round"/><path d="M30.1296 25.6002L37.0004 23.1009" stroke="#141414" stroke-width="3" stroke-linecap="round"/></svg>
+        <div class="make-call-btn__name">Заказать звонок</div>
+      </div>
     </div>
     <!--#foo-privacy.my-modal.my-modal--oferta.mfp-hide
     .my-modal__inner

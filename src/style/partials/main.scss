@@ -287,14 +287,16 @@ section {
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 75px;
-	z-index: 99;
+	z-index: 15;
 
 }
+
+
 
 .top-btn {
 	position: absolute;
 	right: -70px;
-	bottom: 0;
+    bottom: 2px;
 	transition-duration: .5s;
 	opacity: 0;
 	width: 38px;
@@ -482,4 +484,37 @@ body::-webkit-scrollbar-thumb {
 	font-size: 12px;
 	line-height: 100%;
 	color: rgba(255, 255, 255, 0.9);
+}
+
+
+
+
+.make-call-btn{
+	cursor: pointer;
+	transition-duration: .25s;
+	&:hover{
+		opacity: .7;
+	}
+	&__art{
+		display: block;
+		width: 60px;
+		height: auto;
+	}
+	&__name{
+		font-weight: 500;
+		font-size: 10px;
+		line-height: 121.5%;
+		text-align: center;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #D1A954;
+		margin-top: 6px;
+		width: 60px;
+	}
+	position: absolute;
+    bottom: 0;
+    left: -93px;
+	@media screen and (max-width:1366px){
+		left: 0;
+	}
 }
