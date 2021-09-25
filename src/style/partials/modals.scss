@@ -123,12 +123,15 @@
 }
 
 .myPopupMainClass--video {
-	/*.mfp-iframe-holder */.mfp-close {
+
+	/*.mfp-iframe-holder */
+	.mfp-close {
 		top: 0;
 		right: -62px;
 		width: 57px;
 		height: 57px;
-		svg{
+
+		svg {
 			display: block;
 			width: 100%;
 			height: auto;
@@ -146,12 +149,14 @@
 
 	@media screen and (max-width: 750px) {
 
-		/*.mfp-iframe-holder*/ .mfp-close {
+		/*.mfp-iframe-holder*/
+		.mfp-close {
 			top: 0;
 			right: 0;
 		}
 
 	}
+
 	@media screen and (max-width: 720px) {
 		.mfp-content {
 			width: 100% !important;
@@ -162,11 +167,13 @@
 
 .mfp-iframe-scaler video {
 	display: block;
-	position: absolute;	left: 0;
+	position: absolute;
+	left: 0;
 	top: 0;
 	width: 100%;
 	height: 100%;
 }
+
 .myPopupMainClass--video--type2 {
 	.mfp-content {
 		width: 720px !important;
@@ -193,15 +200,32 @@
 
 
 .my-modal--type-sign-up {
+	background: #141414;
+
+
 	@media screen and (min-width: 1000px) {
 		width: 458px;
 		padding: 0;
 	}
 
 	@media screen and (max-width: 999px) {
+		width: 458px;
+		max-width: 100%;
 		padding: 0;
 	}
 
+	@media screen and (min-width: 575px) {
+		.mfp-close {
+			right: -58px;
+			top: 0px;
+		}
+	}
+	@media screen and (max-width: 574px) {
+		.secform-form__title {
+			text-align: left;
+			padding-right: 26px;
+		}
+	}
 	.my-modal__inner {}
 }
 
