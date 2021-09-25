@@ -21,7 +21,10 @@ $(document).ready(function () {
 	});
 
 	$('.js-set-modal-tarif').click(function () {
-		$('#tarif-inp').val($(this).attr('data-tarif'));
+		//$('#tarif-inp').val($(this).attr('data-tarif'));
+		$('#modal-tarif-radio-'+$(this).attr('data-tarif')).prop('checked', true);
+
+
 	});
 
 
@@ -35,12 +38,12 @@ $(document).ready(function () {
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><svg class="js-mfp-close-svg" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="42.544" y1="14.2052" x2="14.2052" y2="42.544" stroke="white" stroke-width="2"/><line x1="14.2086" y1="14.1298" x2="42.5474" y2="42.4686" stroke="white" stroke-width="2"/></svg></button>',
 		callbacks: {
 			open: function () {
-				$.magnificPopup.instance.close = function () {
+				/*$.magnificPopup.instance.close = function () {
 					$('#tarif-inp').val('');
 
 					// Call the original close method to close the popup
 					$.magnificPopup.proto.close.call(this);
-				};
+				};*/
 			}
 		}
 
@@ -239,11 +242,10 @@ $(document).ready(function () {
 		'ua': '+380'
 	}
 
-
-
 	$('.js-phone-inp').attr('placeholder', placeholdersArray[defaultCountry]);
+
 	$('.js-phone-inp').mask(masksArray[defaultCountry],{
-		clearIfNotMatch: true,
+		//clearIfNotMatch: true,
 		translation: {
 			'n': {pattern: /\d/},
 			/*'r': {
@@ -252,9 +254,8 @@ $(document).ready(function () {
 			},*/
 			placeholder:placeholdersArray[defaultCountry]
 		}
-
-
 	});
+
 	$('.js-phone-inp').on("countrychange", function (e, ) {
 		var countryData=$(this).intlTelInput('getSelectedCountryData');
 
@@ -274,18 +275,54 @@ $(document).ready(function () {
 		// do something with iti.getSelectedCountryData()
 	});
 
-
 	$('.js-section-prices__read-more').click(function(){
 		$(this).closest('.section-prices-card').toggleClass('section-prices-card--mob-open');
 		$(this).siblings('.section-prices-ul').stop().slideToggle(600);
 	});
-
-
 
 	$('.js-section-reviews__read-more').click(function(){
 		$(this).closest('.secreviews-card').toggleClass('module-card-opener--open');
 		$(this).siblings('.secreviews-card__text-wrap').stop().slideToggle(600);
 	});
 
+//data-type="sign-up"
+//data-type="request-call"
+
+	$('.js-form-processing').submit(function(e){
+		e.preventDefault();
+		var form = $(this);
+		var formType = $(this).attr('data-type');
+
+		switch(formType){
+			case "sign-up":
+				var telInp=form.find('.js-phone-inp');
+				console.log(validateTel(telInp));
+				//console.log(telInp.cleanVal());
+			break;
+			case "request-call":
+
+			break;
+		}
+	});
 
 });
+/**
+ * @param  {} telInp //jquery объект, указывающий на поле для ввода телефона
+ */
+
+function checkNoEmpty(inp){
+	return inp.val().length>0;
+}
+
+function validateTel(telInp){
+	if(checkNoEmpty(telInp)){
+		var countryData=telInp.intlTelInput('getSelectedCountryData');
+
+		console.log(countryData);
+		//inp.val()
+
+	}
+	else{
+		return "empty";
+	}
+}

@@ -59,7 +59,7 @@
 								.footer-social__name Telegram
 								.footer-social__desc Читай
 				.footer-col.footer-col--4
-					form.footer-form(action="").dd1.dd2.dt1
+					form.footer-form.js-form-processing(action="" data-type="sign-up").dd1.dd2.dt1
 						.secform-inp-row
 							.secform-inp-wrap
 								input.secform-inp(type="text", name="name", placeholder="Как Вас зовут?")
@@ -128,49 +128,66 @@ div(style="display:none")
 
 #modal-sign-up.my-modal.my-modal--type-sign-up.mfp-hide
 	.my-modal__inner
-		form.secform-form.secform-form--modal(action="")
-			.secform-form__title готов достичь новых финансовых высот?
-			.secform-form__inputs
 
+		form.secform-form.secform-form--modal.js-form-processing(action="" data-type="sign-up")
+			.secform-form__title готов достичь новых финансовых высот?
+			//.secform-form__subtitle присоединяйся!
+			.secform-form__inputs
 				.secform-inp-row
 					.secform-inp-wrap
-						input.secform-inp(type="text", name="name", placeholder="Имя")
+						input.secform-inp(type="text", name="name", placeholder="Как Вас зовут?")
+				.secform-info Выберите <span class="hidenomob">удобный</span> канал&nbsp;связи
 				.secform-inp-row
 					.secform-inp-wrap
-						input.secform-inp(type="tel", name="tel", placeholder="Телефон")
+						input.secform-inp(type="text", name="telegram", placeholder="Ник Telegram")
 				.secform-inp-row
 					.secform-inp-wrap
-						input.secform-inp(type="email", name="email", placeholder="E-mail (не обязательно)")
-				.secform-inp-row
-					.secform-inp-wrap
-						input.secform-inp(type="text", name="telegram", placeholder="Ник Telegram (если есть)")
-				.secform-inp-row.secform-inp-row--textarea
+						input.secform-inp.js-phone-inp(type="tel", name="tel", placeholder="Телефон")
+				.secform-info Выберите ТАРИФ
+
+				.secform-inp-row.secform-inp-row--radio
+					.secform-radio-group
+						label.secform-radio
+							input.secform-radio__inp#modal-tarif-radio-STANDARD(type="radio", name="tarif-secform", value="STANDARD" , checked)
+							.secform-radio__indicator
+							.secform-radio__name Тариф “STANDARD”
+						label.secform-radio
+							input.secform-radio__inp#modal-tarif-radio-INDIVIDUAL(type="radio", name="tarif-secform", value="INDIVIDUAL" )
+							.secform-radio__indicator
+							.secform-radio__name Тариф “INDIVIDUAL”
+				//.secform-inp-row.secform-inp-row--textarea
 					.secform-textarea-wrap
 						textarea.secform-textarea(name="text", placeholder="Сообщение (не обязательно)" )
 				.secform-inp-row.secform-inp-row--btn
-					input#tarif-inp.hide(type="text" name="tarif")
-					button.btn.btn--square.secform-btn-submit(type="submit") Отправить заявку
+					button.btn.btn--square.secform-btn-submit(type="submit") Записаться
+				.secform-privacy Нажимая на кнопку, Вы соглашаетесь с&nbsp;
+					a.js-open-popup-inline(href="#foo-oferta") политикой конфиденциальности и обработки данных
+
+
+
+
+
+
 
 #modal-feedback.my-modal.my-modal--type-sign-up.mfp-hide
 	.my-modal__inner
-		form.secform-form.secform-form--modal(action="")
-			.secform-form__title готов достичь новых финансовых высот?
+
+		form.secform-form.secform-form--modal.js-form-processing(action="" data-type="request-call")
+			.secform-form__title МЫ ПЕРЕЗВОНИМ В БЛИЖАЙШЕЕ ВРЕМЯ
+			//.secform-form__subtitle присоединяйся!
 			.secform-form__inputs
 				.secform-inp-row
 					.secform-inp-wrap
-						input.secform-inp(type="text", name="name", placeholder="Имя")
+						input.secform-inp(type="text", name="name", placeholder="Как Вас зовут?")
+
 				.secform-inp-row
 					.secform-inp-wrap
-						input.secform-inp(type="email", name="email", placeholder="E-mail")
-				.secform-inp-row
-					.secform-inp-wrap
-						input.secform-inp(type="text", name="telegram", placeholder="Ник Telegram (если есть)")
-				.secform-inp-row.secform-inp-row--textarea
-					.secform-textarea-wrap
-						textarea.secform-textarea(name="text", placeholder="Сообщение (не обязательно)" )
+						input.secform-inp.js-phone-inp(type="tel", name="tel", placeholder="Телефон")
 				.secform-inp-row.secform-inp-row--btn
-					input#tarif-inp.hide(type="text" name="tarif")
-					button.btn.btn--square.secform-btn-submit(type="submit") Отправить заявку
+					button.btn.btn--square.secform-btn-submit(type="submit") Записаться
+				.secform-privacy Нажимая на кнопку, Вы соглашаетесь с&nbsp;
+					a.js-open-popup-inline(href="#foo-oferta") политикой конфиденциальности и обработки данных
+
 
 
 

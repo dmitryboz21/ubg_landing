@@ -307,7 +307,7 @@
                       <div class="section-prices-li">$5 бонусами за каждый пройденный урок;</div>
                       <div class="section-prices-li">Право на участие в конкурсе.</div>
                     </div>
-                    <div class="section-prices-card__btn-wrap"><a class="btn btn--square js-set-modal-tarif js-open-popup-inline" href="#modal-sign-up" data-tarif="silver"> Записаться</a></div>
+                    <div class="section-prices-card__btn-wrap"><a class="btn btn--square js-set-modal-tarif js-open-popup-inline" href="#modal-sign-up" data-tarif="STANDARD"> Записаться</a></div>
                   </div>
                 </div>
                 <div class="section-prices-card">
@@ -323,7 +323,7 @@
                       <div class="section-prices-li">Доступ в закрытый чат по практике трейдинга. В нем я объясняю свои сделки в реальном времени и делюсь личными инвестиционными идеями.</div>
                       <div class="section-prices-li section-prices-li--star">Обучение по этому билету подразумевает личные занятия, соответственно <span class="color-gold">количество мест ограничено</span>. Так я смогу уделить достаточно внимания каждому ученику, не жертвуя качеством обучения.</div>
                     </div>
-                    <div class="section-prices-card__btn-wrap"><a class="btn btn--square js-set-modal-tarif js-open-popup-inline" href="#modal-sign-up" data-tarif="gold"> Записаться</a></div>
+                    <div class="section-prices-card__btn-wrap"><a class="btn btn--square js-set-modal-tarif js-open-popup-inline" href="#modal-sign-up" data-tarif="INDIVIDUAL"> Записаться</a></div>
                   </div>
                 </div>
               </div>
@@ -429,7 +429,7 @@
         <section class="section-form">
           <div class="section-form__inner">
             <div class="container container--secform">
-              <form class="secform-form" action="">
+              <form class="secform-form js-form-processing" action="" data-type="sign-up">
                 <div class="secform-form__title">готов достичь новых финансовых высот?</div>
                 <!--.secform-form__subtitle присоединяйся!-->
                 <div class="secform-form__inputs">
@@ -598,7 +598,7 @@
                   </div></a></div>
             </div>
             <div class="footer-col footer-col--4">
-              <form class="footer-form dd1 dd2 dt1" action="">
+              <form class="footer-form js-form-processing dd1 dd2 dt1" action="" data-type="sign-up">
                 <div class="secform-inp-row">
                   <div class="secform-inp-wrap">
                     <input class="secform-inp" type="text" name="name" placeholder="Как Вас зовут?">
@@ -665,71 +665,73 @@
     </div>
     <div class="my-modal my-modal--type-sign-up mfp-hide" id="modal-sign-up">
       <div class="my-modal__inner">
-        <form class="secform-form secform-form--modal" action="">
+        <form class="secform-form secform-form--modal js-form-processing" action="" data-type="sign-up">
           <div class="secform-form__title">готов достичь новых финансовых высот?</div>
+          <!--.secform-form__subtitle присоединяйся!-->
           <div class="secform-form__inputs">
             <div class="secform-inp-row">
               <div class="secform-inp-wrap">
-                <input class="secform-inp" type="text" name="name" placeholder="Имя">
+                <input class="secform-inp" type="text" name="name" placeholder="Как Вас зовут?">
+              </div>
+            </div>
+            <div class="secform-info">Выберите <span class="hidenomob">удобный</span> канал&nbsp;связи</div>
+            <div class="secform-inp-row">
+              <div class="secform-inp-wrap">
+                <input class="secform-inp" type="text" name="telegram" placeholder="Ник Telegram">
               </div>
             </div>
             <div class="secform-inp-row">
               <div class="secform-inp-wrap">
-                <input class="secform-inp" type="tel" name="tel" placeholder="Телефон">
+                <input class="secform-inp js-phone-inp" type="tel" name="tel" placeholder="Телефон">
               </div>
             </div>
-            <div class="secform-inp-row">
-              <div class="secform-inp-wrap">
-                <input class="secform-inp" type="email" name="email" placeholder="E-mail (не обязательно)">
+            <div class="secform-info">Выберите ТАРИФ</div>
+            <div class="secform-inp-row secform-inp-row--radio">
+              <div class="secform-radio-group">
+                <label class="secform-radio">
+                  <input class="secform-radio__inp" id="modal-tarif-radio-STANDARD" type="radio" name="tarif-secform" value="STANDARD" checked>
+                  <div class="secform-radio__indicator"></div>
+                  <div class="secform-radio__name">Тариф “STANDARD”</div>
+                </label>
+                <label class="secform-radio">
+                  <input class="secform-radio__inp" id="modal-tarif-radio-INDIVIDUAL" type="radio" name="tarif-secform" value="INDIVIDUAL">
+                  <div class="secform-radio__indicator"></div>
+                  <div class="secform-radio__name">Тариф “INDIVIDUAL”</div>
+                </label>
               </div>
             </div>
-            <div class="secform-inp-row">
-              <div class="secform-inp-wrap">
-                <input class="secform-inp" type="text" name="telegram" placeholder="Ник Telegram (если есть)">
-              </div>
-            </div>
-            <div class="secform-inp-row secform-inp-row--textarea">
-              <div class="secform-textarea-wrap">
-                <textarea class="secform-textarea" name="text" placeholder="Сообщение (не обязательно)"></textarea>
-              </div>
-            </div>
+            <!--.secform-inp-row.secform-inp-row--textarea
+            .secform-textarea-wrap
+            	textarea.secform-textarea(name="text", placeholder="Сообщение (не обязательно)" )
+            -->
             <div class="secform-inp-row secform-inp-row--btn">
-              <input class="hide" id="tarif-inp" type="text" name="tarif">
-              <button class="btn btn--square secform-btn-submit" type="submit">Отправить заявку</button>
+              <button class="btn btn--square secform-btn-submit" type="submit">Записаться</button>
             </div>
+            <div class="secform-privacy">Нажимая на кнопку, Вы соглашаетесь с&nbsp;<a class="js-open-popup-inline" href="#foo-oferta">политикой конфиденциальности и обработки данных</a></div>
           </div>
         </form>
       </div>
     </div>
     <div class="my-modal my-modal--type-sign-up mfp-hide" id="modal-feedback">
       <div class="my-modal__inner">
-        <form class="secform-form secform-form--modal" action="">
-          <div class="secform-form__title">готов достичь новых финансовых высот?</div>
+        <form class="secform-form secform-form--modal js-form-processing" action="" data-type="request-call">
+          <div class="secform-form__title">МЫ ПЕРЕЗВОНИМ В БЛИЖАЙШЕЕ ВРЕМЯ</div>
+          <!--.secform-form__subtitle присоединяйся!-->
           <div class="secform-form__inputs">
             <div class="secform-inp-row">
               <div class="secform-inp-wrap">
-                <input class="secform-inp" type="text" name="name" placeholder="Имя">
+                <input class="secform-inp" type="text" name="name" placeholder="Как Вас зовут?">
               </div>
             </div>
             <div class="secform-inp-row">
               <div class="secform-inp-wrap">
-                <input class="secform-inp" type="email" name="email" placeholder="E-mail">
-              </div>
-            </div>
-            <div class="secform-inp-row">
-              <div class="secform-inp-wrap">
-                <input class="secform-inp" type="text" name="telegram" placeholder="Ник Telegram (если есть)">
-              </div>
-            </div>
-            <div class="secform-inp-row secform-inp-row--textarea">
-              <div class="secform-textarea-wrap">
-                <textarea class="secform-textarea" name="text" placeholder="Сообщение (не обязательно)"></textarea>
+                <input class="secform-inp js-phone-inp" type="tel" name="tel" placeholder="Телефон">
               </div>
             </div>
             <div class="secform-inp-row secform-inp-row--btn">
-              <input class="hide" id="tarif-inp" type="text" name="tarif">
-              <button class="btn btn--square secform-btn-submit" type="submit">Отправить заявку</button>
+              <button class="btn btn--square secform-btn-submit" type="submit">Записаться</button>
             </div>
+            <div class="secform-privacy">Нажимая на кнопку, Вы соглашаетесь с&nbsp;<a class="js-open-popup-inline" href="#foo-oferta">политикой конфиденциальности и обработки данных</a></div>
           </div>
         </form>
       </div>
