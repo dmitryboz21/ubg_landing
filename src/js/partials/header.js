@@ -8,6 +8,7 @@ $(document).ready(function () {
 		$('#site-header').toggleClass('site-header--menu-open');
 		$('.sh-menu-wrap').toggleClass('sh-menu-wrap--open');
 		$('body').toggleClass('body-locked');
+		$('body, html').toggleClass('lock-scroll');
 
 		if ($('body').hasClass('body-locked')) {
 			if ($('body').width() > originalWidth) {

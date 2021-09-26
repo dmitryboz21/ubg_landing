@@ -518,3 +518,13 @@ body::-webkit-scrollbar-thumb {
 		left: 0;
 	}
 }
+
+.lock-scroll{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.iti {
+	position: relative;
+}

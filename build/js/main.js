@@ -50,6 +50,7 @@ $(document).ready(function () {
 		$('#site-header').toggleClass('site-header--menu-open');
 		$('.sh-menu-wrap').toggleClass('sh-menu-wrap--open');
 		$('body').toggleClass('body-locked');
+		$('body, html').toggleClass('lock-scroll');
 
 		if ($('body').hasClass('body-locked')) {
 			if ($('body').width() > originalWidth) {
@@ -90,6 +91,14 @@ $(document).ready(function () {
 				'</div>',
 
 			srcAction: 'iframe_src',
+		},
+		callbacks: {
+			open: function () {
+				$('body, html').addClass('lock-scroll');
+			},
+			close: function () {
+				$('body, html').removeClass('lock-scroll');
+			}
 		}
 	});
 
@@ -109,17 +118,24 @@ $(document).ready(function () {
 		closeBtnInside: true,
 		mainClass: "myPopupMainClass",
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><svg class="js-mfp-close-svg" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="42.544" y1="14.2052" x2="14.2052" y2="42.544" stroke="white" stroke-width="2"/><line x1="14.2086" y1="14.1298" x2="42.5474" y2="42.4686" stroke="white" stroke-width="2"/></svg></button>',
-		callbacks: {
+		/*callbacks: {
 			open: function () {
-				/*$.magnificPopup.instance.close = function () {
+				$.magnificPopup.instance.close = function () {
 					$('#tarif-inp').val('');
 
 					// Call the original close method to close the popup
 					$.magnificPopup.proto.close.call(this);
-				};*/
+				};
+			}
+		}*/
+		callbacks: {
+			open: function () {
+				$('body, html').addClass('lock-scroll');
+			},
+			close: function () {
+				$('body, html').removeClass('lock-scroll');
 			}
 		}
-
 	});
 
 	/*$('.js-open-video').magnificPopup({
@@ -142,10 +158,12 @@ $(document).ready(function () {
 				$('#video-content').append('<video controls width="720" height="1280" autoplay="true" ><source src="' + this.st.el[0].getAttribute('data-href') + '" type="video/mp4"></video>');
 				$('#video-content').find('video')[0].play();
 				player = $('#video-content').find('video');
+				$('body, html').addClass('lock-scroll');
 			},
 			close: function () {
 				player[0].pause();
 				player[0].remove();
+				$('body, html').removeClass('lock-scroll');
 			}
 		}
 	});
@@ -162,10 +180,12 @@ $(document).ready(function () {
 				$('#video-content').append('<video controls width="720" height="706" autoplay="true" ><source src="' + this.st.el[0].getAttribute('data-href') + '" type="video/mp4"></video>');
 				$('#video-content').find('video')[0].play();
 				player = $('#video-content').find('video');
+				$('body, html').addClass('lock-scroll');
 			},
 			close: function () {
 				player[0].pause();
 				player[0].remove();
+				$('body, html').removeClass('lock-scroll');
 			}
 		}
 	});
@@ -202,10 +222,13 @@ $(document).ready(function () {
 		var el = $(this);
 		var dest = el.attr('href'); // получаем направление
 		if (dest !== undefined && dest !== '') { // проверяем существование
-			$('html').animate({
+			$('html,body').animate({
 				scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
-			}, 500 // скорость прокрутки
-			);
+
+			}, 500 );
+			if($('#site-header').hasClass('site-header--menu-open')) {
+				$('.sh-burger-wrap').click();
+			}
 		}
 		return false;
 	});
