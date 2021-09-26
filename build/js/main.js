@@ -72,7 +72,19 @@ $(document).ready(function () {
 		}
 	});
 });
+var htmlScrollTop=-1;
 topBtnShow = false;
+
+function setScrollTop(){
+	htmlScrollTop=$('html').scrollTop();
+}
+
+function returnScrollTop(){
+	$('html').scrollTop(htmlScrollTop);
+	htmlScrollTop=-1;
+}
+
+
 $(document).ready(function () {
 	// $("input[name='phone']").mask(" +7 (999) 999-99-99");
 
@@ -83,7 +95,7 @@ $(document).ready(function () {
 		mainClass: 'mfp-fade',
 		removalDelay: 160,
 		preloader: false,
-		fixedContentPos: false,
+		fixedContentPos: true,
 		iframe: {
 			markup: '<div class="mfp-iframe-scaler">' +
 				'<div class="mfp-close"></div>' +
@@ -94,10 +106,12 @@ $(document).ready(function () {
 		},
 		callbacks: {
 			open: function () {
-				$('body, html').addClass('lock-scroll');
+				/*setScrollTop();
+				$('body, html').addClass('lock-scroll');*/
 			},
 			close: function () {
-				$('body, html').removeClass('lock-scroll');
+				/*$('body, html').removeClass('lock-scroll');
+				returnScrollTop();*/
 			}
 		}
 	});
@@ -116,8 +130,9 @@ $(document).ready(function () {
 	$('.js-open-popup-inline').magnificPopup({
 		type: 'inline',
 		closeBtnInside: true,
-		mainClass: "myPopupMainClass",
+		mainClass: "myPopupMainClass myPopupMainClass--modals-no-video",
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><svg class="js-mfp-close-svg" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="42.544" y1="14.2052" x2="14.2052" y2="42.544" stroke="white" stroke-width="2"/><line x1="14.2086" y1="14.1298" x2="42.5474" y2="42.4686" stroke="white" stroke-width="2"/></svg></button>',
+		fixedContentPos: true,
 		/*callbacks: {
 			open: function () {
 				$.magnificPopup.instance.close = function () {
@@ -130,10 +145,12 @@ $(document).ready(function () {
 		}*/
 		callbacks: {
 			open: function () {
-				$('body, html').addClass('lock-scroll');
+				/*setScrollTop();
+				$('body, html').addClass('lock-scroll');*/
 			},
 			close: function () {
-				$('body, html').removeClass('lock-scroll');
+				/*$('body, html').removeClass('lock-scroll');
+				returnScrollTop();*/
 			}
 		}
 	});
@@ -149,21 +166,23 @@ $(document).ready(function () {
 	$('.js-open-video').magnificPopup({
 		type: 'inline',
 		closeBtnInside: true,
-		mainClass: 'custom-popup-class',
 		mainClass: "myPopupMainClass myPopupMainClass--video",
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><svg class="js-mfp-close-svg" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="42.544" y1="14.2052" x2="14.2052" y2="42.544" stroke="white" stroke-width="2"/><line x1="14.2086" y1="14.1298" x2="42.5474" y2="42.4686" stroke="white" stroke-width="2"/></svg></button>',
+		fixedContentPos: true,
 		callbacks: {
 			open: function () {
 				//console.log(this.st.el[0].getAttribute('data-href'));
 				$('#video-content').append('<video controls width="720" height="1280" autoplay="true" ><source src="' + this.st.el[0].getAttribute('data-href') + '" type="video/mp4"></video>');
 				$('#video-content').find('video')[0].play();
 				player = $('#video-content').find('video');
-				$('body, html').addClass('lock-scroll');
+				/*setScrollTop();
+				$('body, html').addClass('lock-scroll');*/
 			},
 			close: function () {
 				player[0].pause();
 				player[0].remove();
-				$('body, html').removeClass('lock-scroll');
+				/*$('body, html').removeClass('lock-scroll');
+				returnScrollTop();*/
 			}
 		}
 	});
@@ -174,18 +193,21 @@ $(document).ready(function () {
 		mainClass: 'custom-popup-class',
 		mainClass: "myPopupMainClass myPopupMainClass--video myPopupMainClass--video--type2",
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close"><svg class="js-mfp-close-svg" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="42.544" y1="14.2052" x2="14.2052" y2="42.544" stroke="white" stroke-width="2"/><line x1="14.2086" y1="14.1298" x2="42.5474" y2="42.4686" stroke="white" stroke-width="2"/></svg></button>',
+		fixedContentPos: true,
 		callbacks: {
 			open: function () {
 				//console.log(this.st.el[0].getAttribute('data-href'));
 				$('#video-content').append('<video controls width="720" height="706" autoplay="true" ><source src="' + this.st.el[0].getAttribute('data-href') + '" type="video/mp4"></video>');
 				$('#video-content').find('video')[0].play();
 				player = $('#video-content').find('video');
-				$('body, html').addClass('lock-scroll');
+				/*setScrollTop();
+				$('body, html').addClass('lock-scroll');*/
 			},
 			close: function () {
 				player[0].pause();
 				player[0].remove();
-				$('body, html').removeClass('lock-scroll');
+				/*$('body, html').removeClass('lock-scroll');
+				returnScrollTop();*/
 			}
 		}
 	});
@@ -254,20 +276,25 @@ $(document).ready(function () {
 		}, 1000);
 	});
 	var defaultCountry="ua";
-	$('.js-phone-inp').intlTelInput({
-		initialCountry: defaultCountry,
-		onlyCountries: ["by", "kz", "ru", "ua"],
-		localizedCountries: {
-			"by": "Беларусь",
-			"kz": "Казахстан",
-			"ru": "Россия",
-			"ua": "Украина"
-		},
-		separateDialCode: true,
-		nationalMode: false
-		//utilsScript: "js/utils.js"
-		// any initialisation options go here
+	$('.js-phone-inp').each(function(){
+		var $this = $(this);
+		$this.intlTelInput({
+			initialCountry: defaultCountry,
+			onlyCountries: ["by", "kz", "ru", "ua"],
+			localizedCountries: {
+				"by": "Беларусь",
+				"kz": "Казахстан",
+				"ru": "Россия",
+				"ua": "Украина"
+			},
+			separateDialCode: true,
+			nationalMode: false,
+			//dropdownContainer: $this.closest('.secform-inp-wrap')[0]
+			//utilsScript: "js/utils.js"
+			// any initialisation options go here
+		});
 	});
+
 	/*
 		var reset = function (inp) {
 			inp.classList.remove("error");
