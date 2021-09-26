@@ -72,16 +72,16 @@ $(document).ready(function () {
 		}
 	});
 });
-var htmlScrollTop=-1;
+var htmlScrollTop = -1;
 topBtnShow = false;
 
-function setScrollTop(){
-	htmlScrollTop=$('html').scrollTop();
+function setScrollTop() {
+	htmlScrollTop = $('html').scrollTop();
 }
 
-function returnScrollTop(){
+function returnScrollTop() {
 	$('html').scrollTop(htmlScrollTop);
-	htmlScrollTop=-1;
+	htmlScrollTop = -1;
 }
 
 
@@ -118,7 +118,7 @@ $(document).ready(function () {
 
 	$('.js-set-modal-tarif').click(function () {
 		//$('#tarif-inp').val($(this).attr('data-tarif'));
-		$('#modal-tarif-radio-'+$(this).attr('data-tarif')).prop('checked', true);
+		$('#modal-tarif-radio-' + $(this).attr('data-tarif')).prop('checked', true);
 
 
 	});
@@ -247,8 +247,8 @@ $(document).ready(function () {
 			$('html,body').animate({
 				scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
 
-			}, 500 );
-			if($('#site-header').hasClass('site-header--menu-open')) {
+			}, 500);
+			if ($('#site-header').hasClass('site-header--menu-open')) {
 				$('.sh-burger-wrap').click();
 			}
 		}
@@ -275,8 +275,8 @@ $(document).ready(function () {
 			scrollTop: 0
 		}, 1000);
 	});
-	var defaultCountry="ua";
-	$('.js-phone-inp').each(function(){
+	var defaultCountry = "ua";
+	$('.js-phone-inp').each(function () {
 		var $this = $(this);
 		$this.intlTelInput({
 			initialCountry: defaultCountry,
@@ -328,8 +328,9 @@ $(document).ready(function () {
 
 	$.jMaskGlobals = {
 		translation: {
-			'n': {pattern: /\d/},
-		}
+			'n': { pattern: /\d/ },
+		},
+
 	};
 	/*var masksArray = {
 		'by': '+375 (nn) nnn-nn-nn',
@@ -367,85 +368,258 @@ $(document).ready(function () {
 
 	$('.js-phone-inp').attr('placeholder', placeholdersArray[defaultCountry]);
 
-	$('.js-phone-inp').mask(masksArray[defaultCountry],{
+	$('.js-phone-inp').mask(masksArray[defaultCountry], {
 		//clearIfNotMatch: true,
 		translation: {
-			'n': {pattern: /\d/},
+			'n': { pattern: /\d/ },
 			/*'r': {
 			  pattern: /[\/]/,
 			  fallback: '/'
 			},*/
-			placeholder:placeholdersArray[defaultCountry]
+			placeholder: placeholdersArray[defaultCountry]
+		},
+		onComplete: function (val, e, inp, options) {
+			console.log('cep onComplete! ', val, e, inp, options);
+			//console.log($(this));
+			$(inp).addClass('js-tel-mask-valid');
+		},
+		onChange: function (val, e, inp, options) {
+			//console.log('cep onChange! ', val,e,inp,options)
+			$(inp).removeClass('js-tel-mask-valid');
+			//console.log($(this));
 		}
 	});
 
-	$('.js-phone-inp').on("countrychange", function (e, ) {
-		var countryData=$(this).intlTelInput('getSelectedCountryData');
+	$('.js-phone-inp').on("countrychange", function (e,) {
+		var countryData = $(this).intlTelInput('getSelectedCountryData');
 
 		$(this).val('');
 		$('.js-phone-inp').attr('placeholder', placeholdersArray[countryData.iso2]);
-		$(this).mask(masksArray[countryData.iso2],{
 
-		translation: {
-			'n': {pattern: /\d/},
-			/*'r': {
-			  pattern: /[\/]/,
-			  fallback: '/'
-			},*/
-			placeholder:placeholdersArray[countryData.iso2]
-		}
+		$(this).unmask();
+		$(this).mask(masksArray[countryData.iso2], {
+
+			translation: {
+				'n': { pattern: /\d/ },
+				/*'r': {
+				  pattern: /[\/]/,
+				  fallback: '/'
+				},*/
+				placeholder: placeholdersArray[countryData.iso2]
+			},
+			onComplete: function (val, e, inp, options) {
+				console.log('cep onComplete! ', val, e, inp, options);
+				//console.log($(this));
+				$(inp).addClass('js-tel-mask-valid');
+			},
+			onChange: function (val, e, inp, options) {
+				//console.log('cep onChange! ', val,e,inp,options)
+				$(inp).removeClass('js-tel-mask-valid');
+				//console.log($(this));
+			}
 		});
 		// do something with iti.getSelectedCountryData()
 	});
 
-	$('.js-section-prices__read-more').click(function(){
+	$('.js-section-prices__read-more').click(function () {
 		$(this).closest('.section-prices-card').toggleClass('section-prices-card--mob-open');
 		$(this).siblings('.section-prices-ul').stop().slideToggle(600);
 	});
 
-	$('.js-section-reviews__read-more').click(function(){
+	$('.js-section-reviews__read-more').click(function () {
 		$(this).closest('.secreviews-card').toggleClass('module-card-opener--open');
 		$(this).siblings('.secreviews-card__text-wrap').stop().slideToggle(600);
 	});
 
-//data-type="sign-up"
-//data-type="request-call"
+	//data-type="sign-up"
+	//data-type="request-call"
 
-	$('.js-form-processing').submit(function(e){
+	$('.js-form-processing').submit(function (e) {
 		e.preventDefault();
 		var form = $(this);
 		var formType = $(this).attr('data-type');
-
-		switch(formType){
+		var telInp = form.find('.js-phone-inp');
+		var nameInp = form.find('input[name="name"]');
+		var tgInp = form.find('input[name="telegram"]');
+		var hasErrors = false;
+		switch (formType) {
 			case "sign-up":
-				var telInp=form.find('.js-phone-inp');
-				console.log(validateTel(telInp));
+				/*console.log(validateTel(telInp));
 				//console.log(telInp.cleanVal());
-			break;
+				switch(validateTel(telInp)){
+					case "valid":
+						clearErrors(telInp);
+					break;
+					case "non-completed":
+						printError(telInp, errText);
+					break;
+					case "empty":
+						printError(telInp, errText);
+					break;
+				}*/
+				break;
 			case "request-call":
+				switch (validateTel(telInp)) {
+					case "valid":
+						clearErrors(telInp);
+						break;
+					case "non-completed":
+						printError(telInp, '*Номер заполнен не полностью');
+						hasErrors = true;
+						break;
+					case "empty":
+						printError(telInp, '*Данное поле обязательно к заполнению');
+						hasErrors = true;
+						break;
+				}
 
-			break;
+				break;
+		}
+
+
+		var nameInvalidReg = /[^А-ЯЁа-яёA-Za-z ]/;
+		if (nameInvalidReg.test(nameInp.val())) {//имя невалидно
+			printError(nameInp, '*Разрешены только символы русского алфавита');
+			hasErrors = true;
+		}
+		else {
+			if(checkNoEmpty(nameInp)){
+				clearErrors(nameInp);
+			}
+			else{
+				printError(nameInp, '*Обязательно к заполнению');
+				hasErrors = true;
+			}
+		}
+
+		if (!hasErrors) {
+			var formData = {
+				formType: formType,
+				name: nameInp.val()
+			};
+
+			switch (formType) {
+				case "sign-up":
+					//formData.=
+					break;
+				case "request-call":
+					//formData.=
+					break;
+			}
+
+
+			$.ajax({
+				type: "POST",
+				url: form.attr('action'),
+				data: json_encode(formData),
+				dataType: "json",
+				encode: true,
+			}).done(function () {
+				console.log('success');
+			}).fail(function () {
+				console.log('fail');
+			});
+
+			/*done(function (data) {
+			  console.log(data);
+
+			  if (!data.success) {
+				if (data.errors.name) {
+				  $("#name-group").addClass("has-error");
+				  $("#name-group").append(
+					'<div class="help-block">' + data.errors.name + "</div>"
+				  );
+				}
+
+				if (data.errors.email) {
+				  $("#email-group").addClass("has-error");
+				  $("#email-group").append(
+					'<div class="help-block">' + data.errors.email + "</div>"
+				  );
+				}
+
+				if (data.errors.superheroAlias) {
+				  $("#superhero-group").addClass("has-error");
+				  $("#superhero-group").append(
+					'<div class="help-block">' + data.errors.superheroAlias + "</div>"
+				  );
+				}
+			  } else {
+				$("form").html(
+				  '<div class="alert alert-success">' + data.message + "</div>"
+				);
+			  }
+
+			});*/
 		}
 	});
 
+
+
 });
+/*
+$('form input').change(function(){
+	clearErrors($(this));
+})*/
+
+function checkNoEmpty(inp) {
+	return inp.val().length > 0;
+}
+
 /**
  * @param  {} telInp //jquery объект, указывающий на поле для ввода телефона
  */
+function validateTel(telInp) {
+	if (telInp.hasClass('js-tel-mask-valid')) {
+		return "valid";
+	}
+	else {
+		if (checkNoEmpty(telInp)) {
+			return "non-completed";
+		}
+		else {
+			return "empty";
+		}
+	}
+}
+//printError($('.section-form .js-phone-inp'),'test error 1')
+function printError(inp, errText) {
+	var inpRow = inp.closest('.secform-inp-row');
+	var inpErrContainer;
 
-function checkNoEmpty(inp){
-	return inp.val().length>0;
+	var errItemHtml = '<div class="inp-err-item inp-err-item--hidden"><div class="inp-err-item__inner">' + errText + '</div></div>';
+
+	if (!inpRow.find('.inp-err-container').length > 0) {
+		inpRow.append('<div class="inp-err-container">' + errItemHtml + '</div>');
+		inpRow.find(".inp-err-item").slideDown(200);
+	}
+	else {
+		var errContainer = inpRow.find('.inp-err-container');
+		if (errContainer.find('.inp-err-item').length > 0) {
+			errContainer.find('.inp-err-item').slideUp(200, function () {
+				errContainer.find('.inp-err-item').remove();
+				errContainer.html(errItemHtml);
+				inpRow.find(".inp-err-item").slideDown(200);
+			});
+		}
+		else {
+			errContainer.html(errItemHtml);
+			inpRow.find(".inp-err-item").slideDown(200);
+		}
+	}
+
 }
 
-function validateTel(telInp){
-	if(checkNoEmpty(telInp)){
-		var countryData=telInp.intlTelInput('getSelectedCountryData');
+function clearErrors(inp) {
+	var inpRow = inp.closest('.secform-inp-row');
+	var inpErrContainer;
 
-		console.log(countryData);
-		//inp.val()
-
-	}
-	else{
-		return "empty";
+	if (inpRow.find('.inp-err-container').length > 0) {
+		var errContainer = inpRow.find('.inp-err-container');
+		if (errContainer.find('.inp-err-item').length > 0) {
+			errContainer.find('.inp-err-item').slideUp(200, function () {
+				errContainer.find('.inp-err-item').remove();
+			});
+		}
 	}
 }

@@ -578,3 +578,22 @@ body::-webkit-scrollbar-thumb {
 		max-height: unset;
 	}
 }*/
+
+
+.inp-err-container{
+	display: block;
+}
+.inp-err-item{
+	display: block;
+}
+.inp-err-item--hidden{
+	display: none;
+}
+.inp-err-item__inner{
+	display: block;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	color: #E31313;
+	padding-top: 5px;
+}
