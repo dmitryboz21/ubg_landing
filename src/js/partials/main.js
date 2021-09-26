@@ -432,9 +432,9 @@ $(document).ready(function () {
 					//formData.=
 					break;
 			}
+			alert("Заебись, чётко");
 
-
-			$.ajax({
+			/*$.ajax({
 				type: "POST",
 				url: form.attr('action'),
 				data: json_encode(formData),
@@ -445,7 +445,7 @@ $(document).ready(function () {
 			}).fail(function () {
 				console.log('fail');
 			});
-
+*/
 			/*done(function (data) {
 			  console.log(data);
 
