@@ -440,23 +440,54 @@ $(document).ready(function () {
 		var formType = $(this).attr('data-type');
 		var telInp = form.find('.js-phone-inp');
 		var nameInp = form.find('input[name="name"]');
-		var tgInp = form.find('input[name="telegram"]');
+		var telegramInp = form.find('input[name="telegram"]');
 		var hasErrors = false;
 		switch (formType) {
 			case "sign-up":
-				/*console.log(validateTel(telInp));
-				//console.log(telInp.cleanVal());
-				switch(validateTel(telInp)){
+				var validateTelResult=validateTel(telInp);
+				var validateTelegramResult=validateTelegram(telegramInp);
+
+				switch (validateTelResult) {
 					case "valid":
 						clearErrors(telInp);
-					break;
+						break;
 					case "non-completed":
-						printError(telInp, errText);
-					break;
+						printError(telInp, '*Номер заполнен не полностью');
+						hasErrors = true;
+						break;
 					case "empty":
-						printError(telInp, errText);
-					break;
-				}*/
+						//Если одно поле пустое - это пофиг. Если оба поля пустые - ошибку выведу в проверке ниже
+						//printError(telInp, '*Данное поле обязательно к заполнению');
+						//hasErrors = true;
+						break;
+				}
+				switch (validateTelegramResult) {
+					case "valid":
+						clearErrors(telegramInp);
+						break;
+					case "invalid":
+						printError(telegramInp, '*Некорректный никнейм');
+						hasErrors = true;
+						break;
+					case "empty":
+						//Если одно поле пустое - это пофиг. Если оба поля пустые - ошибку выведу в проверке ниже
+						//printError(telegramInp, '*Данное поле обязательно к заполнению');
+						//hasErrors = true;
+						break;
+				}
+
+
+
+				if(validateTelResult==="valid" || validateTelegramResult==="valid"){//если хотя бы одно поле валиджно из этих, то ошибку тут не выводим
+					clearErrors(form.find('.secform-info--select-channel-of-communication'));
+				}
+				else{
+					//console.log(form.find('.secform-info--select-channel-of-communication').length);
+					printError(form.find('.secform-info--select-channel-of-communication'),'*Минимум одно поле должно быть заполнено');
+					hasErrors = true;
+				}
+
+
 				break;
 			case "request-call":
 				switch (validateTel(telInp)) {
@@ -472,7 +503,6 @@ $(document).ready(function () {
 						hasErrors = true;
 						break;
 				}
-
 				break;
 		}
 
@@ -582,9 +612,36 @@ function validateTel(telInp) {
 		}
 	}
 }
+/**
+ * @param  {} telegramInp //jquery объект, указывающий на поле для ввода телеграм ника
+ *
+ * возвращает "valid" "invalid" "empty"
+ */
+function validateTelegram(telegramInp) {
+	const validTelegramNickname = /^[A-Za-z\d_]{5,32}$/;
+	if (validTelegramNickname.test(telegramInp.val())) {
+		return "valid";
+	}
+	else {
+		if (checkNoEmpty(telegramInp)) {
+			return "invalid";
+		}
+		else {
+			return "empty";
+		}
+	}
+}
 //printError($('.section-form .js-phone-inp'),'test error 1')
 function printError(inp, errText) {
-	var inpRow = inp.closest('.secform-inp-row');
+	var inpRow;
+	if(inp.hasClass('secform-info')){//ошибку выводим к заголовку группы правил
+		inpRow = inp;
+	}
+	else{//ошибку выводим к оболочке инпута
+		inpRow = inp.closest('.secform-inp-row');
+	}
+
+
 	var inpErrContainer;
 
 	var errItemHtml = '<div class="inp-err-item inp-err-item--hidden"><div class="inp-err-item__inner">' + errText + '</div></div>';
@@ -607,11 +664,16 @@ function printError(inp, errText) {
 			inpRow.find(".inp-err-item").slideDown(200);
 		}
 	}
-
 }
 
 function clearErrors(inp) {
-	var inpRow = inp.closest('.secform-inp-row');
+	var inpRow;
+	if(inp.hasClass('secform-info')){//ошибку выводим к заголовку группы правил
+		inpRow = inp;
+	}
+	else{//ошибку выводим к оболочке инпута
+		inpRow = inp.closest('.secform-inp-row');
+	}
 	var inpErrContainer;
 
 	if (inpRow.find('.inp-err-container').length > 0) {
