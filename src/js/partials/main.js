@@ -305,7 +305,6 @@ $(document).ready(function () {
 			placeholder: placeholdersArray[defaultCountry]
 		},
 		onComplete: function (val, e, inp, options) {
-			console.log('cep onComplete! ', val, e, inp, options);
 			//console.log($(this));
 			$(inp).addClass('js-tel-mask-valid');
 		},
@@ -334,7 +333,6 @@ $(document).ready(function () {
 				placeholder: placeholdersArray[countryData.iso2]
 			},
 			onComplete: function (val, e, inp, options) {
-				console.log('cep onComplete! ', val, e, inp, options);
 				//console.log($(this));
 				$(inp).addClass('js-tel-mask-valid');
 			},
@@ -367,11 +365,14 @@ $(document).ready(function () {
 		var telInp = form.find('.js-phone-inp');
 		var nameInp = form.find('input[name="name"]');
 		var telegramInp = form.find('input[name="telegram"]');
+		var tarifInp = form.find('input[name="tarif-secform"]:checked');
 		var hasErrors = false;
+		var validateTelResult = false;
+		var validateTelegramResult = false;
 		switch (formType) {
 			case "sign-up":
-				var validateTelResult=validateTel(telInp);
-				var validateTelegramResult=validateTelegram(telegramInp);
+				validateTelResult=validateTel(telInp);
+				validateTelegramResult=validateTelegram(telegramInp);
 
 				switch (validateTelResult) {
 					case "valid":
@@ -452,31 +453,60 @@ $(document).ready(function () {
 		if (!hasErrors) {
 			var formData = {
 				formType: formType,
-				name: nameInp.val()
+				name: nameInp.val(),
+				description: ""
 			};
 
+			var countryData=telInp.intlTelInput('getSelectedCountryData');
+			//dialCode: "380"
+			//name: "Украина"
+			//console.log(countryData);
 			switch (formType) {
 				case "sign-up":
-					//formData.=
+					formData.title="Запись на курс";
+					if(validateTelResult==="valid"){
+						formData.phone=countryData.dialCode+telInp.cleanVal();
+						formData.description+="Страна: "+countryData.name+"\r\n \t";
+					}
+					else{
+						formData.phone="0000000000";
+					}
+					if(validateTelegramResult==="valid"){
+						formData.description+="Telegram: "+telegramInp.val()+"\r\n \t";
+					}
+					else{
+						formData.description+="Telegram: -\r\n \t";
+					}
+					formData.description+="Тариф: "+tarifInp.val();
 					break;
 				case "request-call":
-					//formData.=
+					formData.title="Заказан звонок";
+					formData.phone=countryData.dialCode+telInp.cleanVal();
+					formData.description+="Страна: "+countryData.name+"\r\n \t";
 					break;
 			}
-			alert("Заебись, чётко");
 
-			/*$.ajax({
+
+			$.ajax({
 				type: "POST",
-				url: form.attr('action'),
-				data: json_encode(formData),
-				dataType: "json",
+				url: 'http://localhost:80/ubg/sendform.php', //form.attr('action'),
+				data: formData,
+				//dataType: "json",
+			//	dataType: "html",
 				encode: true,
-			}).done(function () {
+				beforeSend: function(data){
+					console.log(data);
+				}
+			}).done(function (idata, test) {
 				console.log('success');
-			}).fail(function () {
+				console.log(idata);
+				console.log(test);
+			}).fail(function (idata, test) {
 				console.log('fail');
+				console.log(idata);
+				console.log(test);
 			});
-*/
+
 			/*done(function (data) {
 			  console.log(data);
 
