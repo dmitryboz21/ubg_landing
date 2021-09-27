@@ -571,14 +571,14 @@ $(document).ready(function () {
 				beforeSend: function(data){
 					console.log(data);
 				}
-			}).done(function (idata, test) {
+			}).done(function (idata) {
 				console.log('success');
 				console.log(idata);
-				console.log(test);
-			}).fail(function (idata, test) {
+				console.log(idata.responseText);
+			}).fail(function (idata) {
 				console.log('fail');
 				console.log(idata);
-				console.log(test);
+				console.log(idata.responseText);
 			});
 
 			/*done(function (data) {
