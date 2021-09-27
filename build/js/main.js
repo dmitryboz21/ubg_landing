@@ -619,7 +619,7 @@ function validateTel(telInp) {
  * возвращает "valid" "invalid" "empty"
  */
 function validateTelegram(telegramInp) {
-	const validTelegramNickname = /^[A-Za-z\d_]{5,32}$/;
+	const validTelegramNickname = /^[@]{0,1}[A-Za-z\d_]{5,32}$/;
 	if (validTelegramNickname.test(telegramInp.val())) {
 		return "valid";
 	}
