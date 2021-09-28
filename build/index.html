@@ -16,6 +16,7 @@
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#ffffff">
     <title>Litvinoff cryptotrader</title>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lcyo5ccAAAAAEpIQ0QFy65pD7tEDs4fMYV20T19"></script>
   </head>
   <body>
     <div class="dark-bg-for-menu js-dark-bg-for-menu"></div>
@@ -430,6 +431,7 @@
           <div class="section-form__inner">
             <div class="container container--secform">
               <form class="secform-form js-form-processing" action="/form-processor.php" data-type="sign-up">
+                <input class="recaptchaResponse" type="hidden" name="recaptcha_response">
                 <div class="secform-form__title">готов достичь новых финансовых высот?</div>
                 <!--.secform-form__subtitle присоединяйся!-->
                 <div class="secform-form__inputs">
@@ -599,6 +601,7 @@
             </div>
             <div class="footer-col footer-col--4">
               <form class="footer-form js-form-processing dd1 dd2 dt1" action="/form-processor.php" data-type="request-call">
+                <input class="recaptchaResponse" type="hidden" name="recaptcha_response">
                 <div class="secform-inp-row">
                   <div class="secform-inp-wrap">
                     <input class="secform-inp" type="text" name="name" placeholder="Как Вас зовут?">
@@ -666,6 +669,7 @@
     <div class="my-modal my-modal--type-sign-up mfp-hide" id="modal-sign-up">
       <div class="my-modal__inner">
         <form class="secform-form secform-form--modal js-form-processing" action="/form-processor.php" data-type="sign-up">
+          <input class="recaptchaResponse" type="hidden" name="recaptcha_response">
           <div class="secform-form__title">готов достичь новых финансовых высот?</div>
           <!--.secform-form__subtitle присоединяйся!-->
           <div class="secform-form__inputs">
@@ -715,6 +719,7 @@
     <div class="my-modal my-modal--type-sign-up mfp-hide" id="modal-feedback">
       <div class="my-modal__inner">
         <form class="secform-form secform-form--modal js-form-processing" action="/form-processor.php" data-type="request-call">
+          <input class="recaptchaResponse" type="hidden" name="recaptcha_response">
           <div class="secform-form__title">МЫ ПЕРЕЗВОНИМ В БЛИЖАЙШЕЕ ВРЕМЯ</div>
           <!--.secform-form__subtitle присоединяйся!-->
           <div class="secform-form__inputs">

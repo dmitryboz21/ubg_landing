@@ -60,6 +60,7 @@
 								.footer-social__desc Читай
 				.footer-col.footer-col--4
 					form.footer-form.js-form-processing(action="/form-processor.php" data-type="request-call").dd1.dd2.dt1
+						input.recaptchaResponse(type="hidden" name="recaptcha_response")
 						.secform-inp-row
 							.secform-inp-wrap
 								input.secform-inp(type="text", name="name", placeholder="Как Вас зовут?")
@@ -131,6 +132,7 @@ div(style="display:none")
 	.my-modal__inner
 
 		form.secform-form.secform-form--modal.js-form-processing(action="/form-processor.php" data-type="sign-up")
+			input.recaptchaResponse(type="hidden" name="recaptcha_response")
 			.secform-form__title готов достичь новых финансовых высот?
 			//.secform-form__subtitle присоединяйся!
 			.secform-form__inputs
@@ -174,6 +176,7 @@ div(style="display:none")
 	.my-modal__inner
 
 		form.secform-form.secform-form--modal.js-form-processing(action="/form-processor.php" data-type="request-call")
+			input.recaptchaResponse(type="hidden" name="recaptcha_response")
 			.secform-form__title МЫ ПЕРЕЗВОНИМ В БЛИЖАЙШЕЕ ВРЕМЯ
 			//.secform-form__subtitle присоединяйся!
 			.secform-form__inputs

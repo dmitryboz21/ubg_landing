@@ -472,10 +472,10 @@ $(document).ready(function () {
 						formData.phone="0000000000";
 					}
 					if(validateTelegramResult==="valid"){
-						formData.description+="Telegram: "+telegramInp.val()+"\r\n \t";
+						formData.telegram=telegramInp.val();
 					}
 					else{
-						formData.description+="Telegram: -\r\n \t";
+						formData.telegram="";
 					}
 					formData.description+="Тариф: "+tarifInp.val();
 					break;
@@ -485,27 +485,38 @@ $(document).ready(function () {
 					formData.description+="Страна: "+countryData.name+"\r\n \t";
 					break;
 			}
+			grecaptcha.ready(function () {
+				grecaptcha.execute('6Lcyo5ccAAAAAEpIQ0QFy65pD7tEDs4fMYV20T19', { action: 'submit_form' }).then(function (token) {
+					// var recaptchaResponse = form.find('.recaptchaResponse')[0];
+					// recaptchaResponse.value = token;
+					formData.recaptchaResponse=token;
+					// Выполняем здесь вызов Ajax
+					$.ajax({
+						type: "POST",
+						url: 'http://localhost:80/ubg/sendform.php', //form.attr('action'),
+						data: formData,
+						//dataType: "json",
+					//	dataType: "html",
+						encode: true,
+						beforeSend: function(data){
+							console.log(data);
+						}
+					}).done(function (idata) {
+						//console.log('success');
+						//console.log(idata);
+						console.log(idata.responseText);
+
+					}).fail(function (idata) {
+						console.log('fail');
+						//console.log(idata);
+						console.log(idata.responseText);
+					});
 
 
-			$.ajax({
-				type: "POST",
-				url: 'http://localhost:80/ubg/sendform.php', //form.attr('action'),
-				data: formData,
-				//dataType: "json",
-			//	dataType: "html",
-				encode: true,
-				beforeSend: function(data){
-					console.log(data);
-				}
-			}).done(function (idata) {
-				console.log('success');
-				console.log(idata);
-				console.log(idata.responseText);
-			}).fail(function (idata) {
-				console.log('fail');
-				console.log(idata);
-				console.log(idata.responseText);
-			});
+
+				});
+			 });
+
 
 			/*done(function (data) {
 			  console.log(data);
@@ -569,6 +580,8 @@ function validateTel(telInp) {
 		}
 	}
 }
+
+
 /**
  * @param  {} telegramInp //jquery объект, указывающий на поле для ввода телеграм ника
  *
