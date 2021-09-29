@@ -498,9 +498,8 @@ $(document).ready(function () {
 						formData.recaptchaResponse = token;
 						// Выполняем здесь вызов Ajax
 						$.ajax({
-
 							type: "POST",
-							url:'http://localhost/ubg/sendform.php',// form.attr('action'),
+							url:  form.attr('action'),
 							data: formData,
 							dataType: "JSON",
 							//	dataType: "html",
