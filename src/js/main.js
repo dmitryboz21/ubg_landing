@@ -6,6 +6,7 @@
 //= libs/intlTelInput-jquery.min.js
 /*libs/slick.min.js*/
 //= libs/jquery.mask.min.js
+//= libs/offline.min.js
 
 /* my scripts */
 

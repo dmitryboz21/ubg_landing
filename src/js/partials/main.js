@@ -358,6 +358,9 @@ $(document).ready(function () {
 	//data-type="sign-up"
 	//data-type="request-call"
 
+	//Offline.options = {checks: {image: {url: 'my-image.gif'}, active: 'image'}}
+	//Offline.on('down', handler, context)
+
 	$('.js-form-processing').submit(function (e) {
 		e.preventDefault();
 		var form = $(this);
@@ -371,8 +374,8 @@ $(document).ready(function () {
 		var validateTelegramResult = false;
 		switch (formType) {
 			case "sign-up":
-				validateTelResult=validateTel(telInp);
-				validateTelegramResult=validateTelegram(telegramInp);
+				validateTelResult = validateTel(telInp);
+				validateTelegramResult = validateTelegram(telegramInp);
 
 				switch (validateTelResult) {
 					case "valid":
@@ -405,12 +408,12 @@ $(document).ready(function () {
 
 
 
-				if(validateTelResult==="valid" || validateTelegramResult==="valid"){//если хотя бы одно поле валиджно из этих, то ошибку тут не выводим
+				if (validateTelResult === "valid" || validateTelegramResult === "valid") {//если хотя бы одно поле валиджно из этих, то ошибку тут не выводим
 					clearErrors(form.find('.secform-info--select-channel-of-communication'));
 				}
-				else{
+				else {
 					//console.log(form.find('.secform-info--select-channel-of-communication').length);
-					printError(form.find('.secform-info--select-channel-of-communication'),'*Минимум одно поле должно быть заполнено');
+					printError(form.find('.secform-info--select-channel-of-communication'), '*Минимум одно поле должно быть заполнено');
 					hasErrors = true;
 				}
 
@@ -441,10 +444,10 @@ $(document).ready(function () {
 			hasErrors = true;
 		}
 		else {
-			if(checkNoEmpty(nameInp)){
+			if (checkNoEmpty(nameInp)) {
 				clearErrors(nameInp);
 			}
-			else{
+			else {
 				printError(nameInp, '*Обязательно к заполнению');
 				hasErrors = true;
 			}
@@ -457,104 +460,155 @@ $(document).ready(function () {
 				description: ""
 			};
 
-			var countryData=telInp.intlTelInput('getSelectedCountryData');
+			var countryData = telInp.intlTelInput('getSelectedCountryData');
 			//dialCode: "380"
 			//name: "Украина"
 			//console.log(countryData);
 			switch (formType) {
 				case "sign-up":
-					formData.title="Запись на курс";
-					if(validateTelResult==="valid"){
-						formData.phone=countryData.dialCode+telInp.cleanVal();
-						formData.description+="Страна: "+countryData.name+"\r\n \t";
+					formData.title = "Запись на курс";
+					if (validateTelResult === "valid") {
+						formData.phone = countryData.dialCode + telInp.cleanVal();
+						formData.description += "Страна: " + countryData.name + "\r\n \t";
 					}
-					else{
-						formData.phone="0000000000";
+					else {
+						formData.phone = "0000000000";
 					}
-					if(validateTelegramResult==="valid"){
-						formData.telegram=telegramInp.val();
+					if (validateTelegramResult === "valid") {
+						formData.telegram = telegramInp.val();
 					}
-					else{
-						formData.telegram="";
+					else {
+						formData.telegram = "";
 					}
-					formData.description+="Тариф: "+tarifInp.val();
+					formData.description += "Тариф: " + tarifInp.val();
 					break;
 				case "request-call":
-					formData.title="Заказан звонок";
-					formData.phone=countryData.dialCode+telInp.cleanVal();
-					formData.description+="Страна: "+countryData.name+"\r\n \t";
+					formData.title = "Заказан звонок";
+					formData.phone = countryData.dialCode + telInp.cleanVal();
+					formData.description += "Страна: " + countryData.name + "\r\n \t";
+					formData.telegram = "";
 					break;
 			}
-			grecaptcha.ready(function () {
-				grecaptcha.execute('6Lcyo5ccAAAAAEpIQ0QFy65pD7tEDs4fMYV20T19', { action: 'submit_form' }).then(function (token) {
-					// var recaptchaResponse = form.find('.recaptchaResponse')[0];
-					// recaptchaResponse.value = token;
-					formData.recaptchaResponse=token;
-					// Выполняем здесь вызов Ajax
-					$.ajax({
-						type: "POST",
-						url: 'http://localhost:80/ubg/sendform.php', //form.attr('action'),
-						data: formData,
-						//dataType: "json",
-					//	dataType: "html",
-						encode: true,
-						beforeSend: function(data){
-							console.log(data);
-						}
-					}).done(function (idata) {
-						//console.log('success');
-						//console.log(idata);
-						console.log(idata.responseText);
+			$("body").css("cursor", "progress");
 
-					}).fail(function (idata) {
-						console.log('fail');
-						//console.log(idata);
-						console.log(idata.responseText);
+			if(typeof(grecaptcha)!=='undefined'){
+				grecaptcha.ready(function () {
+					grecaptcha.execute('6Lcyo5ccAAAAAEpIQ0QFy65pD7tEDs4fMYV20T19', { action: 'submit_form' }).then(function (token) {
+						// var recaptchaResponse = form.find('.recaptchaResponse')[0];
+						// recaptchaResponse.value = token;
+						formData.recaptchaResponse = token;
+						// Выполняем здесь вызов Ajax
+						$.ajax({
+
+							type: "POST",
+							url: 'http://localhost:80/ubg/sendform.php', //form.attr('action'),
+							data: formData,
+							dataType: "JSON",
+							//	dataType: "html",
+							encode: true,
+							beforeSend: function (data) {
+								console.log(data);
+							}
+						}).done(function (idata) {
+							console.log('success');
+							if(typeof(phpOutputCodes[idata.code]) !== 'undefined'){
+								formShowBanner(form, phpOutputCodes[idata.code]);
+							}
+							else{
+								formShowBanner(form, phpOutputCodes['err_default']);
+							}
+						}).fail(function (idata) {//ошибка php или ответ не получен
+							console.log('fail');
+							if(typeof(phpOutputCodes[idata.code]) !== 'undefined'){
+								formShowBanner(form, phpOutputCodes[idata.code]);
+							}
+							else{
+								formShowBanner(form, phpOutputCodes['err_default']);
+							}
+						});
+
+
+
 					});
-
-
-
 				});
-			 });
-
-
-			/*done(function (data) {
-			  console.log(data);
-
-			  if (!data.success) {
-				if (data.errors.name) {
-				  $("#name-group").addClass("has-error");
-				  $("#name-group").append(
-					'<div class="help-block">' + data.errors.name + "</div>"
-				  );
-				}
-
-				if (data.errors.email) {
-				  $("#email-group").addClass("has-error");
-				  $("#email-group").append(
-					'<div class="help-block">' + data.errors.email + "</div>"
-				  );
-				}
-
-				if (data.errors.superheroAlias) {
-				  $("#superhero-group").addClass("has-error");
-				  $("#superhero-group").append(
-					'<div class="help-block">' + data.errors.superheroAlias + "</div>"
-				  );
-				}
-			  } else {
-				$("form").html(
-				  '<div class="alert alert-success">' + data.message + "</div>"
-				);
-			  }
-
-			});*/
+			}
+			else{
+				formShowBanner(form, phpOutputCodes['err_default_internet']);
+			}
 		}
 	});
-
-
-
 });
+
+var defaultErrorMessage='Попробуйте еще раз';
+var phpOutputCodes = {
+	'err_default': {//err_default - если не получили подходящего ответа от php
+		type: 'error',
+		message: defaultErrorMessage,
+	},
+	'err_default_internet': {//err_default - если не получили подходящего ответа от php
+		type: 'error',
+		message: 'Проверьте интернет-соединение',
+	},
+	'err_captcha_not_work': {
+		type: 'error',
+		message: defaultErrorMessage,
+	},
+	'err_captcha_1': {
+		type: 'error',
+		message: defaultErrorMessage,
+	},
+	'err_captcha_2': {
+		type: 'error',
+		message: defaultErrorMessage,
+	},
+	'error_validation': {
+		type: 'error',
+		message: defaultErrorMessage,
+	},
+	'error_send': {
+		type: 'error',
+		message: defaultErrorMessage,
+	},
+	'err_all_bad': {
+		type: 'type',
+		message: defaultErrorMessage,
+	},
+	'successful_send': {
+		type: 'success',
+		message: 'Мы с вами свяжемся в ближайшее время',
+		additionalMessage: 'Заявки обрабатываются пн-пт 9:00 - 19:00'
+	},
+}
+function formShowBanner(form, phpOutputCode){
+	var bannerContentHtml = '<div class="form-banner_flex"><div class="form-banner_title">' + (phpOutputCode.type==='success'?'Отправлено':'Ошибка') + '</div></div>';
+	if (!form.find('.form-banner').length > 0) {
+		form.append('<div class="form-banner">' + bannerContentHtml + '</div>');
+	}
+	else {
+		form.find('.form-banner').html(bannerContentHtml)
+	}
+
+	var formBanner=form.find('.form-banner');
+	var formBannerFlex=form.find('.form-banner_flex');
+
+	if(typeof(phpOutputCode.message) !== 'undefined'){
+		formBannerFlex.append('<div class="form-banner_message">'+phpOutputCode.message+'</div>')
+	}
+	if(typeof(phpOutputCode.additionalMessage) !== 'undefined'){
+		formBannerFlex.append('<div class="form-banner_additional-message">'+phpOutputCode.additionalMessage+'</div>')
+	}
+
+	formBanner.fadeIn(400);
+	$("body").css("cursor", "default");
+	if(phpOutputCode.type==='error'){
+		formBanner.addClass('form-banner--err');
+		setTimeout(function(){
+			formBanner.fadeOut(300);
+			formBanner.removeClass('form-banner--err');
+		},4500);
+	}
+}
+
 /*
 $('form input').change(function(){
 	clearErrors($(this));
@@ -604,10 +658,10 @@ function validateTelegram(telegramInp) {
 //printError($('.section-form .js-phone-inp'),'test error 1')
 function printError(inp, errText) {
 	var inpRow;
-	if(inp.hasClass('secform-info')){//ошибку выводим к заголовку группы правил
+	if (inp.hasClass('secform-info')) {//ошибку выводим к заголовку группы правил
 		inpRow = inp;
 	}
-	else{//ошибку выводим к оболочке инпута
+	else {//ошибку выводим к оболочке инпута
 		inpRow = inp.closest('.secform-inp-row');
 	}
 
@@ -638,10 +692,10 @@ function printError(inp, errText) {
 
 function clearErrors(inp) {
 	var inpRow;
-	if(inp.hasClass('secform-info')){//ошибку выводим к заголовку группы правил
+	if (inp.hasClass('secform-info')) {//ошибку выводим к заголовку группы правил
 		inpRow = inp;
 	}
-	else{//ошибку выводим к оболочке инпута
+	else {//ошибку выводим к оболочке инпута
 		inpRow = inp.closest('.secform-inp-row');
 	}
 	var inpErrContainer;
