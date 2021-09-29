@@ -570,23 +570,23 @@ $(document).ready(function () {
 			if(typeof(grecaptcha)!=='undefined'){
 				grecaptcha.ready(function () {
 					grecaptcha.execute('6LdOHpscAAAAAHJn_n-HRHvnIgaVX6Jb9T4fqdUH', { action: 'submit_form' }).then(function (token) {
-						// var recaptchaResponse = form.find('.recaptchaResponse')[0];
-						// recaptchaResponse.value = token;
+
 						formData.recaptchaResponse = token;
 						// Выполняем здесь вызов Ajax
 						$.ajax({
 
 							type: "POST",
-							url: form.attr('action'),
+							url:'http://localhost/ubg/sendform.php',// form.attr('action'),
 							data: formData,
 							dataType: "JSON",
 							//	dataType: "html",
 							encode: true,
 							beforeSend: function (data) {
-								console.log(data);
+								//console.log(formData);
 							}
 						}).done(function (idata) {
 							console.log('success');
+							console.log(idata);
 							if(typeof(phpOutputCodes[idata.code]) !== 'undefined'){
 								formShowBanner(form, phpOutputCodes[idata.code]);
 							}
@@ -595,6 +595,7 @@ $(document).ready(function () {
 							}
 						}).fail(function (idata) {//ошибка php или ответ не получен
 							console.log('fail');
+							console.log(idata);
 							if(typeof(phpOutputCodes[idata.code]) !== 'undefined'){
 								formShowBanner(form, phpOutputCodes[idata.code]);
 							}
