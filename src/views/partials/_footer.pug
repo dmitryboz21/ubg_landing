@@ -59,7 +59,7 @@
 								.footer-social__name Telegram
 								.footer-social__desc Читай
 				.footer-col.footer-col--4
-					form.footer-form.js-form-processing(action="/form-processor.php" data-type="request-call").dd1.dd2.dt1
+					form.footer-form.js-form-processing(action="/sendform.php" data-type="request-call").dd1.dd2.dt1
 						input.recaptchaResponse(type="hidden" name="recaptcha_response")
 						.secform-inp-row
 							.secform-inp-wrap
@@ -131,7 +131,7 @@ div(style="display:none")
 #modal-sign-up.my-modal.my-modal--type-sign-up.mfp-hide
 	.my-modal__inner
 
-		form.secform-form.secform-form--modal.js-form-processing(action="/form-processor.php" data-type="sign-up")
+		form.secform-form.secform-form--modal.js-form-processing(action="/sendform.php" data-type="sign-up")
 			input.recaptchaResponse(type="hidden" name="recaptcha_response")
 			.secform-form__title готов достичь новых финансовых высот?
 			//.secform-form__subtitle присоединяйся!
@@ -175,7 +175,7 @@ div(style="display:none")
 #modal-feedback.my-modal.my-modal--type-sign-up.mfp-hide
 	.my-modal__inner
 
-		form.secform-form.secform-form--modal.js-form-processing(action="/form-processor.php" data-type="request-call")
+		form.secform-form.secform-form--modal.js-form-processing(action="/sendform.php" data-type="request-call")
 			input.recaptchaResponse(type="hidden" name="recaptcha_response")
 			.secform-form__title МЫ ПЕРЕЗВОНИМ В БЛИЖАЙШЕЕ ВРЕМЯ
 			//.secform-form__subtitle присоединяйся!
