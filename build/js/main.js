@@ -577,7 +577,7 @@ $(document).ready(function () {
 						$.ajax({
 
 							type: "POST",
-							url: 'http://localhost:80/ubg/sendform.php', //form.attr('action'),
+							url: form.attr('action'),
 							data: formData,
 							dataType: "JSON",
 							//	dataType: "html",
