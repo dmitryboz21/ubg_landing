@@ -493,7 +493,7 @@ $(document).ready(function () {
 
 			if(typeof(grecaptcha)!=='undefined'){
 				grecaptcha.ready(function () {
-					grecaptcha.execute('6Lcyo5ccAAAAAEpIQ0QFy65pD7tEDs4fMYV20T19', { action: 'submit_form' }).then(function (token) {
+					grecaptcha.execute('6LdOHpscAAAAAHJn_n-HRHvnIgaVX6Jb9T4fqdUH', { action: 'submit_form' }).then(function (token) {
 						// var recaptchaResponse = form.find('.recaptchaResponse')[0];
 						// recaptchaResponse.value = token;
 						formData.recaptchaResponse = token;
