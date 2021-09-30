@@ -330,3 +330,13 @@
 
 	@media screen and (max-width: 999px) {}
 }
+
+
+
+
+.my-modal--type-sign-up--countdown .secform-form{
+	padding-top: 12px;
+	@media screen and (max-width: 575px){
+		padding-top: 30px;
+	}
+}

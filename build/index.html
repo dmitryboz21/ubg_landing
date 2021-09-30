@@ -546,6 +546,14 @@
             </div>
           </div>
         </section>
+        <section class="section-vebinar">
+          <div class="section-vebinar__inner">
+            <div class="container container--section-vebinar">
+              <h2 class="section-title section-title--section-vebinar">Все еще не уверены?</h2>
+              <div class="section-vebinar-main"><a class="btn btn--square js-open-popup-inline" href="#modal-countdown"> try</a></div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
     <div class="outer-container">
@@ -731,6 +739,31 @@
             <div class="secform-inp-row">
               <div class="secform-inp-wrap">
                 <input class="secform-inp js-phone-inp" type="tel" name="tel" placeholder="Телефон">
+              </div>
+            </div>
+            <div class="secform-inp-row secform-inp-row--btn">
+              <button class="btn btn--square secform-btn-submit" type="submit">Записаться</button>
+            </div>
+            <div class="secform-privacy">Нажимая на кнопку, Вы соглашаетесь с&nbsp;<a class="js-open-popup-inline" href="#foo-oferta">политикой конфиденциальности и обработки данных</a></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="my-modal my-modal--type-sign-up my-modal--type-sign-up--countdown mfp-hide" id="modal-countdown">
+      <div class="my-modal__inner">
+        <form class="secform-form secform-form--modal js-form-processing" action="/sendform.php" data-type="request-email">
+          <input class="recaptchaResponse" type="hidden" name="recaptcha_response">
+          <!--.secform-form__title МЫ ПЕРЕЗВОНИМ В БЛИЖАЙШЕЕ ВРЕМЯ-->
+          <!--.secform-form__subtitle присоединяйся!-->
+          <div class="secform-form__inputs">
+            <div class="secform-inp-row">
+              <div class="secform-inp-wrap">
+                <input class="secform-inp" type="text" name="name" placeholder="Имя">
+              </div>
+            </div>
+            <div class="secform-inp-row">
+              <div class="secform-inp-wrap">
+                <input class="secform-inp" type="email" name="email" placeholder="E-mail">
               </div>
             </div>
             <div class="secform-inp-row secform-inp-row--btn">

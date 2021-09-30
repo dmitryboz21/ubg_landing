@@ -196,6 +196,31 @@ div(style="display:none")
 
 
 
+
+
+#modal-countdown.my-modal.my-modal--type-sign-up.my-modal--type-sign-up--countdown.mfp-hide
+	.my-modal__inner
+		form.secform-form.secform-form--modal.js-form-processing(action="/sendform.php" data-type="request-email")
+			input.recaptchaResponse(type="hidden" name="recaptcha_response")
+			//.secform-form__title МЫ ПЕРЕЗВОНИМ В БЛИЖАЙШЕЕ ВРЕМЯ
+			//.secform-form__subtitle присоединяйся!
+			.secform-form__inputs
+				.secform-inp-row
+					.secform-inp-wrap
+						input.secform-inp(type="text", name="name", placeholder="Имя")
+
+				.secform-inp-row
+					.secform-inp-wrap
+						input.secform-inp(type="email", name="email", placeholder="E-mail")
+				.secform-inp-row.secform-inp-row--btn
+					button.btn.btn--square.secform-btn-submit(type="submit") Записаться
+				.secform-privacy Нажимая на кнопку, Вы соглашаетесь с&nbsp;
+					a.js-open-popup-inline(href="#foo-oferta") политикой конфиденциальности и обработки данных
+
+
+
+
+
 #foo-oferta.my-modal.my-modal--privacy.mfp-hide
 	.my-modal__inner
 		.my-modal__text

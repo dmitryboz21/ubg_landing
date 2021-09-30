@@ -368,6 +368,8 @@ $(document).ready(function () {
 		var telInp = form.find('.js-phone-inp');
 		var nameInp = form.find('input[name="name"]');
 		var telegramInp = form.find('input[name="telegram"]');
+		var emailInp = form.find('input[name="email"]');
+
 		var tarifInp = form.find('input[name="tarif-secform"]:checked');
 		var hasErrors = false;
 		var validateTelResult = false;
@@ -435,6 +437,21 @@ $(document).ready(function () {
 						break;
 				}
 				break;
+			case "request-email":
+				switch (validateEmail(emailInp)) {
+					case "valid":
+						clearErrors(emailInp);
+						break;
+					case "invalid":
+						printError(emailInp, '*Некорректный email');
+						hasErrors = true;
+						break;
+					case "empty":
+						printError(emailInp, '*Данное поле обязательно к заполнению');
+						hasErrors = true;
+						break;
+				}
+				break;
 		}
 
 
@@ -487,6 +504,11 @@ $(document).ready(function () {
 					formData.phone = countryData.dialCode + telInp.cleanVal();
 					formData.description += "Страна: " + countryData.name + "\r\n \t";
 					formData.telegram = "";
+					break;
+
+				case "request-email":
+					formData.title = "Запрос уведомления о вебинаре";
+					formData.email=emailInp.val();
 					break;
 			}
 			$("body").css("cursor", "progress");
@@ -628,6 +650,25 @@ function validateTel(telInp) {
 	else {
 		if (checkNoEmpty(telInp)) {
 			return "non-completed";
+		}
+		else {
+			return "empty";
+		}
+	}
+}
+
+
+/**
+ * @param  {} emailInp //jquery объект, указывающий на поле для ввода телефона
+ */
+function validateEmail(emailInp) {
+	const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	if (validEmail.test(emailInp.val())) {
+		return "valid";
+	}
+	else {
+		if (checkNoEmpty(emailInp)) {
+			return "invalid";
 		}
 		else {
 			return "empty";
