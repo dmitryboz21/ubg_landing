@@ -23,8 +23,8 @@
 
 
     @media screen and (max-width: 575px) {
-        padding-top: 29px;
-        padding-bottom: 60px;
+        padding-top: 35px;
+        padding-bottom: 69px;
     }
 
 }
@@ -84,6 +84,7 @@
     @media screen and (max-width: 575px) {
         font-size: 12px;
         line-height: 150%;
+        margin-top: 17px;
     }
 }
 
@@ -95,7 +96,9 @@
     }
 
 
-    @media screen and (max-width: 575px) {}
+    @media screen and (max-width: 575px) {
+        margin-top: 35px;
+    }
 }
 
 .countdown {
@@ -121,10 +124,23 @@
         background: rgba(255, 255, 255, 0.1);
     }
 
-    @media screen and (max-width: 991px) {flex-grow: 1;}
+    @media screen and (max-width: 991px) {
+        flex-grow: 1;
+    }
 
+    @media screen and (max-width: 700px) {
+        &::before {
+            height: 96px;
+        }
+    }
 
-    @media screen and (max-width: 575px) {}
+    @media screen and (max-width: 575px) {
+        &::before {
+            height: 44px;
+        }
+
+        max-width: 32px;
+    }
 }
 
 .countdown-part {
@@ -134,15 +150,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: red;
+
+    //background: red;
     @media screen and (max-width: 991px) {
         flex-grow: 0;
     }
+
     @media screen and (max-width: 700px) {
         min-width: 125px;
     }
 
-    @media screen and (max-width: 575px) {}
+    @media screen and (max-width: 575px) {
+        min-width: 60px;
+    }
 
     &__val {
         font-style: normal;
@@ -210,13 +230,15 @@
 
     @media screen and (max-width: 991px) {
         font-size: 18px;
-        line-height: 22px;    margin-top: 39px;
+        line-height: 22px;
+        margin-top: 39px;
     }
 
 
     @media screen and (max-width: 575px) {
         font-size: 12px;
         line-height: 150%;
+        margin-top: 18px;
     }
 
     span {
@@ -230,10 +252,12 @@
     margin-top: 65px;
 
     @media screen and (max-width: 991px) {
-        margin-top: 62px;}
+        margin-top: 62px;
+    }
 
 
-    @media screen and (max-width: 575px) {}
+    @media screen and (max-width: 575px) {
+        margin-top: 29px;}
 }
 
 .section-vebinar-btn {

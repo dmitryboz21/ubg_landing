@@ -408,34 +408,33 @@ block main
 		section.section-vebinar
 			.section-vebinar__inner
 				.container.container--section-vebinar
-					h2.section-title.section-title--section-vebinar Все еще не уверены?
+					h2.section-title.section-title--section-vebinar Все еще <span class="nbspm1">не уверены?</span>
 					.section-vebinar-subtitle Запишитесь на мой бесплатный вебинар
 					.section-vebinar-description Я регулярно провожу прямые эфиры, на которых делаю разбор топовых альткоинов, даю свои прогнозы по поводу движения цены Биткоина и отвечаю на вопросы из комментариев. Оставьте заявку на участие. Вам на почту придет уведомление с ссылкой на прямой эфир и напоминание, чтобы Вы точно не забыли. Ваш адрес почты нужен только для этого, никаких рекламных рассылок.
 					.section-vebinar-countdown-wrap
 
-						.countdown
+						#coundown.countdown(data-event-datetime="2022-01-01 00:00")
 							.countdown-part
-								.countdown-part__val 16
-								.countdown-part__name Дней
+								#coundown-days.countdown-part__val 00
+								#coundown-days-name.countdown-part__name Дней
 
 							.countdown-delimiter
 
 							.countdown-part
-								//.countdown-part__val 20
-								.countdown-part__val 04
-								.countdown-part__name Часов
+								#coundown-hours.countdown-part__val 00
+								#coundown-hours-name.countdown-part__name Часов
 
 							.countdown-delimiter
 
 							.countdown-part
-								.countdown-part__val 39
-								.countdown-part__name Минут
+								#coundown-minutes.countdown-part__val 00
+								#coundown-minutes-name.countdown-part__name Минут
 
 							.countdown-delimiter
 
 							.countdown-part
-								.countdown-part__val 15
-								.countdown-part__name Секунд
+								#coundown-seconds.countdown-part__val 00
+								#coundown-seconds-name.countdown-part__name Секунд
 
 						.section-vebinar-next-date до следующего вебинара,
 							span  16.10.21

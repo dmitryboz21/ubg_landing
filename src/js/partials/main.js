@@ -559,6 +559,43 @@ $(document).ready(function () {
 			}
 		}
 	});
+	// declOfNum(count, ['секунда', 'секунды', 'секунд']);
+	function declOfNum(number, titles) {
+		cases = [2, 0, 1, 1, 1, 2];
+		return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
+	}
+
+
+	if($('#coundown').length>0){
+		var attrdateTime=$('#coundown').attr('data-event-datetime');
+		var date = moment.tz(attrdateTime, "Europe/Moscow");
+
+		var cdDays = $('#coundown-days');
+		var cdHours = $('#coundown-hours');
+		var cdMinutes = $('#coundown-minutes');
+		var cdSeconds = $('#coundown-seconds');
+		var cdDaysName = $('#coundown-days-name');
+		var cdHoursName = $('#coundown-hours-name');
+		var cdMinutesName = $('#coundown-minutes-name');
+		var cdSecondsName = $('#coundown-seconds-name');
+
+		$('#coundown').countdown(date.toDate(), function(event) {
+
+			var days=Math.floor(event.offset.totalHours/24);
+			cdDays.html(("0" + days).slice(-2));
+			cdHours.html(("0" + event.offset.hours).slice(-2));
+			cdMinutes.html(("0" + event.offset.minutes).slice(-2));
+			cdSeconds.html(("0" + event.offset.seconds).slice(-2));
+
+			cdDaysName.html(declOfNum(days,['день', 'дня', 'дней']));
+			cdHoursName.html(declOfNum(event.offset.hours,['час', 'часа', 'часов']));
+			cdMinutesName.html(declOfNum(event.offset.minutes,['минута', 'минуты', 'минут']));
+			cdSecondsName.html(declOfNum(event.offset.seconds,['секунда', 'секунды', 'секунд']));
+
+		});
+
+	}
+
 });
 
 var defaultErrorMessage='Попробуйте еще раз';

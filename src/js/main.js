@@ -7,6 +7,9 @@
 /*libs/slick.min.js*/
 //= libs/jquery.mask.min.js
 //= libs/offline.min.js
+//= libs/jquery.countdown.min.js
+//= libs/moment-with-locales.min.js
+//= libs/moment-timezone-with-data.min.js
 
 /* my scripts */
 
