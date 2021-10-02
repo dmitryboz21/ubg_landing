@@ -567,7 +567,7 @@ $(document).ready(function () {
 
 
 	if($('#coundown').length>0){
-		var attrdateTime=$('#coundown').attr('data-event-datetime');
+		var attrdateTime=$('#coundown-date').attr('data-event-datetime');
 		var date = moment.tz(attrdateTime, "Europe/Moscow");
 
 		var cdDays = $('#coundown-days');

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php require("countdownSettings.php"); ?><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
@@ -18,8 +18,9 @@
     <title>Litvinoff cryptotrader</title>
     <script src="https://www.google.com/recaptcha/api.js?render=6LdOHpscAAAAAHJn_n-HRHvnIgaVX6Jb9T4fqdUH"></script> <!-- Yandex.Metrika counter -->   <script type="text/javascript" >  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");  ym(85716684, "init", {  clickmap:true,  trackLinks:true,  accurateTrackBounce:true,  webvisor:true  });  </script>   <noscript><div><img src="https://mc.yandex.ru/watch/85716684" style="position:absolute; left:-9999px;" alt="" /></div></noscript>  <!-- /Yandex.Metrika counter -->
      <!-- Global site tag (gtag.js) - Google Analytics -->  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KC2MVMWJ74"></script>  <script>    window.dataLayer = window.dataLayer || [];    function gtag(){dataLayer.push(arguments);}    gtag('js', new Date());      gtag('config', 'G-KC2MVMWJ74');  </script>
+     <!-- Google Tag Manager --> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-NKBNZDD');</script> <!-- End Google Tag Manager -->
   </head>
-  <body>
+  <body> <!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKBNZDD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->
     <div class="dark-bg-for-menu js-dark-bg-for-menu"></div>
     <div class="outer-container">
       <section class="main-banner">
@@ -523,7 +524,7 @@
                       <div class="cf-accordeon-item__heading">Сколько стоит обучение?</div>
                     </div>
                     <div class="cf-accordeon-item__content">
-                      <div class="cf-accordeon-answer">Курс преподаетсяется по двум тарифам. Объем и полезность информации, при этом, не отличается. Билет "Individual" дает больше бонусов во время и после обучения. Кроме этого, Вашим обучением занимаюсь лично я. Я не хочу жертвовать качеством обучения, соответственно, количество учеников, которых я могу обучить по билету "Individual" - ограничено. <br>Вне зависимости от билета, все домашние задания проверяю лично я. Стоимость обучения по билету "Standard" - $500, по билету "Individual" - $1500. Более подробно о каждом билете Вы можете узнать в блоке "Стоимость".</div>
+                      <div class="cf-accordeon-answer">Курс преподаетсяется по двум тарифам. Объем и полезность информации, при этом, не отличается. Билет "Individual" дает больше бонусов во время и после обучения. Кроме этого, Вашим обучением занимаюсь лично я. Я не хочу жертвовать качеством обучения, соответственно, количество учеников, которых я могу обучить по билету "Individual" - ограничено. <br>Вне зависимости от билета, все домашние задания проверяю лично я. Стоимость обучения по билету "Standard" - $500, по билету "Individual" - $1000. Более подробно о каждом билете Вы можете узнать в блоке "Стоимость".</div>
                     </div>
                   </div>
                   <div class="cf-accordeon-item cf-accordeon-item--faq">
@@ -546,15 +547,17 @@
               </div>
             </div>
           </div>
-        </section>
+        </section><?php if(!($hide_if_times_up && $d < $now  || !$hide_if_times_up && $show_section===false)){ ?>
         <section class="section-vebinar">
           <div class="section-vebinar__inner">
             <div class="container container--section-vebinar">
               <h2 class="section-title section-title--section-vebinar">Все еще <span class="nbspm1">не уверены?</span></h2>
               <div class="section-vebinar-subtitle">Запишитесь на мой бесплатный вебинар</div>
               <div class="section-vebinar-description">Я регулярно провожу прямые эфиры, на которых делаю разбор топовых альткоинов, даю свои прогнозы по поводу движения цены Биткоина и отвечаю на вопросы из комментариев. Оставьте заявку на участие. Вам на почту придет уведомление с ссылкой на прямой эфир и напоминание, чтобы Вы точно не забыли. Ваш адрес почты нужен только для этого, никаких рекламных рассылок.</div>
-              <div class="section-vebinar-countdown-wrap">
-                <div class="countdown" id="coundown" data-event-datetime="2022-01-01 00:00">
+              <div class="section-vebinar-countdown-wrap"> <?php echo('<div id="coundown-date" style="display:none;" data-event-datetime="'.($d->format('Y-m-d H:i')).'"></div>'); ?>
+                <!-- data-event-datetime="2022-01-01 00:00
+                -->
+                <div class="countdown" id="coundown">
                   <div class="countdown-part">
                     <div class="countdown-part__val" id="coundown-days">00</div>
                     <div class="countdown-part__name" id="coundown-days-name">Дней</div>
@@ -575,12 +578,12 @@
                     <div class="countdown-part__name" id="coundown-seconds-name">Секунд</div>
                   </div>
                 </div>
-                <div class="section-vebinar-next-date">до следующего вебинара,<span> 16.10.21</span> в<span> 20:00</span> по мск</div>
+                <div class="section-vebinar-next-date">до следующего вебинара,<span> <?php echo $d->format('d-m-y'); ?></span> в<span> <?php echo $d->format('H:i'); ?></span> по мск</div>
                 <div class="section-vebinar-btn-wrap"><a class="section-vebinar-btn btn btn--square js-open-popup-inline" href="#modal-countdown"> принять участие</a></div>
               </div>
             </div>
           </div>
-        </section>
+        </section><?php } ?>
       </div>
     </main>
     <div class="outer-container">

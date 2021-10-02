@@ -391,7 +391,7 @@ block main
 								.cf-accordeon-item__top.js-cf-accordeon-item__top
 									.cf-accordeon-item__heading Сколько стоит обучение?
 								.cf-accordeon-item__content
-									.cf-accordeon-answer Курс преподаетсяется по двум тарифам. Объем и полезность информации, при этом, не отличается. Билет "Individual" дает больше бонусов во время и после обучения. Кроме этого, Вашим обучением занимаюсь лично я. Я не хочу жертвовать качеством обучения, соответственно, количество учеников, которых я могу обучить по билету "Individual" - ограничено. <br>Вне зависимости от билета, все домашние задания проверяю лично я. Стоимость обучения по билету "Standard" - $500, по билету "Individual" - $1500. Более подробно о каждом билете Вы можете узнать в блоке "Стоимость".
+									.cf-accordeon-answer Курс преподаетсяется по двум тарифам. Объем и полезность информации, при этом, не отличается. Билет "Individual" дает больше бонусов во время и после обучения. Кроме этого, Вашим обучением занимаюсь лично я. Я не хочу жертвовать качеством обучения, соответственно, количество учеников, которых я могу обучить по билету "Individual" - ограничено. <br>Вне зависимости от билета, все домашние задания проверяю лично я. Стоимость обучения по билету "Standard" - $500, по билету "Individual" - $1000. Более подробно о каждом билете Вы можете узнать в блоке "Стоимость".
 							.cf-accordeon-item.cf-accordeon-item--faq
 								.cf-accordeon-item__top.js-cf-accordeon-item__top
 									.cf-accordeon-item__heading Возможно ли оформить рассрочку?
@@ -405,6 +405,7 @@ block main
 								.cf-accordeon-item__content
 									.cf-accordeon-answer Мой курс рассчитан на новичков, и это не рецепт быстрого обогащения. Я могу гарантировать, что изложенная информация и стратегии, позволят Вам зарабатывать деньги, а не терять их. Если же Вы, неукоснительно следуя моим стратегиям, сольете депозит - я возмещу полную стоимость обучения. Проанализировав все ваши сделки, я пойму, что именно привело к провалу, и дам советы как избежать этого в будущем. Но, поверьте, еще ни разу такого не произошло. Все ученики остались довольны и успешно занимаются трейдингом.
 
+		| <?php if(!($hide_if_times_up && $d < $now  || !$hide_if_times_up && $show_section===false)){ ?>
 		section.section-vebinar
 			.section-vebinar__inner
 				.container.container--section-vebinar
@@ -412,8 +413,10 @@ block main
 					.section-vebinar-subtitle Запишитесь на мой бесплатный вебинар
 					.section-vebinar-description Я регулярно провожу прямые эфиры, на которых делаю разбор топовых альткоинов, даю свои прогнозы по поводу движения цены Биткоина и отвечаю на вопросы из комментариев. Оставьте заявку на участие. Вам на почту придет уведомление с ссылкой на прямой эфир и напоминание, чтобы Вы точно не забыли. Ваш адрес почты нужен только для этого, никаких рекламных рассылок.
 					.section-vebinar-countdown-wrap
-
-						#coundown.countdown(data-event-datetime="2022-01-01 00:00")
+						|  <?php echo('<div id="coundown-date" style="display:none;" data-event-datetime="'.($d->format('Y-m-d H:i')).'"></div>'); ?>
+						//
+							 data-event-datetime="2022-01-01 00:00
+						#coundown.countdown
 							.countdown-part
 								#coundown-days.countdown-part__val 00
 								#coundown-days-name.countdown-part__name Дней
@@ -437,12 +440,13 @@ block main
 								#coundown-seconds-name.countdown-part__name Секунд
 
 						.section-vebinar-next-date до следующего вебинара,
-							span  16.10.21
+							span  <?php echo $d->format('d-m-y'); ?>
 							|  в
-							span  20:00
+							span  <?php echo $d->format('H:i'); ?>
 							|  по мск
 						.section-vebinar-btn-wrap
 							a.section-vebinar-btn.btn.btn--square.js-open-popup-inline(href="#modal-countdown")  принять участие
 
+		| <?php } ?>
 
 
